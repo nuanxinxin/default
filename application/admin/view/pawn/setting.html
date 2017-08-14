@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {include file="header"}
+</head>
+<body>
+{include file="loading"}
+<div class="layui-main">
+    <fieldset class="layui-elem-field layui-field-title">
+        <legend>信息参数配置</legend>
+    </fieldset>
+    <div class="layui-field-box">
+        <form action="{:path('setting')}" method="post" class="layui-form">
+            <div class="layui-form-item">
+                <div class="label-title Validform_label">浏览费</div>
+                <div><input type="text" name="pawn_browse_fee" value="{$data.pawn_browse_fee}" class="layui-input" datatype="n">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="label-title Validform_label">下架时间(天)</div>
+                <div><input type="text" name="pawn_distance_out_time" value="{$data.pawn_distance_out_time}" class="layui-input" datatype="n">
+                </div>
+            </div>
+            <div class="layui-form-item b-t-s">
+                {:token()}
+                <button type="submit" class="layui-btn">提交</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    layui.use('validform', function () {
+        var $ = layui.jquery;
+
+        //表单验证
+        $("form").Validform({
+            tiptype: 3
+        });
+    });
+</script>
+
+
+</body>
+</html>

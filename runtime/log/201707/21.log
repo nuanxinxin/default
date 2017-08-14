@@ -1,0 +1,773 @@
+[ 2017-07-21T10:08:02+08:00 ] 127.0.0.1 127.0.0.1 POST /api/Wx/appRegist
+[ log ] www.a.com/api/Wx/appRegist [运行时间：0.150008s][吞吐率：6.67req/s] [内存消耗：532.91kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.004000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Wx',
+    2 => 'appRegist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Fiddler',
+  'host' => 'www.a.com',
+  'content-length' => '33',
+  'content-type' => 'application/x-www-form-urlencoded,',
+)
+[ info ] [ PARAM ] array (
+  '/api/Wx/appRegist' => '',
+  'phone' => '18870065270',
+  'password' => '123456',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\api\controller\Wx->appRegist[ D:\project\default\application\api\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `phone` = '18870065270'  AND `source` = 'app' LIMIT 1 [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_user` WHERE  `identifier` IS NULL LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_admin_company` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_admin_company` WHERE  `identifier` IS NULL LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_user` WHERE  `phone` = '18870065270' LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-07-21T10:14:30+08:00 ] 127.0.0.1 127.0.0.1 POST /api/Wx/appRegist
+[ log ] www.a.com/api/Wx/appRegist [运行时间：0.052003s][吞吐率：19.23req/s] [内存消耗：332.61kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Wx',
+    2 => 'appRegist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Fiddler',
+  'host' => 'www.a.com',
+  'content-length' => '33',
+  'content-type' => 'application/x-www-form-urlencoded,',
+)
+[ info ] [ PARAM ] array (
+  '/api/Wx/appRegist' => '',
+  'phone' => '18870065270',
+  'password' => '123456',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\api\controller\Wx->appRegist[ D:\project\default\application\api\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `phone` = '18870065270'  AND `source` = 'app' LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_user` WHERE  `identifier` IS NULL LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_admin_company` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_admin_company` WHERE  `identifier` IS NULL LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_user` WHERE  `phone` = '18870065270' LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-07-21T10:17:04+08:00 ] 127.0.0.1 127.0.0.1 POST /api/Wx/appRegist
+[ log ] www.a.com/api/Wx/appRegist [运行时间：0.071004s][吞吐率：14.08req/s] [内存消耗：335.05kb] [文件加载：68]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Wx',
+    2 => 'appRegist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Fiddler',
+  'host' => 'www.a.com',
+  'content-length' => '33',
+  'content-type' => 'application/x-www-form-urlencoded,',
+)
+[ info ] [ PARAM ] array (
+  '/api/Wx/appRegist' => '',
+  'phone' => '18870065270',
+  'password' => '123456',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\api\controller\Wx->appRegist[ D:\project\default\application\api\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `phone` = '18870065270'  AND `source` = 'app' LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_user` WHERE  `identifier` IS NULL LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_admin_company` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_admin_company` WHERE  `identifier` IS NULL LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_user` WHERE  `phone` = '18870065270' LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [8]未定义变量: id[D:\project\default\application\common\model\User.php:59]
+
+---------------------------------------------------------------
+[ 2017-07-21T10:17:11+08:00 ] 127.0.0.1 127.0.0.1 POST /api/Wx/appRegist
+[ log ] www.a.com/api/Wx/appRegist [运行时间：0.048003s][吞吐率：20.83req/s] [内存消耗：333.92kb] [文件加载：68]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Wx',
+    2 => 'appRegist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Fiddler',
+  'host' => 'www.a.com',
+  'content-length' => '33',
+  'content-type' => 'application/x-www-form-urlencoded,',
+)
+[ info ] [ PARAM ] array (
+  '/api/Wx/appRegist' => '',
+  'phone' => '18870065270',
+  'password' => '123456',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\api\controller\Wx->appRegist[ D:\project\default\application\api\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `phone` = '18870065270'  AND `source` = 'app' LIMIT 1 [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_user` WHERE  `identifier` IS NULL LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_admin_company` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_admin_company` WHERE  `identifier` IS NULL LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_user` WHERE  `phone` = '18870065270' LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [8]未定义变量: id[D:\project\default\application\common\model\User.php:59]
+
+---------------------------------------------------------------
+[ 2017-07-21T10:17:24+08:00 ] 127.0.0.1 127.0.0.1 POST /api/Wx/appRegist
+[ log ] www.a.com/api/Wx/appRegist [运行时间：0.042002s][吞吐率：23.81req/s] [内存消耗：348.09kb] [文件加载：58]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Wx',
+    2 => 'appRegist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Fiddler',
+  'host' => 'www.a.com',
+  'content-length' => '33',
+  'content-type' => 'application/x-www-form-urlencoded,',
+)
+[ info ] [ PARAM ] array (
+  '/api/Wx/appRegist' => '',
+  'phone' => '18870065270',
+  'password' => '123456',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\api\controller\Wx->appRegist[ D:\project\default\application\api\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `phone` = '18870065270'  AND `source` = 'app' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_user` WHERE  `identifier` IS NULL LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_admin_company` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_admin_company` WHERE  `identifier` IS NULL LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-07-21T10:18:03+08:00 ] 127.0.0.1 127.0.0.1 POST /api/Wx/appRegist
+[ log ] www.a.com/api/Wx/appRegist [运行时间：0.046002s][吞吐率：21.74req/s] [内存消耗：333.99kb] [文件加载：63]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Wx',
+    2 => 'appRegist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Fiddler',
+  'host' => 'www.a.com',
+  'content-length' => '33',
+  'content-type' => 'application/x-www-form-urlencoded,',
+)
+[ info ] [ PARAM ] array (
+  '/api/Wx/appRegist' => '',
+  'phone' => '18870065270',
+  'password' => '123456',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\api\controller\Wx->appRegist[ D:\project\default\application\api\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `phone` = '18870065270'  AND `source` = 'app' LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_user` WHERE  `identifier` IS NULL LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_admin_company` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_admin_company` WHERE  `identifier` IS NULL LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_user` WHERE  `phone` = '18870065270'  AND `source` = 'app' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `snake_user` (`nickname` , `thumb` , `phone` , `company_id` , `password` , `city` , `parent_id` , `identifier` , `source` , `register_time` , `credit_money` , `current_tool_money`) VALUES ('手牵手用户' , 'http://www.a.com/static/layui/images/gray.png' , '18870065270' , 1 , 'e10adc3949ba59abbe56e057f20f883e' , '南昌' , '0' , '655813aece290b7c74feceebaef31260' , 'app' , 1500603483 , '0' , '0') [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-07-21T15:29:50+08:00 ] 127.0.0.1 127.0.0.1 POST /api/Wx/changePassword
+[ log ] www.a.com/api/Wx/changePassword [运行时间：0.046002s][吞吐率：21.74req/s] [内存消耗：316.72kb] [文件加载：64]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Wx',
+    2 => 'changePassword',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Fiddler',
+  'host' => 'www.a.com',
+  'content-length' => '32',
+  'content-type' => 'application/x-www-form-urlencoded,',
+)
+[ info ] [ PARAM ] array (
+  '/api/Wx/changePassword' => '',
+  'phone' => '18870065270',
+  'password' => 'liuxi',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\api\controller\Wx->changePassword[ D:\project\default\application\api\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `phone` = '18870065270'  AND `source` = 'app' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `snake_user`  SET `password`='2a303fb55aad103ee7f62c786a06570b'  WHERE  `id` = 890 [ RunTime:0.005000s ]
+
+---------------------------------------------------------------
+[ 2017-07-21T15:30:27+08:00 ] 127.0.0.1 127.0.0.1 POST /api/Wx/changePassword
+[ log ] www.a.com/api/Wx/changePassword [运行时间：0.044003s][吞吐率：22.73req/s] [内存消耗：315.59kb] [文件加载：64]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Wx',
+    2 => 'changePassword',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Fiddler',
+  'host' => 'www.a.com',
+  'content-length' => '31',
+  'content-type' => 'application/x-www-form-urlencoded,',
+)
+[ info ] [ PARAM ] array (
+  '/api/Wx/changePassword' => '',
+  'phone' => '18870065270',
+  'password' => 'liux',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\api\controller\Wx->changePassword[ D:\project\default\application\api\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `phone` = '18870065270'  AND `source` = 'app' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `snake_user`  SET `password`='ca03e7517472097f49f822f5d6b0056f'  WHERE  `id` = 890 [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-07-21T15:31:57+08:00 ] 127.0.0.1 127.0.0.1 POST /api/Wx/appRegist
+[ log ] www.a.com/api/Wx/appRegist [运行时间：0.066004s][吞吐率：15.15req/s] [内存消耗：333.07kb] [文件加载：63]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Wx',
+    2 => 'appRegist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Fiddler',
+  'host' => 'www.a.com',
+  'content-length' => '32',
+  'content-type' => 'application/x-www-form-urlencoded,',
+)
+[ info ] [ PARAM ] array (
+  '/api/Wx/appRegist' => '',
+  'phone' => '18870065273',
+  'password' => '12345',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.001001s ]
+[ info ] [ RUN ] app\api\controller\Wx->appRegist[ D:\project\default\application\api\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `phone` = '18870065273'  AND `source` = 'app' LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_user` WHERE  `identifier` IS NULL LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_admin_company` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_admin_company` WHERE  `identifier` IS NULL LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_user` WHERE  `phone` = '18870065273'  AND `source` = 'app' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `snake_user` (`nickname` , `thumb` , `phone` , `company_id` , `password` , `city` , `parent_id` , `identifier` , `source` , `register_time` , `credit_money` , `current_tool_money`) VALUES ('手牵手用户' , 'http://www.a.com/static/layui/images/gray.png' , '18870065273' , 1 , '827ccb0eea8a706c4c34a16891f84e7b' , '南昌' , '0' , 'e5c6df3c48ccc07bf27fc6ccafa9222c' , 'app' , 1500622317 , '0' , '0') [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-07-21T15:34:09+08:00 ] 127.0.0.1 127.0.0.1 POST /api/Wx/appRegist
+[ log ] www.a.com/api/Wx/appRegist [运行时间：0.047002s][吞吐率：21.28req/s] [内存消耗：353.65kb] [文件加载：62]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Wx',
+    2 => 'appRegist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Fiddler',
+  'host' => 'www.a.com',
+  'content-length' => '32',
+  'content-type' => 'application/x-www-form-urlencoded,',
+)
+[ info ] [ PARAM ] array (
+  '/api/Wx/appRegist' => '',
+  'phone' => '18870065273',
+  'password' => '12345',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\api\controller\Wx->appRegist[ D:\project\default\application\api\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `phone` = '18870065273'  AND `source` = 'app' LIMIT 1 [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-07-21T15:34:17+08:00 ] 127.0.0.1 127.0.0.1 POST /api/Wx/appRegist
+[ log ] www.a.com/api/Wx/appRegist [运行时间：0.054003s][吞吐率：18.52req/s] [内存消耗：333.07kb] [文件加载：63]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Wx',
+    2 => 'appRegist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Fiddler',
+  'host' => 'www.a.com',
+  'content-length' => '32',
+  'content-type' => 'application/x-www-form-urlencoded,',
+)
+[ info ] [ PARAM ] array (
+  '/api/Wx/appRegist' => '',
+  'phone' => '18870065274',
+  'password' => '12345',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\api\controller\Wx->appRegist[ D:\project\default\application\api\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `phone` = '18870065274'  AND `source` = 'app' LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_user` WHERE  `identifier` IS NULL LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_admin_company` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_admin_company` WHERE  `identifier` IS NULL LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_user` WHERE  `phone` = '18870065274'  AND `source` = 'app' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `snake_user` (`nickname` , `thumb` , `phone` , `company_id` , `password` , `city` , `parent_id` , `identifier` , `source` , `register_time` , `credit_money` , `current_tool_money`) VALUES ('手牵手用户' , 'http://www.a.com/static/layui/images/gray.png' , '18870065274' , 1 , '827ccb0eea8a706c4c34a16891f84e7b' , '南昌' , '0' , '6f2465ae6229efddd70bdc19190c2989' , 'app' , 1500622457 , '0' , '0') [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-07-21T15:35:07+08:00 ] 127.0.0.1 127.0.0.1 POST /api/Wx/appRegist
+[ log ] www.a.com/api/Wx/appRegist [运行时间：0.054003s][吞吐率：18.52req/s] [内存消耗：349.58kb] [文件加载：58]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Wx',
+    2 => 'appRegist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Fiddler',
+  'host' => 'www.a.com',
+  'content-length' => '32',
+  'content-type' => 'application/x-www-form-urlencoded,',
+)
+[ info ] [ PARAM ] array (
+  '/api/Wx/appRegist' => '',
+  'phone' => '18870065274',
+  'password' => '12345',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\api\controller\Wx->appRegist[ D:\project\default\application\api\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `phone` = '18870065274'  AND `source` = 'app' LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_user` WHERE  `identifier` IS NULL LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_admin_company` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_admin_company` WHERE  `identifier` IS NULL LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_user` WHERE  `phone` = '18870065274'  AND `source` = 'app' LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-07-21T15:35:41+08:00 ] 127.0.0.1 127.0.0.1 POST /api/Wx/appRegist
+[ log ] www.a.com/api/Wx/appRegist [运行时间：0.041003s][吞吐率：24.39req/s] [内存消耗：348.66kb] [文件加载：58]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Wx',
+    2 => 'appRegist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Fiddler',
+  'host' => 'www.a.com',
+  'content-length' => '32',
+  'content-type' => 'application/x-www-form-urlencoded,',
+)
+[ info ] [ PARAM ] array (
+  '/api/Wx/appRegist' => '',
+  'phone' => '18870065274',
+  'password' => '12345',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\api\controller\Wx->appRegist[ D:\project\default\application\api\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `phone` = '18870065274'  AND `source` = 'app' LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_user` WHERE  `identifier` IS NULL LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_admin_company` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_admin_company` WHERE  `identifier` IS NULL LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_user` WHERE  `phone` = '18870065274'  AND `source` = 'app' LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-07-21T15:35:52+08:00 ] 127.0.0.1 127.0.0.1 POST /api/Wx/appRegist
+[ log ] www.a.com/api/Wx/appRegist [运行时间：0.042002s][吞吐率：23.81req/s] [内存消耗：349.58kb] [文件加载：58]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Wx',
+    2 => 'appRegist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Fiddler',
+  'host' => 'www.a.com',
+  'content-length' => '32',
+  'content-type' => 'application/x-www-form-urlencoded,',
+)
+[ info ] [ PARAM ] array (
+  '/api/Wx/appRegist' => '',
+  'phone' => '18870065274',
+  'password' => '12345',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\api\controller\Wx->appRegist[ D:\project\default\application\api\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `phone` = '18870065274'  AND `source` = 'app' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_user` WHERE  `identifier` IS NULL LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_admin_company` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_admin_company` WHERE  `identifier` IS NULL LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_user` WHERE  `phone` = '18870065274'  AND `source` = 'app' LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-07-21T15:37:36+08:00 ] 127.0.0.1 127.0.0.1 POST /api/Wx/appRegist
+[ log ] www.a.com/api/Wx/appRegist [运行时间：0.055003s][吞吐率：18.18req/s] [内存消耗：349.52kb] [文件加载：58]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Wx',
+    2 => 'appRegist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Fiddler',
+  'host' => 'www.a.com',
+  'content-length' => '32',
+  'content-type' => 'application/x-www-form-urlencoded,',
+)
+[ info ] [ PARAM ] array (
+  '/api/Wx/appRegist' => '',
+  'phone' => '18870065274',
+  'password' => '12345',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\api\controller\Wx->appRegist[ D:\project\default\application\api\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `phone` = '18870065274'  AND `source` = 'app' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_user` WHERE  `identifier` IS NULL LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_admin_company` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_admin_company` WHERE  `identifier` IS NULL LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_user` WHERE  `phone` = '18870065274'  AND `source` = 'app' LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-07-21T15:38:25+08:00 ] 127.0.0.1 127.0.0.1 POST /api/Wx/appRegist
+[ log ] www.a.com/api/Wx/appRegist [运行时间：0.044002s][吞吐率：22.73req/s] [内存消耗：333.12kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Wx',
+    2 => 'appRegist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Fiddler',
+  'host' => 'www.a.com',
+  'content-length' => '32',
+  'content-type' => 'application/x-www-form-urlencoded,',
+)
+[ info ] [ PARAM ] array (
+  '/api/Wx/appRegist' => '',
+  'phone' => '18870065274',
+  'password' => '12345',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\api\controller\Wx->appRegist[ D:\project\default\application\api\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `phone` = '18870065274'  AND `source` = 'app' LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_user` WHERE  `identifier` IS NULL LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_admin_company` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_admin_company` WHERE  `identifier` IS NULL LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_user` WHERE  `phone` = '18870065274'  AND `source` = 'app' LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-07-21T15:38:42+08:00 ] 127.0.0.1 127.0.0.1 POST /api/Wx/appRegist
+[ log ] www.a.com/api/Wx/appRegist [运行时间：0.028002s][吞吐率：35.71req/s] [内存消耗：333.07kb] [文件加载：63]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Wx',
+    2 => 'appRegist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Fiddler',
+  'host' => 'www.a.com',
+  'content-length' => '33',
+  'content-type' => 'application/x-www-form-urlencoded,',
+)
+[ info ] [ PARAM ] array (
+  '/api/Wx/appRegist' => '',
+  'phone' => '18870065274',
+  'password' => '123456',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\api\controller\Wx->appRegist[ D:\project\default\application\api\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `phone` = '18870065274'  AND `source` = 'app' LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_user` WHERE  `identifier` IS NULL LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_admin_company` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_admin_company` WHERE  `identifier` IS NULL LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_user` WHERE  `phone` = '18870065274'  AND `source` = 'app' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `snake_user` (`nickname` , `thumb` , `phone` , `company_id` , `password` , `city` , `parent_id` , `identifier` , `source` , `register_time` , `credit_money` , `current_tool_money`) VALUES ('手牵手用户' , 'http://www.a.com/static/layui/images/gray.png' , '18870065274' , 1 , 'e10adc3949ba59abbe56e057f20f883e' , '南昌' , '0' , 'ba7c10e8f23807d6eaad89add9804e3a' , 'app' , 1500622722 , '0' , '0') [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-07-21T15:39:20+08:00 ] 127.0.0.1 127.0.0.1 POST /api/Wx/changePassword
+[ log ] www.a.com/api/Wx/changePassword [运行时间：0.046002s][吞吐率：21.74req/s] [内存消耗：324.95kb] [文件加载：65]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Wx',
+    2 => 'changePassword',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Fiddler',
+  'host' => 'www.a.com',
+  'content-length' => '32',
+  'content-type' => 'application/x-www-form-urlencoded,',
+)
+[ info ] [ PARAM ] array (
+  '/api/Wx/changePassword' => '',
+  'phone' => '18870065274',
+  'password' => '12345',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\api\controller\Wx->changePassword[ D:\project\default\application\api\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `phone` = '18870065274'  AND `source` = 'app' LIMIT 1 [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-07-21T15:39:29+08:00 ] 127.0.0.1 127.0.0.1 POST /api/Wx/changePassword
+[ log ] www.a.com/api/Wx/changePassword [运行时间：0.039002s][吞吐率：25.64req/s] [内存消耗：315.59kb] [文件加载：64]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Wx',
+    2 => 'changePassword',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Fiddler',
+  'host' => 'www.a.com',
+  'content-length' => '33',
+  'content-type' => 'application/x-www-form-urlencoded,',
+)
+[ info ] [ PARAM ] array (
+  '/api/Wx/changePassword' => '',
+  'phone' => '18870065274',
+  'password' => '123456',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\api\controller\Wx->changePassword[ D:\project\default\application\api\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `phone` = '18870065274'  AND `source` = 'app' LIMIT 1 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] UPDATE `snake_user`  SET `password`='e10adc3949ba59abbe56e057f20f883e'  WHERE  `id` = 893 [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-07-21T15:39:58+08:00 ] 127.0.0.1 127.0.0.1 POST /api/Wx/changePassword
+[ log ] www.a.com/api/Wx/changePassword [运行时间：0.028001s][吞吐率：35.71req/s] [内存消耗：315.59kb] [文件加载：64]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Wx',
+    2 => 'changePassword',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Fiddler',
+  'host' => 'www.a.com',
+  'content-length' => '33',
+  'content-type' => 'application/x-www-form-urlencoded,',
+)
+[ info ] [ PARAM ] array (
+  '/api/Wx/changePassword' => '',
+  'phone' => '18870065274',
+  'password' => '132133',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\api\controller\Wx->changePassword[ D:\project\default\application\api\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `phone` = '18870065274'  AND `source` = 'app' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `snake_user`  SET `password`='dbd1b16b7996424e125745f007988757'  WHERE  `id` = 893 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-07-21T16:50:06+08:00 ] 127.0.0.1 127.0.0.1 POST /api/Wx/login
+[ log ] www.a.com/api/Wx/login [运行时间：0.060003s][吞吐率：16.67req/s] [内存消耗：397.42kb] [文件加载：71]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Wx',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Fiddler',
+  'host' => 'www.a.com',
+  'content-length' => '47',
+  'content-type' => 'application/x-www-form-urlencoded,',
+)
+[ info ] [ PARAM ] array (
+  '/api/Wx/login' => '',
+  'city' => '南昌',
+  'openid' => 'o9elqv1_pphejh9M4_RweusFfulM',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\api\controller\Wx->login[ D:\project\default\application\api\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `wx` = 'o9elqv1_pphejh9M4_RweusFfulM' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `snake_user`  SET `password`='d48cc89a007e30ddcfeb76e255f84236'  WHERE  `id` = 842 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_admin_company` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_auth_info` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 842 LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-07-21T18:06:31+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.074004s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.069004s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `phone` = '18870065274'  AND `source` = 'app' LIMIT 1 [ RunTime:0.015001s ]
+
+---------------------------------------------------------------

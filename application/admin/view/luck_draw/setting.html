@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {include file="header"}
+</head>
+<body>
+{include file="loading"}
+<div class="layui-main">
+    <div class="layui-field-box">
+        <form action="{:path('setting')}" method="post" class="layui-form">
+            <div class="layui-form-item">
+                <div class="label-title Validform_label">幸运抽奖条件</div>
+                <div><input type="text" name="xycj_conditions_buy_count" value="{$data.xycj_conditions_buy_count}" class="layui-input" datatype="n">
+                </div>
+            </div>
+            <div class="layui-form-item b-t-s">
+                {:token()}
+                <button type="submit" class="layui-btn">提交</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    layui.use('validform', function () {
+        var $ = layui.jquery;
+
+        //表单验证
+        $("form").Validform({
+            tiptype: 3
+        });
+    });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>{include file="header"}
+</head>
+<body>
+	{include file="loading"}
+	<div class="layui-main">
+		<fieldset class="layui-elem-field layui-field-title">
+			<legend>代付</legend>
+		</fieldset>
+		<div class="layui-field-box">
+			<form action="" method="post" class="layui-form">
+				<div class="layui-form-item b-t-d">
+					<div class="label-title Validform_label">代付银行卡号</div>
+					<div>
+						<input type="text" name="account_no" value="" class="layui-input"
+							datatype="n15-19">
+					</div>
+				</div>
+				<div class="layui-form-item b-t-d">
+					<div class="label-title Validform_label">代付银行卡所属人</div>
+					<div>
+						<input type="text" name="account_name" value=""
+							class="layui-input" datatype="s1-5">
+					</div>
+				</div>
+				<div class="layui-form-item b-t-d">
+					<div class="label-title Validform_label">银行</div>
+					<div style="width: 360px;">
+						<select name="bank_code" datatype="*">
+							<option value=""></option> 
+							{foreach name="banks" item="item"}
+							<option value="{$item->bank_code}">{$item->bank_name}</option>
+							{/foreach}
+						</select>
+					</div>
+				</div>
+				<div class="layui-form-item b-t-d">
+					<div class="label-title Validform_label">代付金额</div>
+					<div>
+						<input type="text" name="amount" value="" class="layui-input"
+							datatype=" /^\d+\.?\d*$/i">
+					</div>
+				</div>
+				<div class="layui-form-item b-t-d">
+					<div class="label-title ">代付摘要</div>
+					<div>
+						<input type="text" name="summary" value="" class="layui-input">
+					</div>
+				</div>
+				<div class="layui-form-item b-t-d">
+					<div class="label-title ">代付备注</div>
+					<div>
+						<input type="text" name="remark" value="" class="layui-input">
+					</div>
+				</div>
+
+
+
+				<div class="layui-form-item b-t-s">
+					{:token()}
+					<button type="submit" class="layui-btn">代付</button>
+
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<script>
+    layui.use(['base','validform','form'], function () {
+        var $ = layui.jquery;
+
+        //表单验证
+        $("form").Validform({
+            tiptype: 3
+        });
+    });
+</script>
+
+
+</body>
+</html>

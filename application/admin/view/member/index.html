@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {include file="header"}
+</head>
+<body>
+{include file="loading"}
+<div class="layui-main">
+    <fieldset class="layui-elem-field layui-field-title">
+        <legend>用户列表</legend>
+    </fieldset>
+    <fieldset class="layui-elem-field">
+        <legend>查询搜索</legend>
+        <div class="layui-field-box">
+            <form action="" method="get" class="layui-form">
+                <div class="layui-input-inline">
+                    <input type="text" name="keyword" value="{$Request.param.keyword}" class="layui-input"
+                           placeholder="手机号">
+                </div>
+                <div class="layui-input-inline">
+                    <select name="company_id">
+                        <option value="">选择公司</option>
+                        {foreach name="companys" item="item"}
+                        <option value="{$item->id}" {$Request.param.company_id==$item->id?'selected':''}>{$item->company_name}</option>
+                        {/foreach}
+                    </select>
+                </div>
+                <div class="layui-input-inline">
+                    <select name="auth_status">
+                        <option value="">认证状态</option>
+                        <option value="全部">全部</option>
+                        <option value="审核中" {$Request.param.auth_status=='审核中'?'selected':''}>审核中</option>
+                        <option value="已通过" {$Request.param.auth_status=='已通过'?'selected':''}>已通过</option>
+                        <option value="认证失败" {$Request.param.auth_status=='认证失败'?'selected':''}>认证失败</option>
+                    </select>
+                </div>
+                <button type="submit" class="layui-btn">提交</button>
+            </form>
+        </div>
+    </fieldset>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>昵称</th>
+            <th>姓名</th>
+            <th>手机号</th>
+            <th>城市</th>
+            <th>信用币</th>
+            <th>当前交易金额</th>
+            <th>所属公司</th>
+            <th>认证状态</th>
+            <th>注册时间</th>
+            <th>支付认证费订单号</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        {foreach name="list" item="item"}
+        <tr>
+            <td>{$item->nickname}</td>
+            <td>{$item->AuthInfo->name}</td>
+            <td>{$item->phone}</td>
+            <td>{$item->city}</td>
+            <td>{$item->credit_money}</td>
+            <td>{$item->current_tool_money}</td>
+            <td>{$item->AdminCompany->company_name}</td>
+            <td>{$item->AuthInfo->auth_status}</td>
+            <td>{$item->register_time|date='Y-m-d',###}</a></td>
+            <td>{$item->AuthInfo->order_id?$item->AuthInfo->order_id:'未支付'}</td>
+            <td>
+                <a href="javascript:;" data-id="{$item->id}" class="layui-btn layui-btn-mini layui-btn-normal detail">
+                    详情
+                </a>
+            </td>
+        </tr>
+        {/foreach}
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="99">
+                <div class="pagination-box">
+                    <span class="info">
+                        共{$list->total()}条数据 {$list->currentPage()}/{$list->lastPage()}页
+                    </span>
+                    {$list->render()}
+                </div>
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+</div>
+<script>
+    layui.use(['base', 'form'], function () {
+        var $ = layui.jquery;
+        $(".detail").click(function () {
+            var id = $(this).data("id");
+            layui.base().fullBox({
+                title: "查看用户信息",
+                content: "{:path('Pub/tab')}?op=用户信息,Member/user?id=" + id + ";认证信息,Member/auth?user_id=" + id,
+                end: function () {
+                    window.location.reload();
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {include file="header"}
+</head>
+<body>
+{include file="loading"}
+<div class="layui-main">
+    <fieldset class="layui-elem-field layui-field-title">
+        <legend>{$data?'修改公司账号信息':'添加新公司'}</legend>
+    </fieldset>
+    <div class="layui-field-box">
+        <form action="{$data?path('edit',['id'=>$data->id]):path('create')}" method="post" class="layui-form">
+            <div class="layui-form-item">
+                <div class="label-title">公司LOGO</div>
+                <div class="image_upload" data-name="company_pic" data-value="{$data->company_pic}"></div>
+                <span style="color:red;">图片比例必须1:1</span>
+            </div>
+            <div class="layui-form-item">
+                <div class="label-title">公司营业执照正面</div>
+                <div class="image_upload" data-name="business_licence_zheng" data-value="{$data->business_licence_zheng}"></div>
+               <!--  <span style="color:red;">图片比例必须1:1</span> -->
+            </div>
+            <div class="layui-form-item">
+                <div class="label-title">法人身份证</div>
+                <div class="image_upload" data-name="cert_correct" data-value="{$data->cert_correct}"></div>
+                <!-- <span style="color:red;">图片比例必须1:1</span> -->
+            </div>
+             <div class="layui-form-item">
+                <div class="label-title">法人身份证反面</div>
+                <div class="image_upload" data-name="cert_opposite" data-value="{$data->cert_opposite}"></div>
+                <!-- <span style="color:red;">图片比例必须1:1</span> -->
+            </div>
+            <div class="layui-form-item">
+                <div class="label-title">银行正面</div>
+                <div class="image_upload" data-name="card_correct" data-value="{$data->card_correct}"></div>
+                <!-- <span style="color:red;">图片比例必须1:1</span> -->
+            </div>
+            <div class="layui-form-item">
+                <div class="label-title">银行背面</div>
+                <div class="image_upload" data-name="card_opposite" data-value="{$data->card_opposite}"></div>
+                <!-- <span style="color:red;">图片比例必须1:1</span> -->
+            </div>
+              <div class="layui-form-item">
+                <div class="label-title">手持身份证图片</div>
+                <div class="image_upload" data-name="cert_meet" data-value="{$data->cert_meet}"></div>
+                <!-- <span style="color:red;">图片比例必须1:1</span> -->
+            </div>
+            <div class="layui-form-item b-t-d">
+                <div class="label-title Validform_label">登录账号</div>
+                <div><input type="text" name="username" value="{$data->username}" class="layui-input" datatype="s6-15">
+                </div>
+            </div>
+            <div class="layui-form-item b-t-d">
+                <div class="label-title">登录密码</div>
+                <div><input type="password" name="password" class="layui-input" placeholder="{$data?'留空不修改':''}"></div>
+            </div>
+            <div class="layui-form-item b-t-d">
+                <div class="label-title Validform_label">公司名称</div>
+                <div><input type="text" name="company_name" value="{$data->company_name}" class="layui-input"
+                            datatype="s3-50"></div>
+            </div>
+            <div class="layui-form-item b-t-d">
+                <div class="label-title Validform_label">平台赋予信用币</div>
+                <div><input type="text" name="give_credit_money" value="{$data->give_credit_money}" class="layui-input"
+                            datatype="s1-50"></div>
+            </div>
+            <div class="layui-form-item b-t-d">
+                <div class="label-title Validform_label">最低费率（0.001-0.999）</div>
+                <div><input type="text" name="min_rate" value="{$data->min_rate}" class="layui-input"
+                            datatype="/^0\.\d{1,3}$/">
+                </div>
+            </div>
+            <div class="layui-form-item b-t-d">
+                <div class="label-title Validform_label">自营费率（0.001-0.999）</div>
+                <div><input type="text" name="rate" value="{$data->rate}" class="layui-input" datatype="/^0\.\d{1,3}$/">
+                </div>
+            </div>
+            <div class="layui-form-item b-t-d">
+                <div class="label-title Validform_label">通道收取费率</div>
+                <div><input type="text" name="commission_charge" value="{$data->commission_charge}" class="layui-input"  datatype="/^0\.\d{1,3}$/">
+                </div>
+            </div>
+            <div class="layui-form-item b-t-d">
+                <div class="label-title Validform_label">通道每笔订单收取费用</div>
+                <div><input type="text" name="order_expense" value="{$data->order_expense}" class="layui-input" datatype="/^\d+(\.\d+)?$/">
+                </div>
+            </div>
+            <div class="layui-form-item b-t-d">
+                <div class="label-title Validform_label">银行卡号</div>
+                <div><input type="text" name="union_pay_config[bank_no]" value="{$data->union_pay_config['bank_no']}" class="layui-input" datatype="*">
+                </div>
+            </div>
+            <div class="layui-form-item b-t-d">
+                <div class="label-title Validform_label">开户行</div>
+                <div><input type="text" name="union_pay_config[bank_name]" value="{$data->union_pay_config['bank_name']}" class="layui-input" datatype="*">
+                </div>
+            </div>
+            <div class="layui-form-item b-t-d">
+                <div class="label-title Validform_label">开户支行</div>
+                <div><input type="text" name="union_pay_config[bank_sub]" value="{$data->union_pay_config['bank_sub']}" class="layui-input" datatype="*">
+                </div>
+            </div>
+            <div class="layui-form-item b-t-d">
+                <div class="label-title Validform_label">联行号</div>
+                <div>
+                    <input type="text" name="union_pay_config[bank_code]" value="{$data->union_pay_config['bank_code']}" class="layui-input" datatype="*">
+                    <a href="http://www.posp.cn/" target="_blank" style="color:blue;">联行号查询</a>
+                </div>
+            </div>
+            <div class="layui-form-item b-t-d">
+                <div class="label-title Validform_label">身份证</div>
+                <div><input type="text" name="union_pay_config[card_no]" value="{$data->union_pay_config['card_no']}" class="layui-input" datatype="*">
+                </div>
+            </div>
+            <div class="layui-form-item b-t-d">
+                <div class="label-title Validform_label">银行卡持有人姓名</div>
+                <div><input type="text" name="union_pay_config[name]" value="{$data->union_pay_config['name']}" class="layui-input" datatype="*">
+                </div>
+            </div>
+            <div class="layui-form-item b-t-d">
+                <div class="label-title Validform_label">手机号</div>
+                <div><input type="text" name="union_pay_config[mobile]" value="{$data->union_pay_config['mobile']}" class="layui-input" datatype="*">
+                </div>
+            </div>
+            <div class="layui-form-item b-t-s">
+                {:token()}
+                <button type="submit" class="layui-btn">提交</button>
+                {if $data}
+                <button type="button" class="layui-btn layui-btn-primary" onclick="window.history.back()">返回</button>
+                {/if}
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    layui.use(['base','validform'], function () {
+        var $ = layui.jquery;
+
+        //表单验证
+        $("form").Validform({
+            tiptype: 3
+        });
+    });
+</script>
+
+
+</body>
+</html>

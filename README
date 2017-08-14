@@ -1,0 +1,48 @@
+#crontab计划任务
+
+#典当信息结束处理
+*/1 * * * * php /home/wwwroot/default/public/index.php api/Wx/task/type/FinishOrder
+#典当信息过期下架
+*/1 * * * * php /home/wwwroot/default/public/index.php api/Wx/task/type/HaltOrder
+#推送新发布的典当信息
+*/1 * * * * php /home/wwwroot/default/public/index.php api/Wx/pawnNotice
+#幸运抽奖支付超时处理
+*/1 * * * * cd /home/wwwroot/default/ && php think LuckDrawCancelOrder
+#幸运抽奖每日统计
+30 1 * * * cd /home/wwwroot/default/ && php think LuckDrawDayCount
+#幸运抽奖过期处理
+*/1 * * * * cd /home/wwwroot/default/ && php think LuckDrawFailed
+
+
+#后台模块
+|-application
+|--admin
+|---controller
+|----AdminBase.php       //公共
+|----Company.php         //公司(平台)
+|----CompanyHome.php     //公司(公司)
+|----Distribution.php    //推广分销
+|----Document.php        //文档
+|----Index.php           //首页
+|----Loan.php            //贷款
+|----LuckDraw.php        //幸运抽奖
+|----Member.php          //会员
+|----Pawn.php            //典当
+|----Pub.php             //无验证
+|----Upload.php          //上传
+
+#接口模块
+|-application
+|--api
+|---controller
+|----Document.php        //文档
+|----Lucky.php           //幸运抽奖接口
+|----Server.php          //微信推送API
+|----Wx.php              //微信接口
+
+#数据库
+|-snake_2017-06-14.sql
+
+
+#项目远程目录
+/home/wwwroot/default

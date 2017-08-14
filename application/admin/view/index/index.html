@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    {include file="header"}
+</head>
+<body>
+<div class="logo"><img src="__LAYUI__/images/logo.jpg" style="width:100%;height:73px;"></div>
+{if LOGIN_TYPE eq 'admin'}
+<div class="disk">
+    <div class="used" style="width:{:round(150-150/disk_total_space('/')*disk_free_space('/'))}px"></div>
+    <span><img src="__LAYUI__/images/disk.png"> {:round(100-100/disk_total_space('/')*disk_free_space('/'))}% / {:round(100/disk_total_space('/')*disk_free_space('/'))}%</span>
+</div>
+{/if}
+<div class="layui-tab" lay-filter="nav" id="frame">
+    <ul class="layui-tab-title">
+        {foreach name=":config('menu.top')" item="item"}
+        {if in_array(LOGIN_TYPE,$item.args)}
+        <li class="{$key>0?'':'layui-this'}">{$item.text}</li>
+        {/if}
+        {/foreach}
+    </ul>
+    <div class="layui-login-info">
+        <div class="shortcut">
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+        </div>
+        您好! <span>{:session('admin.username')}</span>。您的IP是：<span>{:clientIp()}</span>
+        <button href="javascript:;" class="layui-btn layui-btn-mini layui-btn-normal iframe-item"
+                data-url="{:path('Pub/updatePwd')}">改密
+        </button>
+        <button href="javascript:;" class="layui-btn layui-btn-mini layui-btn-danger iframe-item sign-out"
+                onclick="parent.window.location.href='{:path(\'Pub/signOut\')}'">
+            注销
+        </button>
+    </div>
+    <div class="layui-tab-content">
+        <!--左侧菜单-->
+        {include file="index/menu"}
+    </div>
+    <iframe id="main" src="{:path('CompanyHome/index')}" frameborder="0" seamless></iframe>
+</div>
+<script>
+    layui.use('base');
+</script>
+</body>
+</html>

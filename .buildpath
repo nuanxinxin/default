@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildpath>
+	<buildpathentry kind="src" path="application"/>
+	<buildpathentry kind="src" path="extend"/>
+	<buildpathentry kind="src" path="public"/>
+	<buildpathentry kind="src" path="runtime/cache/setting/a8"/>
+	<buildpathentry kind="src" path="runtime/cache/setting/c4"/>
+	<buildpathentry kind="src" path="runtime/cache/setting/c8"/>
+	<buildpathentry kind="src" path="runtime/cache/setting/e4"/>
+	<buildpathentry kind="src" path="runtime/cache/setting/ec"/>
+	<buildpathentry kind="src" path="runtime/cache/slide/e0"/>
+	<buildpathentry kind="src" path="runtime/temp"/>
+	<buildpathentry kind="src" path="vendor"/>
+	<buildpathentry kind="con" path="org.eclipse.php.core.LANGUAGE"/>
+</buildpath>

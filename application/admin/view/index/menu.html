@@ -1,0 +1,99 @@
+<!--公司-->
+{if LOGIN_TYPE eq 'company' or LOGIN_TYPE eq 'admin'}
+<div class="layui-tab-item layui-show">
+    <ul class="layui-menu">
+        <li class="title"><img src="__LAYUI__/images/menu/seller.png"><a href="javascript:;">公司信息</a></li>
+        <li class="item iframe-item" data-url="{:path('CompanyHome/index')}"><a href="javascript:;">基本信息</a></li>
+    </ul>
+    <ul class="layui-menu">
+        <li class="title"><img src="__LAYUI__/images/menu/trade.png"><a href="javascript:;">交易管理</a></li>
+        <li class="item iframe-item" data-url="{:path('CompanyHome/toolRecord')}"><a href="javascript:;">交易记录</a></li>
+        <!--<li class="item iframe-item" data-url=""><a href="javascript:;">手续费配置</a></li>-->
+    </ul>
+    <ul class="layui-menu">
+        <li class="title"><img src="__LAYUI__/images/menu/bonus.png"><a href="javascript:;">佣金管理</a></li>
+        <li class="item iframe-item" data-url="{:path('Pub/tab')}?op=认证推广,CompanyHome/authIncom"><a href="javascript:;">账单</a></li>
+    </ul>
+    <ul class="layui-menu">
+        <li class="title"><img src="__LAYUI__/images/menu/user.png"><a href="javascript:;">用户管理</a></li>
+        <li class="item iframe-item" data-url="{:path('CompanyHome/member')}"><a href="javascript:;">用户列表</a></li>
+   		<li class="item iframe-item" data-url="{:path('Pub/tab')}?op=奖品,CompanyHome/recharge;充值记录,CompanyHome/rechargeRecord"><a href="javascript:;">充值信用币</a></li>
+    </ul>
+    <ul class="layui-menu">
+        <li class="title"><img src="__LAYUI__/images/menu/bonus.png"><a href="javascript:;">幸运抽奖</a></li>
+        <li class="item iframe-item" data-url="{:path('Pub/tab')}?op=奖品,LuckDraw/prizeGoods;新增奖品,LuckDraw/prizeGoodsAdd"><a href="javascript:;">奖品管理</a></li>
+        <li class="item iframe-item" data-url="{:path('Pub/tab')}?op=活动,LuckDraw/activity;新增活动,LuckDraw/activityAdd"><a href="javascript:;">活动管理</a></li>
+        <li class="item iframe-item" data-url="{:path('Pub/tab')}?op=兑奖,LuckDraw/duijiang;中奖记录,LuckDraw/spoilRecord;幸运兑奖,LuckDraw/xydj"><a href="javascript:;">兑奖记录</a></li>
+        <li class="item iframe-item" data-url="{:path('LuckDraw/settlement')}"><a href="javascript:;">每日结算</a></li>
+        <li class="item iframe-item" data-url="{:path('LuckDraw/setting')}"><a href="javascript:;">设置</a></li>
+    </ul>
+     <ul class="layui-menu">
+        <li class="title"><img src="__LAYUI__/images/menu/trade.png"><a href="javascript:;">账单详情</a></li>
+       <li class="item iframe-item" data-url="{:path('CompanyOrder/orderList')}"><a href="javascript:;">交易记录</a></li>
+       <li class="item iframe-item" data-url="{:path('CompanyOrder/settleList')}"><a href="javascript:;">提现记录</a></li>
+        <li class="item iframe-item" data-url="{:path('CompanyOrder/dailyRecord')}"><a href="javascript:;">每日交易记录</a></li>
+
+    </ul>
+</div>
+{/if}
+<!--平台-->
+{if LOGIN_TYPE eq 'admin'}
+<div class="layui-tab-item">
+    <ul class="layui-menu">
+        <li class="title"><img src="__LAYUI__/images/menu/seller.png"><a href="javascript:;">公司管理</a></li>
+        <li class="item iframe-item" data-url="{:path('Company/create')}"><a href="javascript:;">添加新公司</a></li>
+        <li class="item iframe-item" data-url="{:path('Company/index')}"><a href="javascript:;">公司列表</a></li>
+        <li class="item iframe-item" data-url="{:path('Company/toolRecord')}"><a href="javascript:;">交易记录</a></li>
+    </ul>
+    <ul class="layui-menu">
+        <li class="title"><img src="__LAYUI__/images/menu/user.png"><a href="javascript:;">用户管理</a></li>
+        <li class="item iframe-item" data-url="{:path('Member/index')}"><a href="javascript:;">用户列表</a></li>
+        <li class="item iframe-item" data-url="{:path('Member/collection')}"><a href="javascript:;">提现申请</a></li>
+    </ul>
+    <ul class="layui-menu">
+        <li class="title"><img src="__LAYUI__/images/menu/spread.png"><a href="javascript:;">推广分销</a></li>
+        <li class="item iframe-item" data-url="{:path('Distribution/profit')}"><a href="javascript:;">推广记录</a></li>
+        <li class="item iframe-item" data-url="{:path('Pub/tab')}?op=推广收益,Distribution/setting"><a href="javascript:;">设置</a>
+        </li>
+    </ul>
+    <!--<ul class="layui-menu">-->
+        <!--<li class="title"><img src="__LAYUI__/images/menu/pay.png"><a href="javascript:;">支付通道</a></li>-->
+        <!--<li class="item iframe-item" data-url=""><a href="javascript:;">支付页面链接</a></li>-->
+        <!--<li class="item iframe-item" data-url=""><a href="javascript:;">费率</a></li>-->
+    <!--</ul>-->
+    <ul class="layui-menu">
+        <li class="title"><img src="__LAYUI__/images/menu/document.png"><a href="javascript:;">文档内容</a></li>
+        <li class="item iframe-item" data-url="{:path('Document/index')}"><a href="javascript:;">文档列表</a></li>
+        <li class="item iframe-item" data-url="{:path('Document/slide')}"><a href="javascript:;">首页轮播图</a></li>
+        <li class="item iframe-item" data-url="{:path('Document/webConfig')}"><a href="javascript:;">站点配置</a></li>
+        <li class="item iframe-item" data-url="{:path('Document/question')}"><a href="javascript:;">问题回复</a></li>
+    </ul>
+    <ul class="layui-menu">
+        <li class="title"><img src="__LAYUI__/images/menu/loan.png"><a href="javascript:;">贷款信息管理</a></li>
+        <li class="item iframe-item" data-url="{:path('Loan/index')}"><a href="javascript:;">信息列表</a></li>
+        <li class="item iframe-item" data-url="{:path('Loan/index')}?status=待审核"><a href="javascript:;">信息审核</a></li>
+        <li class="item iframe-item" data-url="{:path('Loan/index')}?apply_refund=1"><a href="javascript:;">退保证金</a></li>
+        <li class="item iframe-item" data-url="{:path('Loan/setting')}"><a href="javascript:;">信息参数配置</a></li>
+    </ul>
+    <ul class="layui-menu">
+        <li class="title"><img src="__LAYUI__/images/menu/pawn.png"><a href="javascript:;">典当信息管理</a></li>
+        <li class="item iframe-item" data-url="{:path('Pawn/index')}"><a href="javascript:;">典当列表</a></li>
+        <li class="item iframe-item" data-url="{:path('Pawn/index')}?status=待审核"><a href="javascript:;">典当审核</a></li>
+        <li class="item iframe-item" data-url="{:path('Pawn/index')}?apply_refund=1"><a href="javascript:;">退押金</a></li>
+        <li class="item iframe-item" data-url="{:path('Pawn/setting')}"><a href="javascript:;">典当参数配置</a></li>
+    </ul>
+    <ul class="layui-menu">
+        <li class="title"><img src="__LAYUI__/images/menu/bonus.png"><a href="javascript:;">幸运抽奖</a></li>
+        <li class="item iframe-item" data-url="{:path('LuckDraw/merchantSettlement')}"><a href="javascript:;">商家结算</a></li>
+        <li class="item iframe-item" data-url="{:path('LuckDraw/tuijian')}"><a href="javascript:;">推荐</a></li>
+        <li class="item iframe-item" data-url="{:path('LuckDraw/notify')}"><a href="javascript:;">公告</a></li>
+        <li class="item iframe-item" data-url="{:path('Pub/tab')}?op=奖品分类,LuckDraw/goodsClass;新增分类,LuckDraw/goodsClassAdd"><a href="javascript:;">奖品分类</a></li>
+        
+    </ul>
+     <ul class="layui-menu">
+        <li class="title"><img src="__LAYUI__/images/menu/spread.png"><a href="javascript:;">代付</a></li>
+        <li class="item iframe-item" data-url="{:path('Pub/tab')}?op=代付,Replace/pay;代付详情,Replace/detail"><a href="javascript:;">代付</a></li>
+        </li>
+    </ul>
+</div>
+{/if}

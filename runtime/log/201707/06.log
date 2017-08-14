@@ -1,0 +1,477 @@
+[ 2017-07-06T16:41:40+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/member/collection.html
+[ log ] www.a.com/admin/member/collection.html [运行时间：0.087005s][吞吐率：11.49req/s] [内存消耗：603.19kb] [文件加载：73]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.001001s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'member',
+    2 => 'collection',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=e2ttks69m4avdichae7o9bus57; thinkphp_show_page_trace=0|0; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/member/collection_html' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Member->collection[ D:\project\default\application\admin\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view\member\collection.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_credit_record` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `snake_credit_record` WHERE  `type` = '提现' LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_credit_record` WHERE  `type` = '提现' ORDER BY id desc LIMIT 0,1000 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 104 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_auth_info` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 104 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 694 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 694 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 79 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 79 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 45 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 45 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 707 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 707 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 600 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 600 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 600 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 600 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 168 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 168 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 79 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 79 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 79 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 79 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 31 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 31 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 28 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-07-06T16:41:42+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/member/reject.html?id=939
+[ log ] www.a.com/admin/member/reject.html?id=939 [运行时间：0.026002s][吞吐率：38.46req/s] [内存消耗：332.46kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'member',
+    2 => 'reject',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin/member/collection.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=e2ttks69m4avdichae7o9bus57; thinkphp_show_page_trace=0|0; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/member/reject_html' => '',
+  'id' => '939',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Member->reject[ D:\project\default\application\admin\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view/jump.html [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view/jump.html [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_credit_record` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_credit_record` WHERE  `id` = 939 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_credit_record` WHERE  `id` = 939 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `snake_credit_record`  SET `title`='提现驳回',`status`='审核中'  WHERE  `id` = 939 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `snake_credit_record` (`user_id` , `money` , `title` , `type` , `create_time` , `status`) VALUES (104 , 192 , '提现驳回' , '提现驳回' , 1499330502 , '正常') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE snake_user SET credit_money=credit_money+192 WHERE id=104 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-07-06T16:41:45+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/member/collection.html
+[ log ] www.a.com/admin/member/collection.html [运行时间：0.068004s][吞吐率：14.71req/s] [内存消耗：602.13kb] [文件加载：73]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'member',
+    2 => 'collection',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=e2ttks69m4avdichae7o9bus57; thinkphp_show_page_trace=0|0; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/member/collection_html' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Member->collection[ D:\project\default\application\admin\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view\member\collection.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_credit_record` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `snake_credit_record` WHERE  `type` = '提现' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_credit_record` WHERE  `type` = '提现' ORDER BY id desc LIMIT 0,1000 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 104 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_auth_info` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 104 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 694 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 694 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 79 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 79 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 45 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 45 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 707 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 707 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 600 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 600 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 600 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 600 LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 168 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 168 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 79 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 79 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 79 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 79 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 31 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 31 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 28 LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-07-06T16:42:41+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/member/collection.html
+[ log ] www.a.com/admin/member/collection.html [运行时间：0.069004s][吞吐率：14.49req/s] [内存消耗：603.23kb] [文件加载：73]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'member',
+    2 => 'collection',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=e2ttks69m4avdichae7o9bus57; thinkphp_show_page_trace=0|0; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/member/collection_html' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Member->collection[ D:\project\default\application\admin\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view\member\collection.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_credit_record` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `snake_credit_record` WHERE  `type` = '提现' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_credit_record` WHERE  `type` = '提现' ORDER BY id desc LIMIT 0,1000 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 104 LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_auth_info` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 104 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 694 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 694 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 79 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 79 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 45 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 45 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 707 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 707 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 600 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 600 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 600 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 600 LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 168 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 168 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 79 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 79 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 79 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 79 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 31 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 31 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 28 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-07-06T16:42:44+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/member/reject.html?id=939
+[ log ] www.a.com/admin/member/reject.html?id=939 [运行时间：0.037002s][吞吐率：27.03req/s] [内存消耗：332.25kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'member',
+    2 => 'reject',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin/member/collection.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=e2ttks69m4avdichae7o9bus57; thinkphp_show_page_trace=0|0; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/member/reject_html' => '',
+  'id' => '939',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Member->reject[ D:\project\default\application\admin\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view/jump.html [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_credit_record` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_credit_record` WHERE  `id` = 939 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_credit_record` WHERE  `id` = 939 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `snake_credit_record`  SET `title`='提现驳回',`status`='审核中'  WHERE  `id` = 939 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `snake_credit_record` (`user_id` , `money` , `title` , `type` , `create_time` , `status`) VALUES (104 , 192 , '提现驳回' , '提现驳回' , 1499330564 , '正常') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE snake_user SET credit_money=credit_money+192 WHERE id=104 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-07-06T16:42:47+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/member/collection.html
+[ log ] www.a.com/admin/member/collection.html [运行时间：0.078004s][吞吐率：12.82req/s] [内存消耗：602.29kb] [文件加载：73]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'member',
+    2 => 'collection',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin/member/reject.html?id=939',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=e2ttks69m4avdichae7o9bus57; thinkphp_show_page_trace=0|0; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/member/collection_html' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Member->collection[ D:\project\default\application\admin\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view\member\collection.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_credit_record` [ RunTime:0.015000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `snake_credit_record` WHERE  `type` = '提现' LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_credit_record` WHERE  `type` = '提现' ORDER BY id desc LIMIT 0,1000 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 104 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_auth_info` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 104 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 28 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 694 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 694 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 79 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 79 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 45 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 45 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 707 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 707 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 600 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 600 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 600 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 600 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 28 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 168 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 168 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 79 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 79 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 79 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 79 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 31 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 31 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 28 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 28 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 28 LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------

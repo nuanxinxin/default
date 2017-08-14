@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {include file="header"}
+    <style>
+        .fee-total span {
+            display: inline-block;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        .fee-total span a {
+            color: #FF5722 !important;
+            cursor: default;
+        }
+    </style>
+</head>
+<body>
+{include file="loading"}
+<div class="layui-main">
+    <fieldset class="layui-elem-field">
+        <legend>查询搜索</legend>
+        <div class="layui-field-box">
+            <form action="" method="get" class="layui-form">
+                <div class="layui-input-inline">
+                    <select name="status">
+                        <option value="">打款状态</option>
+                        <option value="全部">全部</option>
+                        <option value="0" {$Request.param.status=='0'?'selected':''}>等待打款</option>
+                        <option value="1" {$Request.param.status=='1'?'selected':''}>确认大款</option>
+                    </select>
+                                     
+                </div>
+                 {if LOGIN_TYPE eq 'admin'}
+                <div class="layui-input-inline">
+                    <select name="company_id">
+                        <option value="">选择公司</option>
+                        {foreach name="companys" item="item"}
+                        <option value="{$item->id}" {$Request.param.company_id==$item->id?'selected':''}>{$item->company_name}</option>
+                        {/foreach}
+                    </select>
+                </div>
+                {/if}
+                <button type="submit" class="layui-btn">提交</button>
+            </form>
+        </div>
+    </fieldset>
+    <table class="table">
+        <thead>
+        <tr>
+        	<th>提现编号</th>
+            <th>提现金额</th>
+            <th>提现时间</th>
+            <th>提现手续费</th>
+           {if LOGIN_TYPE eq 'admin'}
+            <th>公司名</th>
+            {/if}
+            <th>状态</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        {foreach name="list" item="item"}
+        <tr>
+            <td>{$item->id}</td>
+            <td>{$item->price}元</td>
+            <td>{$item->create_time|date='Y-m-d H:i:s',###}</td>
+             <td>{$item->commission}</td>
+           {if LOGIN_TYPE eq 'admin'}
+            <th>{$item->company->company_name}</th>
+            {/if}
+            {if LOGIN_TYPE eq 'admin'}
+            <td>{if condition="$item->status eq 0"}<a href="javascript:;" class="layui-btn layui-btn-danger layui-btn-mini status" data-id="{$item->id}">确认打款</a>
+           {else/}&nbsp;&nbsp;已打款{/if}
+           &nbsp;&nbsp;<a href="javascript:;" class="layui-btn layui-btn-danger layui-btn-mini detail" data-id="{$item->id}">提现订单详情</a>
+            </td>
+           {else/}
+            <td>{if condition="$item->status eq 0"}等待打款{else/}已打款{/if}<span style="width:10px;">&nbsp;</sapn><a href="javascript:;" class="layui-btn layui-btn-danger layui-btn-mini detail" data-id="{$item->id}">提现订单详情</a></td>
+            {/if}
+            
+        </tr>
+        {/foreach}
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="99">
+                <div class="pagination-box">
+                    <span class="info">
+                        共{$list->total()}条数据 {$list->currentPage()}/{$list->lastPage()}页
+                    </span>
+                    {$list->render()}
+                </div>
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+</div>
+<script>
+layui.use(['base', 'form'], function () {
+    var $ = layui.jquery;
+    $(".status").click(function () {
+        var id = $(this).data("id");
+        layui.base().fullBox({
+            title: "提现信息",
+            content: "{:path('settleStatus')}?id=" + id,
+            end: function () {
+                window.location.reload();
+            }
+        });
+    });
+    $(".detail").click(function () {
+        var id = $(this).data("id");
+        layui.base().fullBox({
+            title: "提现订单",
+            content: "{:path('settleDetail')}?id=" + id,
+            end: function () {
+                window.location.reload();
+            }
+        });
+    });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {include file="header"}
+    <style>
+        .fee-total span {
+            display: inline-block;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        .fee-total span a {
+            color: #FF5722 !important;
+            cursor: default;
+        }
+    </style>
+</head>
+<body>
+{include file="loading"}
+<div class="layui-main">
+            	{if LOGIN_TYPE eq 'admin'}
+     <div class="fee-total">
+        <span class="layui-breadcrumb" lay-separator="|">
+          <a href="javascript:;">{$date}日&nbsp;&nbsp;&nbsp;交易金额：{$todayTradeNo|sprintf='%.2f',###}元        
+          </a>
+        </span>
+    </div>
+    <fieldset class="layui-elem-field">
+        <legend>查询搜索</legend>
+        <div class="layui-field-box">
+            <form action="" method="get" class="layui-form">
+
+                <div class="layui-input-inline">
+                    <select name="company_id">
+                        <option value="">选择公司</option>
+                        {foreach name="companys" item="item"}
+                        <option value="{$item->id}" {$Request.param.company_id==$item->id?'selected':''}>{$item->company_name}</option>
+                        {/foreach}
+                    </select>
+                </div>
+                 <div class="layui-input-inline">
+                    <select name="settle">
+                        <option value="">结算状态</option>
+                        <option value="全部">全部</option>
+                        <option value="0" {$Request.param.settle=='0'?'selected':''}>等待结算</option>
+                        <option value="1" {$Request.param.settle=='1'?'selected':''}>已结算</option>
+                    </select>
+                </div>
+                {if LOGIN_TYPE eq 'admin'}
+                <div class="layui-input-inline">
+                    <select name="channel">
+                        <option value="">选择支付渠道</option>
+						<option value="wlb" {$Request.param.channel=='wlb'?'selected':''}>微联宝(支付宝)</option>
+						<option value="JHF" {$Request.param.channel=='JHF'?'selected':''}>聚合富(微信)</option>
+						<option value="HF" {$Request.param.channel=='HF'?'selected':''}>恒丰(支付宝)</option>
+                    </select>
+                </div>
+                {/if}
+                <div class="layui-input-inline">
+                    <input type="text" name="order_id" value="{$Request.param.order_id}" class="layui-input"
+                           placeholder="订单号查询">
+                </div>
+                <button type="submit" class="layui-btn">提交</button>
+            </form>
+        </div>
+    </fieldset>
+{/if}
+    <table class="table">
+        <thead>
+        <tr>
+        	<th>订单号</th>
+            <th>订单金额</th>
+            <th>操作</th>
+           {if LOGIN_TYPE eq 'admin'}
+            <th>公司名</th>
+            {/if}
+            <th>结算状态</th>
+             {if LOGIN_TYPE eq 'admin'}
+            <th>使用通道</th>
+            {/if}
+        </tr>
+        </thead>
+        <tbody>
+
+        {foreach name="list" item="item"}
+        <tr>
+            <td>{$item->order_id}</td>
+            <td>{$item->amount|sprintf='%.2f',###}元</td>
+            <td>{$item->update_time|date='Y-m-d H:i:s',###}</td>
+                       {if LOGIN_TYPE eq 'admin'}
+            <th>{$item->company->company_name}</th>
+            {/if}
+            <td>{if condition="$item->settle eq 0"}<span style="color:#f90707">未结算</span>{else/}<span style="color:#15af40">已结算</span>{/if}</td>
+       			{if LOGIN_TYPE eq 'admin'}
+       		<td>{switch name="item->channel"}{case value='wlb'}微联宝(支付宝){/case}{case value='JHF'}聚合富(微信){/case}{case value='HF'}恒丰(支付宝){/case}{/switch}</td>	
+        	{/if}
+        </tr>
+        {/foreach}
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="99">
+                <div class="pagination-box">
+                    <span class="info">
+                        共{$list->total()}条数据 {$list->currentPage()}/{$list->lastPage()}页
+                    </span>
+                    {$list->render()}
+                </div>
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+</div>
+<script>
+layui.use(['base', 'form'], function () {
+    var $ = layui.jquery;
+    $(".status").click(function () {
+        var id = $(this).data("id");
+        layui.base().fullBox({
+            title: "详情",
+            content: "{:path('detail')}?id=" + id,
+            end: function () {
+                window.location.reload();
+            }
+        });
+    });
+
+});
+    layui.use(['base', 'form']);
+</script>
+</body>
+</html>

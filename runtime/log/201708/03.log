@@ -1,0 +1,3108 @@
+[ 2017-08-03T11:00:36+08:00 ] 127.0.0.1 127.0.0.1 GET /admin
+[ log ] www.a.com/admin [运行时间：0.190011s][吞吐率：5.26req/s] [内存消耗：599.16kb] [文件加载：57]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin-login.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\project\default\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-03T11:00:36+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/company_order/dailyrecord.html
+[ log ] www.a.com/admin/company_order/dailyrecord.html [运行时间：0.192011s][吞吐率：5.21req/s] [内存消耗：454.33kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'company_order',
+    2 => 'dailyrecord',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/company_order/dailyrecord_html' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\CompanyOrder->dailyrecord[ D:\project\default\application\admin\controller\CompanyOrder.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view\company_order\dailyrecord.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.041002s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_company_order` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `snake_company_order` WHERE  `status` = 1 GROUP BY FROM_UNIXTIME(create_time,'%Y-%m-%d') ) `_group_count_` LIMIT 1 [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT FROM_UNIXTIME(create_time,'%Y-%m-%d') as days,sum(amount) as total_price FROM `snake_company_order` WHERE  `status` = 1 GROUP BY FROM_UNIXTIME(create_time,'%Y-%m-%d') ORDER BY days desc LIMIT 0,10 [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-08-03T11:00:36+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[ log ] www.a.com/favicon.ico [运行时间：0.025001s][吞吐率：40.00req/s] [内存消耗：151.68kb] [文件加载：45]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-03T11:00:37+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/Pub/test4
+[ log ] www.a.com/admin/Pub/test4 [运行时间：1.549089s][吞吐率：0.65req/s] [内存消耗：311.78kb] [文件加载：53]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Pub',
+    2 => 'test4',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/Pub/test4' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Pub->test4[ D:\project\default\application\admin\controller\Pub.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-03T15:34:46+08:00 ] 127.0.0.1 127.0.0.1 GET /admin
+[ log ] www.a.com/admin [运行时间：0.038002s][吞吐率：26.31req/s] [内存消耗：216.25kb] [文件加载：57]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin-login.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\project\default\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-03T15:34:46+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/company_order/dailyrecord.html
+[ log ] www.a.com/admin/company_order/dailyrecord.html [运行时间：0.027001s][吞吐率：37.04req/s] [内存消耗：388.13kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'company_order',
+    2 => 'dailyrecord',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/company_order/dailyrecord_html' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\CompanyOrder->dailyrecord[ D:\project\default\application\admin\controller\CompanyOrder.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view\company_order\dailyrecord.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_company_order` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `snake_company_order` WHERE  `status` = 1 GROUP BY FROM_UNIXTIME(create_time,'%Y-%m-%d') ) `_group_count_` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT FROM_UNIXTIME(create_time,'%Y-%m-%d') as days,sum(amount) as total_price FROM `snake_company_order` WHERE  `status` = 1 GROUP BY FROM_UNIXTIME(create_time,'%Y-%m-%d') ORDER BY days desc LIMIT 0,10 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-03T15:34:49+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/company_order/orderlist.html
+[ log ] www.a.com/admin/company_order/orderlist.html [运行时间：0.075004s][吞吐率：13.33req/s] [内存消耗：682.28kb] [文件加载：73]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'company_order',
+    2 => 'orderlist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/company_order/orderlist_html' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\CompanyOrder->orderList[ D:\project\default\application\admin\controller\CompanyOrder.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view\company_order\orderlist.html [ array (
+  0 => 'companys',
+  1 => 'totalSettle',
+  2 => 'totalSettleNo',
+  3 => 'todayTradeNo',
+  4 => 'totalCommission',
+  5 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_admin_company` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_company_order` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `snake_company_order` WHERE  `order_id` LIKE '%%' LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_company_order` WHERE  `order_id` LIKE '%%' ORDER BY id desc LIMIT 0,20 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT SUM(amount) AS tp_sum FROM `snake_company_order` WHERE  (  status=1 )  AND `settle` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT SUM(amount) AS tp_sum FROM `snake_company_order` WHERE  (  status=1 )  AND `settle` = 0 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT SUM(amount) AS tp_sum FROM `snake_company_order` WHERE  (  status=1 )  AND `settle` = 0  AND `update_time` BETWEEN 1501689600 AND 1501776000 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_company_settle` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT SUM(commission) AS tp_sum FROM `snake_company_settle` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 59 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 59 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 59 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 59 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 59 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 59 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 59 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [8]未定义变量: settleWhere[D:\project\default\application\admin\controller\CompanyOrder.php:61]
+
+---------------------------------------------------------------
+[ 2017-08-03T15:34:50+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/company_order/settlelist.html
+[ log ] www.a.com/admin/company_order/settlelist.html [运行时间：0.039003s][吞吐率：25.64req/s] [内存消耗：579.23kb] [文件加载：73]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'company_order',
+    2 => 'settlelist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/company_order/settlelist_html' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\CompanyOrder->settleList[ D:\project\default\application\admin\controller\CompanyOrder.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view\company_order\settlelist.html [ array (
+  0 => 'companys',
+  1 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_admin_company` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_company_settle` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `snake_company_settle` WHERE  `order_id` LIKE '%%' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_company_settle` WHERE  `order_id` LIKE '%%' ORDER BY id desc LIMIT 0,10 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 59 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 59 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 59 LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [8]未定义变量: status[D:\project\default\application\admin\controller\CompanyOrder.php:106]
+[ error ] [8]未定义变量: baseWhere[D:\project\default\application\admin\controller\CompanyOrder.php:114]
+[ error ] [8]未定义变量: order_id[D:\project\default\application\admin\controller\CompanyOrder.php:114]
+
+---------------------------------------------------------------
+[ 2017-08-03T15:34:51+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/company_order/dailyrecord.html
+[ log ] www.a.com/admin/company_order/dailyrecord.html [运行时间：0.019001s][吞吐率：52.63req/s] [内存消耗：388.13kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'company_order',
+    2 => 'dailyrecord',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/company_order/dailyrecord_html' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\CompanyOrder->dailyrecord[ D:\project\default\application\admin\controller\CompanyOrder.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view\company_order\dailyrecord.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_company_order` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `snake_company_order` WHERE  `status` = 1 GROUP BY FROM_UNIXTIME(create_time,'%Y-%m-%d') ) `_group_count_` LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT FROM_UNIXTIME(create_time,'%Y-%m-%d') as days,sum(amount) as total_price FROM `snake_company_order` WHERE  `status` = 1 GROUP BY FROM_UNIXTIME(create_time,'%Y-%m-%d') ORDER BY days desc LIMIT 0,10 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-03T15:34:56+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/company_order/detail.html?id=2017-07-21
+[ log ] www.a.com/admin/company_order/detail.html?id=2017-07-21 [运行时间：0.077005s][吞吐率：12.99req/s] [内存消耗：557.13kb] [文件加载：70]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'company_order',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin/company_order/dailyrecord.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/company_order/detail_html' => '',
+  'id' => '2017-07-21',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\CompanyOrder->detail[ D:\project\default\application\admin\controller\CompanyOrder.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view\company_order\detail.html [ array (
+  0 => 'companys',
+  1 => 'todayTradeNo',
+  2 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_admin_company` [ RunTime:0.045002s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_company_order` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT SUM(amount) AS tp_sum FROM `snake_company_order` WHERE  (  status=1 )  AND `status` = 1  AND `order_id` LIKE '%%'  AND `update_time` BETWEEN 1501689600 AND 1501776000 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `snake_company_order` WHERE  `status` = 1  AND `create_time` BETWEEN 1500566400 AND 1500652799  AND `order_id` LIKE '%%' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_company_order` WHERE  `status` = 1  AND `create_time` BETWEEN 1500566400 AND 1500652799  AND `order_id` LIKE '%%' ORDER BY id desc LIMIT 0,10 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 59 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 59 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 59 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 59 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 59 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 59 LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-08-03T15:35:01+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/company_order/dailyrecord.html
+[ log ] www.a.com/admin/company_order/dailyrecord.html [运行时间：0.021002s][吞吐率：47.61req/s] [内存消耗：388.13kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'company_order',
+    2 => 'dailyrecord',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/company_order/dailyrecord_html' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\CompanyOrder->dailyrecord[ D:\project\default\application\admin\controller\CompanyOrder.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view\company_order\dailyrecord.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_company_order` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `snake_company_order` WHERE  `status` = 1 GROUP BY FROM_UNIXTIME(create_time,'%Y-%m-%d') ) `_group_count_` LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT FROM_UNIXTIME(create_time,'%Y-%m-%d') as days,sum(amount) as total_price FROM `snake_company_order` WHERE  `status` = 1 GROUP BY FROM_UNIXTIME(create_time,'%Y-%m-%d') ORDER BY days desc LIMIT 0,10 [ RunTime:0.001001s ]
+
+---------------------------------------------------------------
+[ 2017-08-03T15:40:14+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/company_order/detail.html?id=2017-08-02
+[ log ] www.a.com/admin/company_order/detail.html?id=2017-08-02 [运行时间：0.065004s][吞吐率：15.38req/s] [内存消耗：583.74kb] [文件加载：70]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'company_order',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin/company_order/dailyrecord.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/company_order/detail_html' => '',
+  'id' => '2017-08-02',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\CompanyOrder->detail[ D:\project\default\application\admin\controller\CompanyOrder.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view\company_order\detail.html [ array (
+  0 => 'companys',
+  1 => 'todayTradeNo',
+  2 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_admin_company` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_company_order` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT SUM(amount) AS tp_sum FROM `snake_company_order` WHERE  (  status=1 )  AND `status` = 1  AND `order_id` LIKE '%%'  AND `update_time` BETWEEN 1501689600 AND 1501776000 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `snake_company_order` WHERE  `status` = 1  AND `create_time` BETWEEN 1501603200 AND 1501689599  AND `order_id` LIKE '%%' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_company_order` WHERE  `status` = 1  AND `create_time` BETWEEN 1501603200 AND 1501689599  AND `order_id` LIKE '%%' ORDER BY id desc LIMIT 0,10 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 59 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 59 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-08-03T16:43:32+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/company_order/dailyrecord.html
+[ log ] www.a.com/admin/company_order/dailyrecord.html [运行时间：0.225012s][吞吐率：4.44req/s] [内存消耗：389.06kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.004000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'company_order',
+    2 => 'dailyrecord',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/company_order/dailyrecord_html' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\CompanyOrder->dailyrecord[ D:\project\default\application\admin\controller\CompanyOrder.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view\company_order\dailyrecord.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.053003s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_company_order` [ RunTime:0.048003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `snake_company_order` WHERE  `status` = 1 GROUP BY FROM_UNIXTIME(create_time,'%Y-%m-%d') ) `_group_count_` LIMIT 1 [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT FROM_UNIXTIME(create_time,'%Y-%m-%d') as days,sum(amount) as total_price FROM `snake_company_order` WHERE  `status` = 1 GROUP BY FROM_UNIXTIME(create_time,'%Y-%m-%d') ORDER BY days desc LIMIT 0,10 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-03T16:43:34+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/company_order/settlelist.html
+[ log ] www.a.com/admin/company_order/settlelist.html [运行时间：0.064003s][吞吐率：15.62req/s] [内存消耗：578.29kb] [文件加载：73]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'company_order',
+    2 => 'settlelist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/company_order/settlelist_html' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\CompanyOrder->settleList[ D:\project\default\application\admin\controller\CompanyOrder.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view\company_order\settlelist.html [ array (
+  0 => 'companys',
+  1 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_admin_company` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_company_settle` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `snake_company_settle` WHERE  `order_id` LIKE '%%' LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_company_settle` WHERE  `order_id` LIKE '%%' ORDER BY id desc LIMIT 0,10 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 59 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 59 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 59 LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [8]未定义变量: status[D:\project\default\application\admin\controller\CompanyOrder.php:108]
+[ error ] [8]未定义变量: baseWhere[D:\project\default\application\admin\controller\CompanyOrder.php:116]
+[ error ] [8]未定义变量: order_id[D:\project\default\application\admin\controller\CompanyOrder.php:116]
+
+---------------------------------------------------------------
+[ 2017-08-03T16:51:37+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/company_order/dailyrecord.html
+[ log ] www.a.com/admin/company_order/dailyrecord.html [运行时间：0.039002s][吞吐率：25.64req/s] [内存消耗：389.06kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'company_order',
+    2 => 'dailyrecord',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/company_order/dailyrecord_html' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\CompanyOrder->dailyrecord[ D:\project\default\application\admin\controller\CompanyOrder.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view\company_order\dailyrecord.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001001s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_company_order` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `snake_company_order` WHERE  `status` = 1 GROUP BY FROM_UNIXTIME(create_time,'%Y-%m-%d') ) `_group_count_` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT FROM_UNIXTIME(create_time,'%Y-%m-%d') as days,sum(amount) as total_price FROM `snake_company_order` WHERE  `status` = 1 GROUP BY FROM_UNIXTIME(create_time,'%Y-%m-%d') ORDER BY days desc LIMIT 0,10 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-03T16:51:38+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/company_order/orderlist.html
+[ log ] www.a.com/admin/company_order/orderlist.html [运行时间：0.084005s][吞吐率：11.90req/s] [内存消耗：717.11kb] [文件加载：75]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'company_order',
+    2 => 'orderlist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/company_order/orderlist_html' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\CompanyOrder->orderList[ D:\project\default\application\admin\controller\CompanyOrder.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view\company_order\orderlist.html [ array (
+  0 => 'companys',
+  1 => 'totalSettle',
+  2 => 'todayTradeNo',
+  3 => 'totalSettleNo',
+  4 => 'canTotalSettleNo',
+  5 => 'totalCommission',
+  6 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_admin_company` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_company_order` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `snake_company_order` WHERE  `order_id` LIKE '%%' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_company_order` WHERE  `order_id` LIKE '%%' ORDER BY id desc LIMIT 0,20 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT SUM(amount) AS tp_sum FROM `snake_company_order` WHERE  (  status=1 )  AND `settle` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT SUM(amount) AS tp_sum FROM `snake_company_order` WHERE  (  status=1 )  AND `settle` = 0  AND `update_time` BETWEEN 1501689600 AND 1501776000 LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT SUM(amount) AS tp_sum FROM `snake_company_order` WHERE  (  status=1 )  AND `settle` = 0 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT SUM(amount) AS tp_sum FROM `snake_company_order` WHERE  (  status=1 )  AND `settle` = 0  AND `update_time` <= 1501689600 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_company_settle` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT SUM(commission) AS tp_sum FROM `snake_company_settle` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 59 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 59 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 59 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 59 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 59 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 59 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 59 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [8]未定义变量: settleWhere[D:\project\default\application\admin\controller\CompanyOrder.php:63]
+
+---------------------------------------------------------------
+[ 2017-08-03T17:00:37+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/Pub/test4
+[ log ] www.a.com/admin/Pub/test4 [运行时间：0.650037s][吞吐率：1.54req/s] [内存消耗：175.52kb] [文件加载：52]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Pub',
+    2 => 'test4',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/Pub/test4' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Pub->test4[ D:\project\default\application\admin\controller\Pub.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-03T17:03:53+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/company_home/member.html
+[ log ] www.a.com/admin/company_home/member.html [运行时间：0.120007s][吞吐率：8.33req/s] [内存消耗：505.44kb] [文件加载：74]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'company_home',
+    2 => 'member',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/company_home/member_html' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\CompanyHome->member[ D:\project\default\application\admin\controller\CompanyHome.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view\company_home\member.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.031002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `snake_user` WHERE  `phone` LIKE '%%'  AND `company_id` = 1 LIMIT 1 [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `phone` LIKE '%%'  AND `company_id` = 1 ORDER BY id desc LIMIT 0,10 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_auth_info` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 1132 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_admin_company` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 1129 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 1109 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 1107 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 1098 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 1097 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 1066 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 1065 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 1060 LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 1049 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [8]Trying to get property of non-object[D:\project\default\runtime\temp\0d7ca821ee3969a6554e36a082351aa4.php:58]
+[ error ] [8]Trying to get property of non-object[D:\project\default\runtime\temp\0d7ca821ee3969a6554e36a082351aa4.php:64]
+[ error ] [8]Trying to get property of non-object[D:\project\default\runtime\temp\0d7ca821ee3969a6554e36a082351aa4.php:58]
+[ error ] [8]Trying to get property of non-object[D:\project\default\runtime\temp\0d7ca821ee3969a6554e36a082351aa4.php:64]
+[ error ] [8]Trying to get property of non-object[D:\project\default\runtime\temp\0d7ca821ee3969a6554e36a082351aa4.php:58]
+[ error ] [8]Trying to get property of non-object[D:\project\default\runtime\temp\0d7ca821ee3969a6554e36a082351aa4.php:64]
+[ error ] [8]Trying to get property of non-object[D:\project\default\runtime\temp\0d7ca821ee3969a6554e36a082351aa4.php:58]
+[ error ] [8]Trying to get property of non-object[D:\project\default\runtime\temp\0d7ca821ee3969a6554e36a082351aa4.php:64]
+[ error ] [8]Trying to get property of non-object[D:\project\default\runtime\temp\0d7ca821ee3969a6554e36a082351aa4.php:58]
+[ error ] [8]Trying to get property of non-object[D:\project\default\runtime\temp\0d7ca821ee3969a6554e36a082351aa4.php:64]
+[ error ] [8]Trying to get property of non-object[D:\project\default\runtime\temp\0d7ca821ee3969a6554e36a082351aa4.php:58]
+[ error ] [8]Trying to get property of non-object[D:\project\default\runtime\temp\0d7ca821ee3969a6554e36a082351aa4.php:64]
+
+---------------------------------------------------------------
+[ 2017-08-03T17:03:57+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/document/slide.html
+[ log ] www.a.com/admin/document/slide.html [运行时间：0.032001s][吞吐率：31.25req/s] [内存消耗：290.58kb] [文件加载：62]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'document',
+    2 => 'slide',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/document/slide_html' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Document->slide[ D:\project\default\application\admin\controller\Document.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view\document\slide.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]Use of undefined constant checked - assumed 'checked'[D:\project\default\runtime\temp\626b3caa052399e757b7d2ad3f337efe.php:49]
+[ error ] [8]Use of undefined constant checked - assumed 'checked'[D:\project\default\runtime\temp\626b3caa052399e757b7d2ad3f337efe.php:49]
+[ error ] [8]Use of undefined constant checked - assumed 'checked'[D:\project\default\runtime\temp\626b3caa052399e757b7d2ad3f337efe.php:49]
+
+---------------------------------------------------------------
+[ 2017-08-03T17:03:58+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/document/index.html
+[ log ] www.a.com/admin/document/index.html [运行时间：0.055003s][吞吐率：18.18req/s] [内存消耗：434.68kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'document',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/document/index_html' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Document->index[ D:\project\default\application\admin\controller\Document.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view\document\index.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_document` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `snake_document` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_document` ORDER BY id asc LIMIT 0,100 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-03T17:04:01+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/member/index.html
+[ log ] www.a.com/admin/member/index.html [运行时间：0.074004s][吞吐率：13.51req/s] [内存消耗：618.84kb] [文件加载：75]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'member',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/member/index_html' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Member->index[ D:\project\default\application\admin\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view\member\index.html [ array (
+  0 => 'list',
+  1 => 'companys',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `snake_user` WHERE  `phone` LIKE '%%' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `phone` LIKE '%%' ORDER BY id desc LIMIT 0,10 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_admin_company` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_auth_info` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 1139 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 57 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 1138 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 1137 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 1136 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 57 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 1135 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 57 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 1134 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 57 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 1132 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 1131 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 57 LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 1129 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 1128 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 55 LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [8]Trying to get property of non-object[D:\project\default\runtime\temp\540ed9c7fc387967c90aec5baa54300f.php:76]
+[ error ] [8]Trying to get property of non-object[D:\project\default\runtime\temp\540ed9c7fc387967c90aec5baa54300f.php:82]
+[ error ] [8]Trying to get property of non-object[D:\project\default\runtime\temp\540ed9c7fc387967c90aec5baa54300f.php:76]
+[ error ] [8]Trying to get property of non-object[D:\project\default\runtime\temp\540ed9c7fc387967c90aec5baa54300f.php:82]
+[ error ] [8]Trying to get property of non-object[D:\project\default\runtime\temp\540ed9c7fc387967c90aec5baa54300f.php:76]
+[ error ] [8]Trying to get property of non-object[D:\project\default\runtime\temp\540ed9c7fc387967c90aec5baa54300f.php:82]
+[ error ] [8]Trying to get property of non-object[D:\project\default\runtime\temp\540ed9c7fc387967c90aec5baa54300f.php:76]
+[ error ] [8]Trying to get property of non-object[D:\project\default\runtime\temp\540ed9c7fc387967c90aec5baa54300f.php:82]
+[ error ] [8]Trying to get property of non-object[D:\project\default\runtime\temp\540ed9c7fc387967c90aec5baa54300f.php:76]
+[ error ] [8]Trying to get property of non-object[D:\project\default\runtime\temp\540ed9c7fc387967c90aec5baa54300f.php:82]
+[ error ] [8]Trying to get property of non-object[D:\project\default\runtime\temp\540ed9c7fc387967c90aec5baa54300f.php:76]
+[ error ] [8]Trying to get property of non-object[D:\project\default\runtime\temp\540ed9c7fc387967c90aec5baa54300f.php:82]
+[ error ] [8]Trying to get property of non-object[D:\project\default\runtime\temp\540ed9c7fc387967c90aec5baa54300f.php:76]
+[ error ] [8]Trying to get property of non-object[D:\project\default\runtime\temp\540ed9c7fc387967c90aec5baa54300f.php:82]
+[ error ] [8]Trying to get property of non-object[D:\project\default\runtime\temp\540ed9c7fc387967c90aec5baa54300f.php:76]
+[ error ] [8]Trying to get property of non-object[D:\project\default\runtime\temp\540ed9c7fc387967c90aec5baa54300f.php:82]
+[ error ] [8]Trying to get property of non-object[D:\project\default\runtime\temp\540ed9c7fc387967c90aec5baa54300f.php:76]
+[ error ] [8]Trying to get property of non-object[D:\project\default\runtime\temp\540ed9c7fc387967c90aec5baa54300f.php:82]
+[ error ] [8]Trying to get property of non-object[D:\project\default\runtime\temp\540ed9c7fc387967c90aec5baa54300f.php:76]
+[ error ] [8]Trying to get property of non-object[D:\project\default\runtime\temp\540ed9c7fc387967c90aec5baa54300f.php:82]
+
+---------------------------------------------------------------
+[ 2017-08-03T17:04:04+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/member/index.html?keyword=&company_id=&auth_status=%E5%B7%B2%E9%80%9A%E8%BF%87
+[ log ] www.a.com/admin/member/index.html?keyword=&company_id=&auth_status=%E5%B7%B2%E9%80%9A%E8%BF%87 [运行时间：0.069004s][吞吐率：14.49req/s] [内存消耗：654.55kb] [文件加载：72]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'member',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin/member/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/member/index_html' => '',
+  'keyword' => '',
+  'company_id' => '',
+  'auth_status' => '已通过',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Member->index[ D:\project\default\application\admin\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view\member\index.html [ array (
+  0 => 'list',
+  1 => 'companys',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_auth_info` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `user_id` FROM `snake_auth_info` WHERE  `auth_status` = '已通过' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `snake_user` WHERE  `phone` LIKE '%%'  AND `id` IN (104,29,28,55,34,70,59,75,81,82,31,88,41,42,114,30,120,106,131,127,139,79,71,160,84,168,128,178,174,183,193,95,314,117,395,396,407,155,294,463,472,480,484,488,491,486,500,499,198,524,531,542,549,550,35,552,600,602,604,620,621,624,625,628,632,651,655,622,656,659,660,658,543,608,667,487,694,706,705,711,713,735,65,45,796,495,829,653,831,742,842,730,861,847,876,878,501,888,897,896,1049,1042,1073,1066,1098,1061) LIMIT 1 [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `phone` LIKE '%%'  AND `id` IN (104,29,28,55,34,70,59,75,81,82,31,88,41,42,114,30,120,106,131,127,139,79,71,160,84,168,128,178,174,183,193,95,314,117,395,396,407,155,294,463,472,480,484,488,491,486,500,499,198,524,531,542,549,550,35,552,600,602,604,620,621,624,625,628,632,651,655,622,656,659,660,658,543,608,667,487,694,706,705,711,713,735,65,45,796,495,829,653,831,742,842,730,861,847,876,878,501,888,897,896,1049,1042,1073,1066,1098,1061) ORDER BY id desc LIMIT 0,10 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_admin_company` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 1098 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 1073 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 60 LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 1066 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 1061 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 57 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 1049 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 1042 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 897 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 57 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 896 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 888 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 55 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 878 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 56 LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-03T17:04:09+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/member/index.html?keyword=&auth_status=%E5%B7%B2%E9%80%9A%E8%BF%87&company_id=&page=2
+[ log ] www.a.com/admin/member/index.html?keyword=&auth_status=%E5%B7%B2%E9%80%9A%E8%BF%87&company_id=&page=2 [运行时间：0.087005s][吞吐率：11.49req/s] [内存消耗：654.37kb] [文件加载：72]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'member',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin/member/index.html?keyword=&company_id=&auth_status=%E5%B7%B2%E9%80%9A%E8%BF%87',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/member/index_html' => '',
+  'keyword' => '',
+  'auth_status' => '已通过',
+  'company_id' => '',
+  'page' => '2',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Member->index[ D:\project\default\application\admin\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view\member\index.html [ array (
+  0 => 'list',
+  1 => 'companys',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_auth_info` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT `user_id` FROM `snake_auth_info` WHERE  `auth_status` = '已通过' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `snake_user` WHERE  `phone` LIKE '%%'  AND `id` IN (104,29,28,55,34,70,59,75,81,82,31,88,41,42,114,30,120,106,131,127,139,79,71,160,84,168,128,178,174,183,193,95,314,117,395,396,407,155,294,463,472,480,484,488,491,486,500,499,198,524,531,542,549,550,35,552,600,602,604,620,621,624,625,628,632,651,655,622,656,659,660,658,543,608,667,487,694,706,705,711,713,735,65,45,796,495,829,653,831,742,842,730,861,847,876,878,501,888,897,896,1049,1042,1073,1066,1098,1061) LIMIT 1 [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `phone` LIKE '%%'  AND `id` IN (104,29,28,55,34,70,59,75,81,82,31,88,41,42,114,30,120,106,131,127,139,79,71,160,84,168,128,178,174,183,193,95,314,117,395,396,407,155,294,463,472,480,484,488,491,486,500,499,198,524,531,542,549,550,35,552,600,602,604,620,621,624,625,628,632,651,655,622,656,659,660,658,543,608,667,487,694,706,705,711,713,735,65,45,796,495,829,653,831,742,842,730,861,847,876,878,501,888,897,896,1049,1042,1073,1066,1098,1061) ORDER BY id desc LIMIT 10,10 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_admin_company` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 876 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 55 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 861 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 55 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 847 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 57 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 842 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 831 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 829 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 796 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 742 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 735 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 730 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-08-03T17:04:11+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/pub/tab.html?op=%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF,Member/user?id=847;%E8%AE%A4%E8%AF%81%E4%BF%A1%E6%81%AF,Member/auth?user_id=847
+[ log ] www.a.com/admin/pub/tab.html?op=%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF,Member/user?id=847;%E8%AE%A4%E8%AF%81%E4%BF%A1%E6%81%AF,Member/auth?user_id=847 [运行时间：0.013001s][吞吐率：76.92req/s] [内存消耗：178.30kb] [文件加载：53]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'pub',
+    2 => 'tab',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin/member/index.html?keyword=&auth_status=%E5%B7%B2%E9%80%9A%E8%BF%87&company_id=&page=2',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/pub/tab_html' => '',
+  'op' => '用户信息,Member/user?id=847;认证信息,Member/auth?user_id=847',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Pub->tab[ D:\project\default\application\admin\controller\Pub.php ]
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view\pub\tab.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-03T17:04:11+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/member/user/id/847.html
+[ log ] www.a.com/admin/member/user/id/847.html [运行时间：0.043003s][吞吐率：23.25req/s] [内存消耗：393.23kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'member',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin/pub/tab.html?op=%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF,Member/user?id=847;%E8%AE%A4%E8%AF%81%E4%BF%A1%E6%81%AF,Member/auth?user_id=847',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/member/user/id/847_html' => '',
+  'id' => '847',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Member->user[ D:\project\default\application\admin\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view\member\user.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 847 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_admin_company` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 57 LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-08-03T17:04:13+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/member/auth/user_id/847.html
+[ log ] www.a.com/admin/member/auth/user_id/847.html [运行时间：0.046003s][吞吐率：21.74req/s] [内存消耗：386.53kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'member',
+    2 => 'auth',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin/pub/tab.html?op=%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF,Member/user?id=847;%E8%AE%A4%E8%AF%81%E4%BF%A1%E6%81%AF,Member/auth?user_id=847',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/member/auth/user_id/847_html' => '',
+  'user_id' => '847',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Member->auth[ D:\project\default\application\admin\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view\member\auth.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_auth_info` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 847 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT `identifier` FROM `snake_user` WHERE  `id` = 847 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `identifier` FROM `snake_user` WHERE  `id` = 847 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `identifier` FROM `snake_user` WHERE  `id` = 847 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `identifier` FROM `snake_user` WHERE  `id` = 847 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `identifier` FROM `snake_user` WHERE  `id` = 847 LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-08-03T17:04:13+08:00 ] 127.0.0.1 127.0.0.1 GET /pic/a943e631b8585334435992883b97d141/mGRmbGJuZ2KneXpxemlucJebl5mYmZWca2aTYJqdl8WXmWplZGqdZJpva2Gdd3p5paieqJw
+[ log ] www.a.com/pic/a943e631b8585334435992883b97d141/mGRmbGJuZ2KneXpxemlucJebl5mYmZWca2aTYJqdl8WXmWplZGqdZJpva2Gdd3p5paieqJw [运行时间：0.069004s][吞吐率：14.49req/s] [内存消耗：367.77kb] [文件加载：64]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Wx',
+    2 => 'getImage',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin/member/auth/user_id/847.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/pic/a943e631b8585334435992883b97d141/mGRmbGJuZ2KneXpxemlucJebl5mYmZWca2aTYJqdl8WXmWplZGqdZJpva2Gdd3p5paieqJw' => '',
+  'u' => 'a943e631b8585334435992883b97d141',
+  'i' => 'mGRmbGJuZ2KneXpxemlucJebl5mYmZWca2aTYJqdl8WXmWplZGqdZJpva2Gdd3p5paieqJw',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\api\controller\Wx->getImage[ D:\project\default\application\api\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_user` WHERE  `identifier` = 'a943e631b8585334435992883b97d141' LIMIT 1 [ RunTime:0.001001s ]
+[ error ] [8192]Non-static method org\StringCrypt::urlsafe_b64decode() should not be called statically[D:\project\default\extend\org\StringCrypt.php:29]
+[ error ] [8]未定义变量: char[D:\project\default\extend\org\StringCrypt.php:36]
+[ error ] [8]未定义变量: str[D:\project\default\extend\org\StringCrypt.php:44]
+
+---------------------------------------------------------------
+[ 2017-08-03T17:04:13+08:00 ] 127.0.0.1 127.0.0.1 GET /pic/a943e631b8585334435992883b97d141/mGRmbGJtZ2mneXpxepZwaZmbaZtqycNxnWhklnDKZ5rIaJmYapmYkslvbWCed3p5paieqJw
+[ log ] www.a.com/pic/a943e631b8585334435992883b97d141/mGRmbGJtZ2mneXpxepZwaZmbaZtqycNxnWhklnDKZ5rIaJmYapmYkslvbWCed3p5paieqJw [运行时间：0.086005s][吞吐率：11.63req/s] [内存消耗：374.73kb] [文件加载：64]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Wx',
+    2 => 'getImage',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin/member/auth/user_id/847.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/pic/a943e631b8585334435992883b97d141/mGRmbGJtZ2mneXpxepZwaZmbaZtqycNxnWhklnDKZ5rIaJmYapmYkslvbWCed3p5paieqJw' => '',
+  'u' => 'a943e631b8585334435992883b97d141',
+  'i' => 'mGRmbGJtZ2mneXpxepZwaZmbaZtqycNxnWhklnDKZ5rIaJmYapmYkslvbWCed3p5paieqJw',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\api\controller\Wx->getImage[ D:\project\default\application\api\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.050003s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_user` WHERE  `identifier` = 'a943e631b8585334435992883b97d141' LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [8192]Non-static method org\StringCrypt::urlsafe_b64decode() should not be called statically[D:\project\default\extend\org\StringCrypt.php:29]
+[ error ] [8]未定义变量: char[D:\project\default\extend\org\StringCrypt.php:36]
+[ error ] [8]未定义变量: str[D:\project\default\extend\org\StringCrypt.php:44]
+
+---------------------------------------------------------------
+[ 2017-08-03T17:04:13+08:00 ] 127.0.0.1 127.0.0.1 GET /pic/a943e631b8585334435992883b97d141/mGRmbGJuZ2KneXpxepZqnMSYa3CWl5puaZGWZm_IapmdmZaWlZuYacuea5Nwd3p5paieqJw
+[ log ] www.a.com/pic/a943e631b8585334435992883b97d141/mGRmbGJuZ2KneXpxepZqnMSYa3CWl5puaZGWZm_IapmdmZaWlZuYacuea5Nwd3p5paieqJw [运行时间：0.039003s][吞吐率：25.64req/s] [内存消耗：350.73kb] [文件加载：64]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Wx',
+    2 => 'getImage',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin/member/auth/user_id/847.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/pic/a943e631b8585334435992883b97d141/mGRmbGJuZ2KneXpxepZqnMSYa3CWl5puaZGWZm_IapmdmZaWlZuYacuea5Nwd3p5paieqJw' => '',
+  'u' => 'a943e631b8585334435992883b97d141',
+  'i' => 'mGRmbGJuZ2KneXpxepZqnMSYa3CWl5puaZGWZm_IapmdmZaWlZuYacuea5Nwd3p5paieqJw',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\api\controller\Wx->getImage[ D:\project\default\application\api\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_user` WHERE  `identifier` = 'a943e631b8585334435992883b97d141' LIMIT 1 [ RunTime:0.009000s ]
+[ error ] [8192]Non-static method org\StringCrypt::urlsafe_b64decode() should not be called statically[D:\project\default\extend\org\StringCrypt.php:29]
+[ error ] [8]未定义变量: char[D:\project\default\extend\org\StringCrypt.php:36]
+[ error ] [8]未定义变量: str[D:\project\default\extend\org\StringCrypt.php:44]
+
+---------------------------------------------------------------
+[ 2017-08-03T17:04:13+08:00 ] 127.0.0.1 127.0.0.1 GET /pic/a943e631b8585334435992883b97d141/mGRmbGJtZ2mneXpxem2ancaWmZxnnZZsmmdqYJzKl5fLaGdlY2ecYp5tb2Nvd3p5paieqJw
+[ log ] www.a.com/pic/a943e631b8585334435992883b97d141/mGRmbGJtZ2mneXpxem2ancaWmZxnnZZsmmdqYJzKl5fLaGdlY2ecYp5tb2Nvd3p5paieqJw [运行时间：0.030002s][吞吐率：33.33req/s] [内存消耗：362.73kb] [文件加载：64]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Wx',
+    2 => 'getImage',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin/member/auth/user_id/847.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/pic/a943e631b8585334435992883b97d141/mGRmbGJtZ2mneXpxem2ancaWmZxnnZZsmmdqYJzKl5fLaGdlY2ecYp5tb2Nvd3p5paieqJw' => '',
+  'u' => 'a943e631b8585334435992883b97d141',
+  'i' => 'mGRmbGJtZ2mneXpxem2ancaWmZxnnZZsmmdqYJzKl5fLaGdlY2ecYp5tb2Nvd3p5paieqJw',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\api\controller\Wx->getImage[ D:\project\default\application\api\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_user` WHERE  `identifier` = 'a943e631b8585334435992883b97d141' LIMIT 1 [ RunTime:0.002000s ]
+[ error ] [8192]Non-static method org\StringCrypt::urlsafe_b64decode() should not be called statically[D:\project\default\extend\org\StringCrypt.php:29]
+[ error ] [8]未定义变量: char[D:\project\default\extend\org\StringCrypt.php:36]
+[ error ] [8]未定义变量: str[D:\project\default\extend\org\StringCrypt.php:44]
+
+---------------------------------------------------------------
+[ 2017-08-03T17:04:13+08:00 ] 127.0.0.1 127.0.0.1 GET /pic/a943e631b8585334435992883b97d141/mGRmbGJtZ2mneXpxepiaaZyfaW1umsSen2hllZyfaMeaaGxnk2acaclvmpVpd3p5paieqJw
+[ log ] www.a.com/pic/a943e631b8585334435992883b97d141/mGRmbGJtZ2mneXpxepiaaZyfaW1umsSen2hllZyfaMeaaGxnk2acaclvmpVpd3p5paieqJw [运行时间：0.077004s][吞吐率：12.99req/s] [内存消耗：350.73kb] [文件加载：64]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Wx',
+    2 => 'getImage',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin/member/auth/user_id/847.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/pic/a943e631b8585334435992883b97d141/mGRmbGJtZ2mneXpxepiaaZyfaW1umsSen2hllZyfaMeaaGxnk2acaclvmpVpd3p5paieqJw' => '',
+  'u' => 'a943e631b8585334435992883b97d141',
+  'i' => 'mGRmbGJtZ2mneXpxepiaaZyfaW1umsSen2hllZyfaMeaaGxnk2acaclvmpVpd3p5paieqJw',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\api\controller\Wx->getImage[ D:\project\default\application\api\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.023001s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.031002s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_user` WHERE  `identifier` = 'a943e631b8585334435992883b97d141' LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [8192]Non-static method org\StringCrypt::urlsafe_b64decode() should not be called statically[D:\project\default\extend\org\StringCrypt.php:29]
+[ error ] [8]未定义变量: char[D:\project\default\extend\org\StringCrypt.php:36]
+[ error ] [8]未定义变量: str[D:\project\default\extend\org\StringCrypt.php:44]
+
+---------------------------------------------------------------
+[ 2017-08-03T17:04:30+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/member/auth_hf/user_id/847.html
+[ log ] www.a.com/admin/member/auth_hf/user_id/847.html [运行时间：13.092749s][吞吐率：0.08req/s] [内存消耗：387.78kb] [文件加载：79]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'member',
+    2 => 'auth_hf',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin/member/auth/user_id/847.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/member/auth_hf/user_id/847_html' => '',
+  'user_id' => '847',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Member->auth_hf[ D:\project\default\application\admin\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view/jump.html [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_auth_info` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 847 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `id` = 847 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_hf_user` [ RunTime:0.022002s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_hf_user` WHERE  `account` = '15270177995' LIMIT 1 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `identifier` FROM `snake_user` WHERE  `id` = 847 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `identifier` FROM `snake_user` WHERE  `id` = 847 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `identifier` FROM `snake_user` WHERE  `id` = 847 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `identifier` FROM `snake_user` WHERE  `id` = 847 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `identifier` FROM `snake_user` WHERE  `id` = 847 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_hf_bank` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_hf_bank` WHERE  `base_id` = 189 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `snake_hf_bank`  SET `update_time`='2017-08-03 17:04:30',`cert_correct`='http://www.a.com\\pic\\a943e631b8585334435992883b97d141\\mGRmbGJtZ2mneXpxepiaaZyfaW1umsSen2hllZyfaMeaaGxnk2acaclvmpVpd3p5paieqJw',`cert_opposite`='http://www.a.com\\pic\\a943e631b8585334435992883b97d141\\mGRmbGJtZ2mneXpxepZwaZmbaZtqycNxnWhklnDKZ5rIaJmYapmYkslvbWCed3p5paieqJw',`cert_meet`='http://www.a.com\\pic\\a943e631b8585334435992883b97d141\\mGRmbGJuZ2KneXpxepZqnMSYa3CWl5puaZGWZm_IapmdmZaWlZuYacuea5Nwd3p5paieqJw',`card_correct`='http://www.a.com\\pic\\a943e631b8585334435992883b97d141\\mGRmbGJtZ2mneXpxem2ancaWmZxnnZZsmmdqYJzKl5fLaGdlY2ecYp5tb2Nvd3p5paieqJw',`card_opposite`='http://www.a.com\\pic\\a943e631b8585334435992883b97d141\\mGRmbGJuZ2KneXpxemlucJebl5mYmZWca2aTYJqdl8WXmWplZGqdZJpva2Gdd3p5paieqJw'  WHERE  `id` = 171 [ RunTime:0.004000s ]
+[ sql ] [ SQL ] UPDATE `snake_auth_info`  SET `pay_reg_hf`=1  WHERE  `id` = 108 [ RunTime:0.003001s ]
+[ error ] [8192]Non-static method org\StringCrypt::urlsafe_b64decode() should not be called statically[D:\project\default\extend\org\StringCrypt.php:29]
+[ error ] [8]未定义变量: char[D:\project\default\extend\org\StringCrypt.php:36]
+[ error ] [8]未定义变量: str[D:\project\default\extend\org\StringCrypt.php:44]
+[ error ] [8192]Non-static method org\StringCrypt::urlsafe_b64decode() should not be called statically[D:\project\default\extend\org\StringCrypt.php:29]
+[ error ] [8]未定义变量: char[D:\project\default\extend\org\StringCrypt.php:36]
+[ error ] [8]未定义变量: str[D:\project\default\extend\org\StringCrypt.php:44]
+[ error ] [8192]Non-static method org\StringCrypt::urlsafe_b64decode() should not be called statically[D:\project\default\extend\org\StringCrypt.php:29]
+[ error ] [8]未定义变量: char[D:\project\default\extend\org\StringCrypt.php:36]
+[ error ] [8]未定义变量: str[D:\project\default\extend\org\StringCrypt.php:44]
+[ error ] [2]Attempt to assign property of non-object[D:\project\default\extend\org\hfpay.php:237]
+[ error ] [8192]Non-static method org\StringCrypt::urlsafe_b64decode() should not be called statically[D:\project\default\extend\org\StringCrypt.php:29]
+[ error ] [8]未定义变量: char[D:\project\default\extend\org\StringCrypt.php:36]
+[ error ] [8]未定义变量: str[D:\project\default\extend\org\StringCrypt.php:44]
+[ error ] [8192]Non-static method org\StringCrypt::urlsafe_b64decode() should not be called statically[D:\project\default\extend\org\StringCrypt.php:29]
+[ error ] [8]未定义变量: char[D:\project\default\extend\org\StringCrypt.php:36]
+[ error ] [8]未定义变量: str[D:\project\default\extend\org\StringCrypt.php:44]
+[ error ] [2]Attempt to assign property of non-object[D:\project\default\extend\org\hfpay.php:242]
+[ error ] [2]Creating default object from empty value[D:\project\default\application\common\model\AuthInfo.php:238]
+
+---------------------------------------------------------------
+[ 2017-08-03T17:04:33+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/member/auth/user_id/847.html
+[ log ] www.a.com/admin/member/auth/user_id/847.html [运行时间：0.056003s][吞吐率：17.86req/s] [内存消耗：385.30kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'member',
+    2 => 'auth',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin/member/auth_hf/user_id/847.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/member/auth/user_id/847_html' => '',
+  'user_id' => '847',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Member->auth[ D:\project\default\application\admin\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view\member\auth.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_auth_info` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 847 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT `identifier` FROM `snake_user` WHERE  `id` = 847 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `identifier` FROM `snake_user` WHERE  `id` = 847 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `identifier` FROM `snake_user` WHERE  `id` = 847 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `identifier` FROM `snake_user` WHERE  `id` = 847 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `identifier` FROM `snake_user` WHERE  `id` = 847 LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-08-03T17:04:33+08:00 ] 127.0.0.1 127.0.0.1 GET /pic/a943e631b8585334435992883b97d141/mGRmbGJtZ2mneXpxepiaaZyfaW1umsSen2hllZyfaMeaaGxnk2acaclvmpVpd3p5paieqJw
+[ log ] www.a.com/pic/a943e631b8585334435992883b97d141/mGRmbGJtZ2mneXpxepiaaZyfaW1umsSen2hllZyfaMeaaGxnk2acaclvmpVpd3p5paieqJw [运行时间：0.074004s][吞吐率：13.51req/s] [内存消耗：350.73kb] [文件加载：64]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Wx',
+    2 => 'getImage',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin/member/auth/user_id/847.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/pic/a943e631b8585334435992883b97d141/mGRmbGJtZ2mneXpxepiaaZyfaW1umsSen2hllZyfaMeaaGxnk2acaclvmpVpd3p5paieqJw' => '',
+  'u' => 'a943e631b8585334435992883b97d141',
+  'i' => 'mGRmbGJtZ2mneXpxepiaaZyfaW1umsSen2hllZyfaMeaaGxnk2acaclvmpVpd3p5paieqJw',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\api\controller\Wx->getImage[ D:\project\default\application\api\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.024001s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.029002s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_user` WHERE  `identifier` = 'a943e631b8585334435992883b97d141' LIMIT 1 [ RunTime:0.014001s ]
+[ error ] [8192]Non-static method org\StringCrypt::urlsafe_b64decode() should not be called statically[D:\project\default\extend\org\StringCrypt.php:29]
+[ error ] [8]未定义变量: char[D:\project\default\extend\org\StringCrypt.php:36]
+[ error ] [8]未定义变量: str[D:\project\default\extend\org\StringCrypt.php:44]
+
+---------------------------------------------------------------
+[ 2017-08-03T17:04:33+08:00 ] 127.0.0.1 127.0.0.1 GET /pic/a943e631b8585334435992883b97d141/mGRmbGJtZ2mneXpxepZwaZmbaZtqycNxnWhklnDKZ5rIaJmYapmYkslvbWCed3p5paieqJw
+[ log ] www.a.com/pic/a943e631b8585334435992883b97d141/mGRmbGJtZ2mneXpxepZwaZmbaZtqycNxnWhklnDKZ5rIaJmYapmYkslvbWCed3p5paieqJw [运行时间：0.078004s][吞吐率：12.82req/s] [内存消耗：374.73kb] [文件加载：64]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Wx',
+    2 => 'getImage',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin/member/auth/user_id/847.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/pic/a943e631b8585334435992883b97d141/mGRmbGJtZ2mneXpxepZwaZmbaZtqycNxnWhklnDKZ5rIaJmYapmYkslvbWCed3p5paieqJw' => '',
+  'u' => 'a943e631b8585334435992883b97d141',
+  'i' => 'mGRmbGJtZ2mneXpxepZwaZmbaZtqycNxnWhklnDKZ5rIaJmYapmYkslvbWCed3p5paieqJw',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\api\controller\Wx->getImage[ D:\project\default\application\api\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.024001s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.031002s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_user` WHERE  `identifier` = 'a943e631b8585334435992883b97d141' LIMIT 1 [ RunTime:0.017001s ]
+[ error ] [8192]Non-static method org\StringCrypt::urlsafe_b64decode() should not be called statically[D:\project\default\extend\org\StringCrypt.php:29]
+[ error ] [8]未定义变量: char[D:\project\default\extend\org\StringCrypt.php:36]
+[ error ] [8]未定义变量: str[D:\project\default\extend\org\StringCrypt.php:44]
+
+---------------------------------------------------------------
+[ 2017-08-03T17:04:33+08:00 ] 127.0.0.1 127.0.0.1 GET /pic/a943e631b8585334435992883b97d141/mGRmbGJuZ2KneXpxepZqnMSYa3CWl5puaZGWZm_IapmdmZaWlZuYacuea5Nwd3p5paieqJw
+[ log ] www.a.com/pic/a943e631b8585334435992883b97d141/mGRmbGJuZ2KneXpxepZqnMSYa3CWl5puaZGWZm_IapmdmZaWlZuYacuea5Nwd3p5paieqJw [运行时间：0.080005s][吞吐率：12.50req/s] [内存消耗：350.73kb] [文件加载：64]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Wx',
+    2 => 'getImage',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin/member/auth/user_id/847.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/pic/a943e631b8585334435992883b97d141/mGRmbGJuZ2KneXpxepZqnMSYa3CWl5puaZGWZm_IapmdmZaWlZuYacuea5Nwd3p5paieqJw' => '',
+  'u' => 'a943e631b8585334435992883b97d141',
+  'i' => 'mGRmbGJuZ2KneXpxepZqnMSYa3CWl5puaZGWZm_IapmdmZaWlZuYacuea5Nwd3p5paieqJw',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\api\controller\Wx->getImage[ D:\project\default\application\api\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.019001s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.034002s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_user` WHERE  `identifier` = 'a943e631b8585334435992883b97d141' LIMIT 1 [ RunTime:0.021002s ]
+[ error ] [8192]Non-static method org\StringCrypt::urlsafe_b64decode() should not be called statically[D:\project\default\extend\org\StringCrypt.php:29]
+[ error ] [8]未定义变量: char[D:\project\default\extend\org\StringCrypt.php:36]
+[ error ] [8]未定义变量: str[D:\project\default\extend\org\StringCrypt.php:44]
+
+---------------------------------------------------------------
+[ 2017-08-03T17:04:33+08:00 ] 127.0.0.1 127.0.0.1 GET /pic/a943e631b8585334435992883b97d141/mGRmbGJuZ2KneXpxemlucJebl5mYmZWca2aTYJqdl8WXmWplZGqdZJpva2Gdd3p5paieqJw
+[ log ] www.a.com/pic/a943e631b8585334435992883b97d141/mGRmbGJuZ2KneXpxemlucJebl5mYmZWca2aTYJqdl8WXmWplZGqdZJpva2Gdd3p5paieqJw [运行时间：0.080004s][吞吐率：12.50req/s] [内存消耗：366.73kb] [文件加载：64]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Wx',
+    2 => 'getImage',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin/member/auth/user_id/847.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/pic/a943e631b8585334435992883b97d141/mGRmbGJuZ2KneXpxemlucJebl5mYmZWca2aTYJqdl8WXmWplZGqdZJpva2Gdd3p5paieqJw' => '',
+  'u' => 'a943e631b8585334435992883b97d141',
+  'i' => 'mGRmbGJuZ2KneXpxemlucJebl5mYmZWca2aTYJqdl8WXmWplZGqdZJpva2Gdd3p5paieqJw',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\api\controller\Wx->getImage[ D:\project\default\application\api\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.042003s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_user` WHERE  `identifier` = 'a943e631b8585334435992883b97d141' LIMIT 1 [ RunTime:0.018001s ]
+[ error ] [8192]Non-static method org\StringCrypt::urlsafe_b64decode() should not be called statically[D:\project\default\extend\org\StringCrypt.php:29]
+[ error ] [8]未定义变量: char[D:\project\default\extend\org\StringCrypt.php:36]
+[ error ] [8]未定义变量: str[D:\project\default\extend\org\StringCrypt.php:44]
+
+---------------------------------------------------------------
+[ 2017-08-03T17:04:33+08:00 ] 127.0.0.1 127.0.0.1 GET /pic/a943e631b8585334435992883b97d141/mGRmbGJtZ2mneXpxem2ancaWmZxnnZZsmmdqYJzKl5fLaGdlY2ecYp5tb2Nvd3p5paieqJw
+[ log ] www.a.com/pic/a943e631b8585334435992883b97d141/mGRmbGJtZ2mneXpxem2ancaWmZxnnZZsmmdqYJzKl5fLaGdlY2ecYp5tb2Nvd3p5paieqJw [运行时间：0.080004s][吞吐率：12.50req/s] [内存消耗：362.73kb] [文件加载：64]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Wx',
+    2 => 'getImage',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin/member/auth/user_id/847.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/pic/a943e631b8585334435992883b97d141/mGRmbGJtZ2mneXpxem2ancaWmZxnnZZsmmdqYJzKl5fLaGdlY2ecYp5tb2Nvd3p5paieqJw' => '',
+  'u' => 'a943e631b8585334435992883b97d141',
+  'i' => 'mGRmbGJtZ2mneXpxem2ancaWmZxnnZZsmmdqYJzKl5fLaGdlY2ecYp5tb2Nvd3p5paieqJw',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\api\controller\Wx->getImage[ D:\project\default\application\api\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_user` WHERE  `identifier` = 'a943e631b8585334435992883b97d141' LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [8192]Non-static method org\StringCrypt::urlsafe_b64decode() should not be called statically[D:\project\default\extend\org\StringCrypt.php:29]
+[ error ] [8]未定义变量: char[D:\project\default\extend\org\StringCrypt.php:36]
+[ error ] [8]未定义变量: str[D:\project\default\extend\org\StringCrypt.php:44]
+
+---------------------------------------------------------------
+[ 2017-08-03T17:04:35+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/Pub/test4
+[ log ] www.a.com/admin/Pub/test4 [运行时间：0.175010s][吞吐率：5.71req/s] [内存消耗：175.52kb] [文件加载：52]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Pub',
+    2 => 'test4',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/Pub/test4' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Pub->test4[ D:\project\default\application\admin\controller\Pub.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-03T17:04:39+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/Pub/test4
+[ log ] www.a.com/admin/Pub/test4 [运行时间：0.179010s][吞吐率：5.59req/s] [内存消耗：175.52kb] [文件加载：52]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Pub',
+    2 => 'test4',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/Pub/test4' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Pub->test4[ D:\project\default\application\admin\controller\Pub.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-03T17:30:15+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/Pub/test4
+[ log ] www.a.com/admin/Pub/test4 [运行时间：0.303017s][吞吐率：3.30req/s] [内存消耗：175.52kb] [文件加载：52]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Pub',
+    2 => 'test4',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/Pub/test4' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Pub->test4[ D:\project\default\application\admin\controller\Pub.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-03T17:30:16+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/Pub/test4
+[ log ] www.a.com/admin/Pub/test4 [运行时间：0.186010s][吞吐率：5.38req/s] [内存消耗：175.52kb] [文件加载：52]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Pub',
+    2 => 'test4',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/Pub/test4' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Pub->test4[ D:\project\default\application\admin\controller\Pub.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-03T17:35:41+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/Pub/test4
+[ log ] www.a.com/admin/Pub/test4 [运行时间：0.340019s][吞吐率：2.94req/s] [内存消耗：175.52kb] [文件加载：52]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Pub',
+    2 => 'test4',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/Pub/test4' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\admin\controller\Pub->test4[ D:\project\default\application\admin\controller\Pub.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-03T17:39:32+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/Pub/test4
+[ log ] www.a.com/admin/Pub/test4 [运行时间：0.273016s][吞吐率：3.66req/s] [内存消耗：175.52kb] [文件加载：52]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Pub',
+    2 => 'test4',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/Pub/test4' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\admin\controller\Pub->test4[ D:\project\default\application\admin\controller\Pub.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-03T17:39:35+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/Pub/test4
+[ log ] www.a.com/admin/Pub/test4 [运行时间：0.278016s][吞吐率：3.60req/s] [内存消耗：175.52kb] [文件加载：52]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Pub',
+    2 => 'test4',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/Pub/test4' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Pub->test4[ D:\project\default\application\admin\controller\Pub.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-03T17:43:58+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/pub/signout.html
+[ log ] www.a.com/admin/pub/signout.html [运行时间：0.024002s][吞吐率：41.66req/s] [内存消耗：206.71kb] [文件加载：56]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'pub',
+    2 => 'signout',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/pub/signout_html' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\admin\controller\Pub->signOut[ D:\project\default\application\admin\controller\Pub.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-03T17:43:58+08:00 ] 127.0.0.1 127.0.0.1 GET /admin
+[ log ] www.a.com/admin [运行时间：0.006000s][吞吐率：166.67req/s] [内存消耗：179.52kb] [文件加载：55]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-03T17:43:58+08:00 ] 127.0.0.1 127.0.0.1 GET /admin-login.html
+[ log ] www.a.com/admin-login.html [运行时间：0.010001s][吞吐率：99.99req/s] [内存消耗：176.57kb] [文件加载：53]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Pub',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin-login_html' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Pub->login[ D:\project\default\application\admin\controller\Pub.php ]
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view\pub\login.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-03T17:44:03+08:00 ] 127.0.0.1 127.0.0.1 GET /company-login.html
+[ log ] www.a.com/company-login.html [运行时间：0.008001s][吞吐率：124.98req/s] [内存消耗：176.33kb] [文件加载：53]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Pub',
+    2 => 'company',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/company-login_html' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Pub->company[ D:\project\default\application\admin\controller\Pub.php ]
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view\pub\company_login.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-03T17:44:14+08:00 ] 127.0.0.1 127.0.0.1 POST /company-login.html
+[ log ] www.a.com/company-login.html [运行时间：0.043002s][吞吐率：23.25req/s] [内存消耗：343.19kb] [文件加载：61]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Pub',
+    2 => 'company',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'content-length' => '31',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://www.a.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/company-login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/company-login_html' => '',
+  'username' => 'yangbo',
+  'password' => '123456',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\admin\controller\Pub->company[ D:\project\default\application\admin\controller\Pub.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view/jump.html [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_admin_company` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `username` = 'yangbo' LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-03T17:44:17+08:00 ] 127.0.0.1 127.0.0.1 GET /company-login.html
+[ log ] www.a.com/company-login.html [运行时间：0.019001s][吞吐率：52.63req/s] [内存消耗：175.58kb] [文件加载：53]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Pub',
+    2 => 'company',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/company-login_html' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Pub->company[ D:\project\default\application\admin\controller\Pub.php ]
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view\pub\company_login.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-03T17:44:21+08:00 ] 127.0.0.1 127.0.0.1 POST /company-login.html
+[ log ] www.a.com/company-login.html [运行时间：0.048003s][吞吐率：20.83req/s] [内存消耗：343.19kb] [文件加载：61]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Pub',
+    2 => 'company',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'content-length' => '28',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://www.a.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/company-login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/company-login_html' => '',
+  'username' => 'yangbo',
+  'password' => '123',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Pub->company[ D:\project\default\application\admin\controller\Pub.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view/jump.html [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_admin_company` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `username` = 'yangbo' LIMIT 1 [ RunTime:0.016001s ]
+
+---------------------------------------------------------------
+[ 2017-08-03T17:44:24+08:00 ] 127.0.0.1 127.0.0.1 GET /company-login.html
+[ log ] www.a.com/company-login.html [运行时间：0.008001s][吞吐率：124.98req/s] [内存消耗：175.58kb] [文件加载：53]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Pub',
+    2 => 'company',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/company-login_html' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Pub->company[ D:\project\default\application\admin\controller\Pub.php ]
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view\pub\company_login.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-03T17:44:27+08:00 ] 127.0.0.1 127.0.0.1 POST /company-login.html
+[ log ] www.a.com/company-login.html [运行时间：0.043003s][吞吐率：23.25req/s] [内存消耗：348.05kb] [文件加载：61]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Pub',
+    2 => 'company',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'content-length' => '28',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://www.a.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/company-login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/company-login_html' => '',
+  'username' => 'yangbo',
+  'password' => 'sqs',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Pub->company[ D:\project\default\application\admin\controller\Pub.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view/jump.html [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_admin_company` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `username` = 'yangbo' LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-03T17:44:30+08:00 ] 127.0.0.1 127.0.0.1 GET /admin
+[ log ] www.a.com/admin [运行时间：0.024001s][吞吐率：41.67req/s] [内存消耗：202.33kb] [文件加载：56]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/company-login.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\project\default\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-03T17:44:31+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/company_home/index.html
+[ log ] www.a.com/admin/company_home/index.html [运行时间：0.026002s][吞吐率：38.46req/s] [内存消耗：358.48kb] [文件加载：62]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'company_home',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/company_home/index_html' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\CompanyHome->index[ D:\project\default\application\admin\controller\CompanyHome.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view\company_home\index.html [ array (
+  0 => 'company',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_admin_company` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 59 LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-03T17:44:31+08:00 ] 127.0.0.1 127.0.0.1 GET /api/wx/qrcode?userId=&companyId=0b3d8010300c695872967d02269f5bc7
+[ log ] www.a.com/api/wx/qrcode?userId=&companyId=0b3d8010300c695872967d02269f5bc7 [运行时间：0.518030s][吞吐率：1.93req/s] [内存消耗：679.82kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'wx',
+    2 => 'qrcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'referer' => 'http://www.a.com/admin/company_home/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/api/wx/qrcode' => '',
+  'userId' => '',
+  'companyId' => '0b3d8010300c695872967d02269f5bc7',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\api\controller\Wx->qrcode[ D:\project\default\application\api\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_user` WHERE  `identifier` = '' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_admin_company` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_admin_company` WHERE  `identifier` = '0b3d8010300c695872967d02269f5bc7' LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [0]cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)[D:\project\default\vendor\guzzlehttp\guzzle\src\Handler\CurlFactory.php:187]
+
+---------------------------------------------------------------
+[ 2017-08-03T17:44:32+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/company_order/orderlist.html
+[ log ] www.a.com/admin/company_order/orderlist.html [运行时间：0.083004s][吞吐率：12.05req/s] [内存消耗：411.73kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'company_order',
+    2 => 'orderlist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/company_order/orderlist_html' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\CompanyOrder->orderList[ D:\project\default\application\admin\controller\CompanyOrder.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view\company_order\orderlist.html [ array (
+  0 => 'totalSettle',
+  1 => 'todayTradeNo',
+  2 => 'totalSettleNo',
+  3 => 'canTotalSettleNo',
+  4 => 'totalCommission',
+  5 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_company_order` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `snake_company_order` WHERE  `company_id` = 59  AND `order_id` LIKE '%%' LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_company_order` WHERE  `company_id` = 59  AND `order_id` LIKE '%%' ORDER BY id desc LIMIT 0,20 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT SUM(amount) AS tp_sum FROM `snake_company_order` WHERE  (  status=1 )  AND `company_id` = 59  AND `settle` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT SUM(amount) AS tp_sum FROM `snake_company_order` WHERE  (  status=1 )  AND `company_id` = 59  AND `settle` = 0  AND `update_time` BETWEEN 1501689600 AND 1501776000 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT SUM(amount) AS tp_sum FROM `snake_company_order` WHERE  (  status=1 )  AND `company_id` = 59  AND `settle` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT SUM(amount) AS tp_sum FROM `snake_company_order` WHERE  (  status=1 )  AND `company_id` = 59  AND `settle` = 0  AND `update_time` <= 1501689600 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_company_settle` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT SUM(commission) AS tp_sum FROM `snake_company_settle` WHERE  `company_id` = 59 LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-03T17:44:32+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/company_order/settlelist.html
+[ log ] www.a.com/admin/company_order/settlelist.html [运行时间：0.100006s][吞吐率：10.00req/s] [内存消耗：368.09kb] [文件加载：69]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.002001s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'company_order',
+    2 => 'settlelist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/company_order/settlelist_html' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.002000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\CompanyOrder->settleList[ D:\project\default\application\admin\controller\CompanyOrder.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view\company_order\settlelist.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义变量: status[D:\project\default\application\admin\controller\CompanyOrder.php:110]
+[ error ] [8]未定义变量: order_id[D:\project\default\application\admin\controller\CompanyOrder.php:118]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_company_settle` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `snake_company_settle` WHERE  `company_id` = 59  AND `order_id` LIKE '%%' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_company_settle` WHERE  `company_id` = 59  AND `order_id` LIKE '%%' ORDER BY id desc LIMIT 0,10 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-03T17:44:33+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/company_order/dailyrecord.html
+[ log ] www.a.com/admin/company_order/dailyrecord.html [运行时间：0.081004s][吞吐率：12.35req/s] [内存消耗：374.91kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.001001s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'company_order',
+    2 => 'dailyrecord',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/company_order/dailyrecord_html' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\CompanyOrder->dailyrecord[ D:\project\default\application\admin\controller\CompanyOrder.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view\company_order\dailyrecord.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_company_order` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `snake_company_order` WHERE  `company_id` = 59  AND `status` = 1 GROUP BY FROM_UNIXTIME(create_time,'%Y-%m-%d') ) `_group_count_` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT FROM_UNIXTIME(create_time,'%Y-%m-%d') as days,sum(amount) as total_price FROM `snake_company_order` WHERE  `company_id` = 59  AND `status` = 1 GROUP BY FROM_UNIXTIME(create_time,'%Y-%m-%d') ORDER BY days desc LIMIT 0,10 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-08-03T17:44:35+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/company_order/orderlist.html
+[ log ] www.a.com/admin/company_order/orderlist.html [运行时间：0.093005s][吞吐率：10.75req/s] [内存消耗：410.70kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'company_order',
+    2 => 'orderlist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/company_order/orderlist_html' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.001001s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\CompanyOrder->orderList[ D:\project\default\application\admin\controller\CompanyOrder.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view\company_order\orderlist.html [ array (
+  0 => 'totalSettle',
+  1 => 'todayTradeNo',
+  2 => 'totalSettleNo',
+  3 => 'canTotalSettleNo',
+  4 => 'totalCommission',
+  5 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_company_order` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `snake_company_order` WHERE  `company_id` = 59  AND `order_id` LIKE '%%' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_company_order` WHERE  `company_id` = 59  AND `order_id` LIKE '%%' ORDER BY id desc LIMIT 0,20 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT SUM(amount) AS tp_sum FROM `snake_company_order` WHERE  (  status=1 )  AND `company_id` = 59  AND `settle` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT SUM(amount) AS tp_sum FROM `snake_company_order` WHERE  (  status=1 )  AND `company_id` = 59  AND `settle` = 0  AND `update_time` BETWEEN 1501689600 AND 1501776000 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT SUM(amount) AS tp_sum FROM `snake_company_order` WHERE  (  status=1 )  AND `company_id` = 59  AND `settle` = 0 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT SUM(amount) AS tp_sum FROM `snake_company_order` WHERE  (  status=1 )  AND `company_id` = 59  AND `settle` = 0  AND `update_time` <= 1501689600 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_company_settle` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT SUM(commission) AS tp_sum FROM `snake_company_settle` WHERE  `company_id` = 59 LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-08-03T17:44:39+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/company_order/ordersettle.html
+[ log ] www.a.com/admin/company_order/ordersettle.html [运行时间：0.090005s][吞吐率：11.11req/s] [内存消耗：362.44kb] [文件加载：60]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'company_order',
+    2 => 'ordersettle',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin/company_order/orderlist.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/company_order/ordersettle_html' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\CompanyOrder->orderSettle[ D:\project\default\application\admin\controller\CompanyOrder.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_admin_company` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 59 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_company_order` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT SUM(amount) AS tp_sum FROM `snake_company_order` WHERE  `company_id` = 59  AND `status` = 1  AND `settle` = 0  AND `update_time` <= 1501689600 LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-08-03T17:58:44+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/Pub/test4
+[ log ] www.a.com/admin/Pub/test4 [运行时间：0.216013s][吞吐率：4.63req/s] [内存消耗：175.52kb] [文件加载：52]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Pub',
+    2 => 'test4',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/Pub/test4' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\admin\controller\Pub->test4[ D:\project\default\application\admin\controller\Pub.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-03T17:58:46+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/Pub/test4
+[ log ] www.a.com/admin/Pub/test4 [运行时间：0.193011s][吞吐率：5.18req/s] [内存消耗：175.52kb] [文件加载：52]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Pub',
+    2 => 'test4',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/Pub/test4' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\admin\controller\Pub->test4[ D:\project\default\application\admin\controller\Pub.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-03T17:58:55+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/Pub/test4
+[ log ] www.a.com/admin/Pub/test4 [运行时间：0.223012s][吞吐率：4.48req/s] [内存消耗：175.52kb] [文件加载：52]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Pub',
+    2 => 'test4',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/Pub/test4' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.001001s ]
+[ info ] [ RUN ] app\admin\controller\Pub->test4[ D:\project\default\application\admin\controller\Pub.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-03T17:58:59+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/Pub/test4
+[ log ] www.a.com/admin/Pub/test4 [运行时间：0.224013s][吞吐率：4.46req/s] [内存消耗：175.52kb] [文件加载：52]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.002001s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Pub',
+    2 => 'test4',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/Pub/test4' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\admin\controller\Pub->test4[ D:\project\default\application\admin\controller\Pub.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-03T17:59:01+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/Pub/test4
+[ log ] www.a.com/admin/Pub/test4 [运行时间：0.181010s][吞吐率：5.52req/s] [内存消耗：175.52kb] [文件加载：52]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Pub',
+    2 => 'test4',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/Pub/test4' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Pub->test4[ D:\project\default\application\admin\controller\Pub.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------

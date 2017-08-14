@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {include file="header"}
+</head>
+<body>
+{include file="loading"}
+<div class="layui-main">
+    <fieldset class="layui-elem-field layui-field-title">
+        <legend>提现列表</legend>
+    </fieldset>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>姓名</th>
+            <th>手机号</th>
+            <th>银行卡号</th>
+            <th>银行名称</th>
+            <th>金额</th>
+            <th>时间</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        {foreach name="list" item="item"}
+        <tr>
+            <td>{$item->User->AuthInfo->name}</td>
+            <td>{$item->User->phone}</td>
+            <td>{$item->User->AuthInfo->bank_card_number}</td>
+            <td>{$item->User->AuthInfo->bank_name}</td>
+            <td>{$item->money}</td>
+            <td>{$item->create_time|date='Y-m-d H:i',###}</td>
+            <td>
+                {if condition="$item->status eq '到账中'"}
+                {if condition="$item->mer_state eq 0"}
+                <a href="javascript:;" data-id="{$item->id}" class="layui-btn layui-btn-mini layui-btn-normal daifu">
+                    银联代付
+                </a>
+                <a href="javascript:;" data-id="{$item->id}" class="layui-btn layui-btn-mini layui-btn-danger reject">
+                    提现驳回
+                </a>
+                {/if}
+                {if condition="$item->mer_state eq 1"}
+                <a href="javascript:;" data-id="{$item->id}" class="layui-btn layui-btn-mini layui-btn-normal detail">
+                    提现确认
+                </a>
+                {/if}
+                {else/}
+                 {if condition="$item->title eq '提现驳回'"}提现驳回 {else/} 已处理{/if}
+                {/if}
+            </td>
+        </tr>
+        {/foreach}
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="99">
+                <div class="pagination-box">
+                    <span class="info">
+                        共{$list->total()}条数据 {$list->currentPage()}/{$list->lastPage()}页
+                    </span>
+                    {$list->render()}
+                </div>
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+</div>
+<script>
+    layui.use(['base', 'form'], function () {
+        var $ = layui.jquery;
+        $(".daifu").click(function () {
+            var id = $(this).data('id');
+            layer.confirm('银联代付确认?', {
+                title: '安全提示',
+                icon: 3,
+                btn: ['确定', '取消']
+            }, function () {
+                window.location.href = "{:path('daifu')}?id=" + id;
+            });
+        });
+        $(".detail").click(function () {
+            var id = $(this).data('id');
+            layer.confirm('操作确认?', {
+                title: '安全提示',
+                icon: 3,
+                btn: ['确定', '取消']
+            }, function () {
+                window.location.href = "{:path('collectionSub')}?id=" + id;
+            });
+        });
+        $(".reject").click(function () {
+            var id = $(this).data('id');
+            layer.confirm('确认驳回?', {
+                title: '安全提示',
+                icon: 3,
+                btn: ['确定', '取消']
+            }, function () {
+                window.location.href = "{:path('reject')}?id=" + id;
+            });
+        });
+        
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+[ 2017-07-19T09:14:31+08:00 ] 127.0.0.1 127.0.0.1 GET /admin
+[ log ] www.a.com/admin [运行时间：0.122007s][吞吐率：8.20req/s] [内存消耗：348.36kb] [文件加载：57]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.004000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin-login.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=e2ttks69m4avdichae7o9bus57; thinkphp_show_page_trace=0|0; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\project\default\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-19T09:14:31+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/luck_draw/settlement.html
+[ log ] www.a.com/admin/luck_draw/settlement.html [运行时间：0.092005s][吞吐率：10.87req/s] [内存消耗：434.09kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'luck_draw',
+    2 => 'settlement',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=e2ttks69m4avdichae7o9bus57; thinkphp_show_page_trace=0|0; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/admin/luck_draw/settlement_html' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\LuckDraw->settlement[ D:\project\default\application\admin\controller\LuckDraw.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\project\default\public/../application/admin\view\luck_draw\settlement_company.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004001s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_lucky_day_settlement` [ RunTime:0.038002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `snake_lucky_day_settlement` `a` INNER JOIN `snake_admin_company` `b` ON `a`.`company_id`=`b`.`id` WHERE  `b`.`id` = 1 LIMIT 1 [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`company_id`,`a`.`day`,`a`.`amount`,`a`.`state`,`b`.`company_name` FROM `snake_lucky_day_settlement` `a` INNER JOIN `snake_admin_company` `b` ON `a`.`company_id`=`b`.`id` WHERE  `b`.`id` = 1 LIMIT 0,10 [ RunTime:0.002001s ]
+
+---------------------------------------------------------------
+[ 2017-07-19T09:14:31+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[ log ] www.a.com/favicon.ico [运行时间：0.028002s][吞吐率：35.71req/s] [内存消耗：153.59kb] [文件加载：49]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://www.a.com/admin',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=e2ttks69m4avdichae7o9bus57; thinkphp_show_page_trace=0|0; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------

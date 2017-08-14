@@ -1,0 +1,1946 @@
+[ 2017-08-08T08:34:02+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay2
+[ log ] www.a.com/Admin/Test/Allinpay2 [运行时间：2.281131s][吞吐率：0.44req/s] [内存消耗：319.81kb] [文件加载：55]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay2',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay2' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay2[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-08T08:34:03+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[ log ] www.a.com/favicon.ico [运行时间：0.010000s][吞吐率：100.00req/s] [内存消耗：151.70kb] [文件加载：45]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://www.a.com/Admin/Test/Allinpay2',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-08T10:12:41+08:00 ] 127.0.0.1 127.0.0.1 OPTIONS /api/wx/login
+[ log ] www.a.com/api/wx/login [运行时间：0.041002s][吞吐率：24.39req/s] [内存消耗：181.02kb] [文件加载：52]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'wx',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'access-control-request-method' => 'POST',
+  'origin' => 'http://127.0.0.1:8080',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'access-control-request-headers' => 'content-type',
+  'accept' => '*/*',
+  'referer' => 'http://127.0.0.1:8080/',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/api/wx/login' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\api\controller\Wx->login[ D:\project\default\application\api\controller\Wx.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-08T10:12:41+08:00 ] 127.0.0.1 127.0.0.1 POST /api/wx/login
+[ log ] www.a.com/api/wx/login [运行时间：0.105006s][吞吐率：9.52req/s] [内存消耗：448.16kb] [文件加载：69]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'wx',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'content-length' => '57',
+  'accept' => 'application/json, text/plain, */*',
+  'origin' => 'http://127.0.0.1:8080',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json;charset=UTF-8',
+  'referer' => 'http://127.0.0.1:8080/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/api/wx/login' => '',
+  'openid' => 'o9elqv1_pphejh9M4_RweusFfulM',
+  'city' => '南昌',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\api\controller\Wx->login[ D:\project\default\application\api\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.021002s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_user` WHERE  `wx` = 'o9elqv1_pphejh9M4_RweusFfulM' LIMIT 1 [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_admin_company` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_admin_company` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_auth_info` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `snake_auth_info` WHERE  `user_id` = 842 LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-08T10:12:41+08:00 ] 127.0.0.1 127.0.0.1 GET /api/wx/mainInfo&1502158361731
+[ log ] www.a.com/api/wx/mainInfo&1502158361731 [运行时间：0.006000s][吞吐率：166.67req/s] [内存消耗：163.47kb] [文件加载：54]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'wx',
+    2 => 'mainInfo&1502158361731',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/plain, */*',
+  'origin' => 'http://127.0.0.1:8080',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'referer' => 'http://127.0.0.1:8080/',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/api/wx/mainInfo' => '',
+  '1502158361731' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-08T10:12:47+08:00 ] 127.0.0.1 127.0.0.1 GET /api/wx/lucky_spoilHome?userId=fba1b1c1795b269ac802e11c47a92cca&page=1&1502158367241
+[ log ] www.a.com/api/wx/lucky_spoilHome?userId=fba1b1c1795b269ac802e11c47a92cca&page=1&1502158367241 [运行时间：0.066003s][吞吐率：15.15req/s] [内存消耗：361.55kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Lucky',
+    2 => 'spoilHome',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/plain, */*',
+  'origin' => 'http://127.0.0.1:8080',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1',
+  'referer' => 'http://127.0.0.1:8080/',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/api/wx/lucky_spoilHome' => '',
+  'userId' => 'fba1b1c1795b269ac802e11c47a92cca',
+  'page' => '1',
+  '1502158367241' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\api\controller\Lucky->spoilHome[ D:\project\default\application\api\controller\Lucky.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_user` WHERE  `identifier` = 'fba1b1c1795b269ac802e11c47a92cca' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_lucky_goods` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT `goods_id`,`page_thumb` FROM `snake_lucky_goods` WHERE  `is_out` = 0  AND `is_recommend` = 1 ORDER BY goods_id desc LIMIT 10 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_admin_company` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT `company`.`company_name`,`company`.`company_pic`,`company`.`identifier`,`goods`.`company_id` FROM `snake_admin_company` `company` INNER JOIN `snake_lucky_goods` `goods` ON `company`.`id`=`goods`.`company_id` GROUP BY company_id [ RunTime:0.002000s ]
+[ sql ] [ SQL ] select goods_id,goods_title,page_thumb,single_price,end_time,max_people_number,(select count(record_id) from snake_lucky_goods_buy_record record where goods.goods_id=record.goods_id and record.pay_status in(0,1)) as people_count from snake_lucky_goods goods where goods.start_time < 1502158367  and goods.end_time > 1502158367 and goods.is_out=0
+        ORDER BY people_count DESC LIMIT 0,10 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] select count(*) as count from snake_lucky_goods goods where goods.start_time < 1502158367  and goods.end_time > 1502158367 and goods.is_out=0 [ RunTime:0.000000s ]
+[ error ] [8192]Non-static method app\common\model\Setting::_getCache() should not be called statically[D:\project\default\application\common\model\Setting.php:17]
+
+---------------------------------------------------------------
+[ 2017-08-08T10:12:49+08:00 ] 127.0.0.1 127.0.0.1 GET /api/wx/lucky_companyHomeList?userId=fba1b1c1795b269ac802e11c47a92cca&companyId=b050e50d41e049ad32f13bcd3d763787&page=1&1502158369866
+[ log ] www.a.com/api/wx/lucky_companyHomeList?userId=fba1b1c1795b269ac802e11c47a92cca&companyId=b050e50d41e049ad32f13bcd3d763787&page=1&1502158369866 [运行时间：0.032002s][吞吐率：31.25req/s] [内存消耗：366.51kb] [文件加载：65]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Lucky',
+    2 => 'companyHomeList',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/plain, */*',
+  'origin' => 'http://127.0.0.1:8080',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1',
+  'referer' => 'http://127.0.0.1:8080/',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/api/wx/lucky_companyHomeList' => '',
+  'userId' => 'fba1b1c1795b269ac802e11c47a92cca',
+  'companyId' => 'b050e50d41e049ad32f13bcd3d763787',
+  'page' => '1',
+  '1502158369866' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\api\controller\Lucky->companyHomeList[ D:\project\default\application\api\controller\Lucky.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_admin_company` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_admin_company` WHERE  `identifier` = 'b050e50d41e049ad32f13bcd3d763787' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_user` WHERE  `identifier` = 'fba1b1c1795b269ac802e11c47a92cca' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] select goods_id,goods_title,page_thumb,single_price,end_time,max_people_number,(select count(record_id) from snake_lucky_goods_buy_record record where goods.goods_id=record.goods_id and record.pay_status in(0,1)) as people_count from snake_lucky_goods goods where goods.start_time < 1502158369  and goods.end_time > 1502158369 and goods.is_out=0 and goods.company_id=1
+        ORDER BY people_count DESC LIMIT 0,10 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `xycj_score` FROM `snake_user` WHERE  `id` = 842 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `xycj_conditions_buy_count` FROM `snake_admin_company` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_lucky_goods_spoil` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT `title` FROM `snake_lucky_goods_spoil` WHERE  `company_id` = 1  AND `spoil_type` = 2 [ RunTime:0.001000s ]
+[ error ] [8]未定义数组下标: 1[D:\project\default\application\common\model\LuckyGoods.php:159]
+
+---------------------------------------------------------------
+[ 2017-08-08T10:12:53+08:00 ] 127.0.0.1 127.0.0.1 GET /api/wx/lucky_spoilHome?userId=fba1b1c1795b269ac802e11c47a92cca&page=1&1502158373227
+[ log ] www.a.com/api/wx/lucky_spoilHome?userId=fba1b1c1795b269ac802e11c47a92cca&page=1&1502158373227 [运行时间：0.063003s][吞吐率：15.87req/s] [内存消耗：360.27kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Lucky',
+    2 => 'spoilHome',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/plain, */*',
+  'origin' => 'http://127.0.0.1:8080',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1',
+  'referer' => 'http://127.0.0.1:8080/',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/api/wx/lucky_spoilHome' => '',
+  'userId' => 'fba1b1c1795b269ac802e11c47a92cca',
+  'page' => '1',
+  '1502158373227' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\api\controller\Lucky->spoilHome[ D:\project\default\application\api\controller\Lucky.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_user` WHERE  `identifier` = 'fba1b1c1795b269ac802e11c47a92cca' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_lucky_goods` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT `goods_id`,`page_thumb` FROM `snake_lucky_goods` WHERE  `is_out` = 0  AND `is_recommend` = 1 ORDER BY goods_id desc LIMIT 10 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_admin_company` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT `company`.`company_name`,`company`.`company_pic`,`company`.`identifier`,`goods`.`company_id` FROM `snake_admin_company` `company` INNER JOIN `snake_lucky_goods` `goods` ON `company`.`id`=`goods`.`company_id` GROUP BY company_id [ RunTime:0.001000s ]
+[ sql ] [ SQL ] select goods_id,goods_title,page_thumb,single_price,end_time,max_people_number,(select count(record_id) from snake_lucky_goods_buy_record record where goods.goods_id=record.goods_id and record.pay_status in(0,1)) as people_count from snake_lucky_goods goods where goods.start_time < 1502158373  and goods.end_time > 1502158373 and goods.is_out=0
+        ORDER BY people_count DESC LIMIT 0,10 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] select count(*) as count from snake_lucky_goods goods where goods.start_time < 1502158373  and goods.end_time > 1502158373 and goods.is_out=0 [ RunTime:0.001000s ]
+[ error ] [8192]Non-static method app\common\model\Setting::_getCache() should not be called statically[D:\project\default\application\common\model\Setting.php:17]
+
+---------------------------------------------------------------
+[ 2017-08-08T10:12:55+08:00 ] 127.0.0.1 127.0.0.1 GET /api/wx/lucky_companyHomeList?userId=fba1b1c1795b269ac802e11c47a92cca&companyId=b719b8c89ec9bdb1bfcdfbb2d221a68a&page=1&1502158375750
+[ log ] www.a.com/api/wx/lucky_companyHomeList?userId=fba1b1c1795b269ac802e11c47a92cca&companyId=b719b8c89ec9bdb1bfcdfbb2d221a68a&page=1&1502158375750 [运行时间：0.050003s][吞吐率：20.00req/s] [内存消耗：365.44kb] [文件加载：65]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Lucky',
+    2 => 'companyHomeList',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/plain, */*',
+  'origin' => 'http://127.0.0.1:8080',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1',
+  'referer' => 'http://127.0.0.1:8080/',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/api/wx/lucky_companyHomeList' => '',
+  'userId' => 'fba1b1c1795b269ac802e11c47a92cca',
+  'companyId' => 'b719b8c89ec9bdb1bfcdfbb2d221a68a',
+  'page' => '1',
+  '1502158375750' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\api\controller\Lucky->companyHomeList[ D:\project\default\application\api\controller\Lucky.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_admin_company` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_admin_company` WHERE  `identifier` = 'b719b8c89ec9bdb1bfcdfbb2d221a68a' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_user` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT `id` FROM `snake_user` WHERE  `identifier` = 'fba1b1c1795b269ac802e11c47a92cca' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] select goods_id,goods_title,page_thumb,single_price,end_time,max_people_number,(select count(record_id) from snake_lucky_goods_buy_record record where goods.goods_id=record.goods_id and record.pay_status in(0,1)) as people_count from snake_lucky_goods goods where goods.start_time < 1502158375  and goods.end_time > 1502158375 and goods.is_out=0 and goods.company_id=36
+        ORDER BY people_count DESC LIMIT 0,10 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `xycj_score` FROM `snake_user` WHERE  `id` = 842 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `xycj_conditions_buy_count` FROM `snake_admin_company` WHERE  `id` = 36 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_lucky_goods_spoil` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT `title` FROM `snake_lucky_goods_spoil` WHERE  `company_id` = 36  AND `spoil_type` = 2 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组下标: 36[D:\project\default\application\common\model\LuckyGoods.php:159]
+
+---------------------------------------------------------------
+[ 2017-08-08T14:52:17+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：0.460026s][吞吐率：2.17req/s] [内存消耗：290.77kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [2]file_get_contents(D:\project\default\extend\org\allinpayInter\key/20042100000837904.pem): failed to open stream: No such file or directory[D:\project\default\extend\org\allinpayInter\PhpTools.php:101]
+[ error ] [2]openssl_sign(): supplied key param cannot be coerced into a private key[D:\project\default\extend\org\allinpayInter\PhpTools.php:104]
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, boolean given[D:\project\default\extend\org\allinpayInter\PhpTools.php:105]
+
+---------------------------------------------------------------
+[ 2017-08-08T14:53:06+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：3.545203s][吞吐率：0.28req/s] [内存消耗：290.91kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [2]file_get_contents(D:\project\default\extend\org\allinpayInter\key/20042100000837904.pem): failed to open stream: No such file or directory[D:\project\default\extend\org\allinpayInter\PhpTools.php:101]
+[ error ] [2]openssl_sign(): supplied key param cannot be coerced into a private key[D:\project\default\extend\org\allinpayInter\PhpTools.php:104]
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, boolean given[D:\project\default\extend\org\allinpayInter\PhpTools.php:105]
+
+---------------------------------------------------------------
+[ 2017-08-08T15:09:36+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：1.391080s][吞吐率：0.72req/s] [内存消耗：316.84kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [2]openssl_sign(): supplied key param cannot be coerced into a private key[D:\project\default\extend\org\allinpayInter\PhpTools.php:104]
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, boolean given[D:\project\default\extend\org\allinpayInter\PhpTools.php:105]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_replace_pay` [ RunTime:0.042003s ]
+[ sql ] [ SQL ] INSERT INTO `snake_replace_pay` (`req_sn` , `submit_time` , `account_name` , `account_no` , `bank_code` , `amount` , `summary` , `remark` , `user_id` , `return_code` , `return_msg` , `create_time` , `status`) VALUES ('20042100000837915021761744368' , '20170808150936' , '东东' , '622700144717004882311' , '102' , '10000000' , '春风贷提现' , '123' , '123' , '1000' , '签名不符' , 1502176174 , 0) [ RunTime:0.006000s ]
+
+---------------------------------------------------------------
+[ 2017-08-08T15:10:09+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：0.355021s][吞吐率：2.82req/s] [内存消耗：333.88kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [2]openssl_sign(): supplied key param cannot be coerced into a private key[D:\project\default\extend\org\allinpayInter\PhpTools.php:104]
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, boolean given[D:\project\default\extend\org\allinpayInter\PhpTools.php:105]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_replace_pay` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] INSERT INTO `snake_replace_pay` (`req_sn` , `submit_time` , `account_name` , `account_no` , `bank_code` , `amount` , `summary` , `remark` , `user_id` , `return_code` , `return_msg` , `create_time` , `status`) VALUES ('20042100000837915021762092877' , '20170808151009' , '东东' , '62270014471700488231' , '102' , '10000000' , '春风贷提现' , '123' , '123' , '1000' , '签名不符' , 1502176209 , 0) [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-08T15:10:13+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：0.282016s][吞吐率：3.55req/s] [内存消耗：317.77kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [2]openssl_sign(): supplied key param cannot be coerced into a private key[D:\project\default\extend\org\allinpayInter\PhpTools.php:104]
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, boolean given[D:\project\default\extend\org\allinpayInter\PhpTools.php:105]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_replace_pay` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] INSERT INTO `snake_replace_pay` (`req_sn` , `submit_time` , `account_name` , `account_no` , `bank_code` , `amount` , `summary` , `remark` , `user_id` , `return_code` , `return_msg` , `create_time` , `status`) VALUES ('20042100000837915021762124952' , '20170808151013' , '东东' , '62270014471700488231' , '102' , '10000000' , '春风贷提现' , '123' , '123' , '1000' , '签名不符' , 1502176212 , 0) [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-08T15:12:31+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：0.436025s][吞吐率：2.29req/s] [内存消耗：317.75kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [2]openssl_sign(): supplied key param cannot be coerced into a private key[D:\project\default\extend\org\allinpayInter\PhpTools.php:104]
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, boolean given[D:\project\default\extend\org\allinpayInter\PhpTools.php:105]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_replace_pay` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] INSERT INTO `snake_replace_pay` (`req_sn` , `submit_time` , `account_name` , `account_no` , `bank_code` , `amount` , `summary` , `remark` , `user_id` , `return_code` , `return_msg` , `create_time` , `status`) VALUES ('20042100000837915021763503056' , '20170808151231' , '东东' , '62270014471700488231' , '102' , '10000000' , '春风贷提现' , '123' , '123' , '1000' , '签名不符' , 1502176350 , 0) [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-08T15:13:21+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：0.312017s][吞吐率：3.20req/s] [内存消耗：317.75kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [2]openssl_sign(): supplied key param cannot be coerced into a private key[D:\project\default\extend\org\allinpayInter\PhpTools.php:104]
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, boolean given[D:\project\default\extend\org\allinpayInter\PhpTools.php:105]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_replace_pay` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] INSERT INTO `snake_replace_pay` (`req_sn` , `submit_time` , `account_name` , `account_no` , `bank_code` , `amount` , `summary` , `remark` , `user_id` , `return_code` , `return_msg` , `create_time` , `status`) VALUES ('20042100000837915021764003573' , '20170808151321' , '东东' , '62270014471700488231' , '102' , '10000000' , '春风贷提现' , '123' , '123' , '1000' , '权限不足' , 1502176400 , 0) [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-08-08T15:13:24+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：0.223012s][吞吐率：4.48req/s] [内存消耗：316.84kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [2]openssl_sign(): supplied key param cannot be coerced into a private key[D:\project\default\extend\org\allinpayInter\PhpTools.php:104]
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, boolean given[D:\project\default\extend\org\allinpayInter\PhpTools.php:105]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_replace_pay` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] INSERT INTO `snake_replace_pay` (`req_sn` , `submit_time` , `account_name` , `account_no` , `bank_code` , `amount` , `summary` , `remark` , `user_id` , `return_code` , `return_msg` , `create_time` , `status`) VALUES ('20042100000837915021764044287' , '20170808151324' , '东东' , '62270014471700488231' , '102' , '10000000' , '春风贷提现' , '123' , '123' , '1000' , '权限不足' , 1502176404 , 0) [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-08T15:13:27+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：0.309017s][吞吐率：3.24req/s] [内存消耗：316.84kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [2]openssl_sign(): supplied key param cannot be coerced into a private key[D:\project\default\extend\org\allinpayInter\PhpTools.php:104]
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, boolean given[D:\project\default\extend\org\allinpayInter\PhpTools.php:105]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_replace_pay` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] INSERT INTO `snake_replace_pay` (`req_sn` , `submit_time` , `account_name` , `account_no` , `bank_code` , `amount` , `summary` , `remark` , `user_id` , `return_code` , `return_msg` , `create_time` , `status`) VALUES ('20042100000837915021764071701' , '20170808151327' , '东东' , '62270014471700488231' , '102' , '10000000' , '春风贷提现' , '123' , '123' , '1000' , '权限不足' , 1502176407 , 0) [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-08T15:13:34+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：0.473027s][吞吐率：2.11req/s] [内存消耗：317.75kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [2]openssl_sign(): supplied key param cannot be coerced into a private key[D:\project\default\extend\org\allinpayInter\PhpTools.php:104]
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, boolean given[D:\project\default\extend\org\allinpayInter\PhpTools.php:105]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_replace_pay` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] INSERT INTO `snake_replace_pay` (`req_sn` , `submit_time` , `account_name` , `account_no` , `bank_code` , `amount` , `summary` , `remark` , `user_id` , `return_code` , `return_msg` , `create_time` , `status`) VALUES ('20042100000837915021764134502' , '20170808151334' , '东东' , '62270014471700488231' , '102' , '10000000' , '春风贷提现' , '123' , '123' , '1000' , '签名不符' , 1502176413 , 0) [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-08T15:19:03+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：0.334019s][吞吐率：2.99req/s] [内存消耗：317.70kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [2]openssl_sign(): supplied key param cannot be coerced into a private key[D:\project\default\extend\org\allinpayInter\PhpTools.php:104]
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, boolean given[D:\project\default\extend\org\allinpayInter\PhpTools.php:105]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_replace_pay` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] INSERT INTO `snake_replace_pay` (`req_sn` , `submit_time` , `account_name` , `account_no` , `bank_code` , `amount` , `summary` , `remark` , `user_id` , `return_code` , `return_msg` , `create_time` , `status`) VALUES ('20042100000837915021767426103' , '20170808151903' , '袁浩天' , '6232086500008779067' , '102' , '1' , '春风贷提现' , '123' , '123' , '1000' , '签名不符' , 1502176742 , 0) [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-08-08T15:21:35+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：0.025001s][吞吐率：40.00req/s] [内存消耗：286.23kb] [文件加载：63]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [2]openssl_sign(): supplied key param cannot be coerced into a private key[D:\project\default\extend\org\allinpayInter\PhpTools.php:105]
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, boolean given[D:\project\default\extend\org\allinpayInter\PhpTools.php:106]
+
+---------------------------------------------------------------
+[ 2017-08-08T15:22:10+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：0.017001s][吞吐率：58.82req/s] [内存消耗：304.60kb] [文件加载：63]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [2]openssl_sign(): supplied key param cannot be coerced into a private key[D:\project\default\extend\org\allinpayInter\PhpTools.php:105]
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, boolean given[D:\project\default\extend\org\allinpayInter\PhpTools.php:106]
+
+---------------------------------------------------------------
+[ 2017-08-08T15:22:31+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：0.007000s][吞吐率：142.86req/s] [内存消耗：304.60kb] [文件加载：63]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [2]openssl_sign(): supplied key param cannot be coerced into a private key[D:\project\default\extend\org\allinpayInter\PhpTools.php:106]
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, boolean given[D:\project\default\extend\org\allinpayInter\PhpTools.php:107]
+
+---------------------------------------------------------------
+[ 2017-08-08T15:22:36+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：0.006001s][吞吐率：166.64req/s] [内存消耗：304.60kb] [文件加载：63]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [2]openssl_sign(): supplied key param cannot be coerced into a private key[D:\project\default\extend\org\allinpayInter\PhpTools.php:106]
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, boolean given[D:\project\default\extend\org\allinpayInter\PhpTools.php:107]
+
+---------------------------------------------------------------
+[ 2017-08-08T15:24:00+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：0.030002s][吞吐率：33.33req/s] [内存消耗：286.23kb] [文件加载：63]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [2]openssl_sign(): supplied key param cannot be coerced into a private key[D:\project\default\extend\org\allinpayInter\PhpTools.php:106]
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, boolean given[D:\project\default\extend\org\allinpayInter\PhpTools.php:107]
+
+---------------------------------------------------------------
+[ 2017-08-08T15:24:00+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：0.015001s][吞吐率：66.66req/s] [内存消耗：285.30kb] [文件加载：63]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [2]openssl_sign(): supplied key param cannot be coerced into a private key[D:\project\default\extend\org\allinpayInter\PhpTools.php:106]
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, boolean given[D:\project\default\extend\org\allinpayInter\PhpTools.php:107]
+
+---------------------------------------------------------------
+[ 2017-08-08T15:24:01+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：0.018001s][吞吐率：55.55req/s] [内存消耗：285.30kb] [文件加载：63]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [2]openssl_sign(): supplied key param cannot be coerced into a private key[D:\project\default\extend\org\allinpayInter\PhpTools.php:106]
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, boolean given[D:\project\default\extend\org\allinpayInter\PhpTools.php:107]
+
+---------------------------------------------------------------
+[ 2017-08-08T15:24:24+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：0.018001s][吞吐率：55.55req/s] [内存消耗：286.23kb] [文件加载：63]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [2]openssl_sign(): supplied key param cannot be coerced into a private key[D:\project\default\extend\org\allinpayInter\PhpTools.php:106]
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, boolean given[D:\project\default\extend\org\allinpayInter\PhpTools.php:107]
+
+---------------------------------------------------------------
+[ 2017-08-08T15:24:42+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：0.015001s][吞吐率：66.66req/s] [内存消耗：304.63kb] [文件加载：63]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [2]openssl_sign(): supplied key param cannot be coerced into a private key[D:\project\default\extend\org\allinpayInter\PhpTools.php:106]
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, boolean given[D:\project\default\extend\org\allinpayInter\PhpTools.php:107]
+
+---------------------------------------------------------------
+[ 2017-08-08T15:26:50+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：0.019001s][吞吐率：52.63req/s] [内存消耗：286.23kb] [文件加载：63]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [2]openssl_sign(): supplied key param cannot be coerced into a private key[D:\project\default\extend\org\allinpayInter\PhpTools.php:106]
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, boolean given[D:\project\default\extend\org\allinpayInter\PhpTools.php:107]
+
+---------------------------------------------------------------
+[ 2017-08-08T15:26:52+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：0.011001s][吞吐率：90.90req/s] [内存消耗：285.30kb] [文件加载：63]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [2]openssl_sign(): supplied key param cannot be coerced into a private key[D:\project\default\extend\org\allinpayInter\PhpTools.php:106]
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, boolean given[D:\project\default\extend\org\allinpayInter\PhpTools.php:107]
+
+---------------------------------------------------------------
+[ 2017-08-08T15:27:13+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：0.026002s][吞吐率：38.46req/s] [内存消耗：286.23kb] [文件加载：63]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [2]openssl_sign(): supplied key param cannot be coerced into a private key[D:\project\default\extend\org\allinpayInter\PhpTools.php:106]
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, boolean given[D:\project\default\extend\org\allinpayInter\PhpTools.php:107]
+
+---------------------------------------------------------------
+[ 2017-08-08T15:27:14+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：0.019001s][吞吐率：52.63req/s] [内存消耗：285.30kb] [文件加载：63]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [2]openssl_sign(): supplied key param cannot be coerced into a private key[D:\project\default\extend\org\allinpayInter\PhpTools.php:106]
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, boolean given[D:\project\default\extend\org\allinpayInter\PhpTools.php:107]
+
+---------------------------------------------------------------
+[ 2017-08-08T15:27:14+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：0.012000s][吞吐率：83.33req/s] [内存消耗：285.30kb] [文件加载：63]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [2]openssl_sign(): supplied key param cannot be coerced into a private key[D:\project\default\extend\org\allinpayInter\PhpTools.php:106]
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, boolean given[D:\project\default\extend\org\allinpayInter\PhpTools.php:107]
+
+---------------------------------------------------------------
+[ 2017-08-08T15:27:15+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：0.011001s][吞吐率：90.90req/s] [内存消耗：285.30kb] [文件加载：63]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [2]openssl_sign(): supplied key param cannot be coerced into a private key[D:\project\default\extend\org\allinpayInter\PhpTools.php:106]
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, boolean given[D:\project\default\extend\org\allinpayInter\PhpTools.php:107]
+
+---------------------------------------------------------------
+[ 2017-08-08T15:27:21+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：0.018001s][吞吐率：55.55req/s] [内存消耗：285.30kb] [文件加载：63]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [2]openssl_sign(): supplied key param cannot be coerced into a private key[D:\project\default\extend\org\allinpayInter\PhpTools.php:106]
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, boolean given[D:\project\default\extend\org\allinpayInter\PhpTools.php:107]
+
+---------------------------------------------------------------
+[ 2017-08-08T15:27:24+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：0.010001s][吞吐率：99.99req/s] [内存消耗：286.23kb] [文件加载：63]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [2]openssl_sign(): supplied key param cannot be coerced into a private key[D:\project\default\extend\org\allinpayInter\PhpTools.php:106]
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, boolean given[D:\project\default\extend\org\allinpayInter\PhpTools.php:107]
+
+---------------------------------------------------------------
+[ 2017-08-08T15:30:21+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：0.026002s][吞吐率：38.46req/s] [内存消耗：286.23kb] [文件加载：63]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [2]openssl_sign(): supplied key param cannot be coerced into a private key[D:\project\default\extend\org\allinpayInter\PhpTools.php:111]
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, boolean given[D:\project\default\extend\org\allinpayInter\PhpTools.php:112]
+
+---------------------------------------------------------------
+[ 2017-08-08T15:30:32+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：0.023002s][吞吐率：43.47req/s] [内存消耗：304.60kb] [文件加载：63]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [2]openssl_sign(): supplied key param cannot be coerced into a private key[D:\project\default\extend\org\allinpayInter\PhpTools.php:111]
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, boolean given[D:\project\default\extend\org\allinpayInter\PhpTools.php:112]
+
+---------------------------------------------------------------
+[ 2017-08-08T15:30:33+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：0.016000s][吞吐率：62.50req/s] [内存消耗：286.23kb] [文件加载：63]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [2]openssl_sign(): supplied key param cannot be coerced into a private key[D:\project\default\extend\org\allinpayInter\PhpTools.php:111]
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, boolean given[D:\project\default\extend\org\allinpayInter\PhpTools.php:112]
+
+---------------------------------------------------------------
+[ 2017-08-08T15:30:45+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：0.020001s][吞吐率：50.00req/s] [内存消耗：286.23kb] [文件加载：63]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [2]openssl_sign(): supplied key param cannot be coerced into a private key[D:\project\default\extend\org\allinpayInter\PhpTools.php:111]
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, boolean given[D:\project\default\extend\org\allinpayInter\PhpTools.php:112]
+
+---------------------------------------------------------------
+[ 2017-08-08T15:30:47+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：0.011000s][吞吐率：90.91req/s] [内存消耗：285.30kb] [文件加载：63]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [2]openssl_sign(): supplied key param cannot be coerced into a private key[D:\project\default\extend\org\allinpayInter\PhpTools.php:111]
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, boolean given[D:\project\default\extend\org\allinpayInter\PhpTools.php:112]
+
+---------------------------------------------------------------
+[ 2017-08-08T15:31:36+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：0.009001s][吞吐率：111.10req/s] [内存消耗：286.23kb] [文件加载：63]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [2]openssl_sign(): supplied key param cannot be coerced into a private key[D:\project\default\extend\org\allinpayInter\PhpTools.php:111]
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, boolean given[D:\project\default\extend\org\allinpayInter\PhpTools.php:112]
+
+---------------------------------------------------------------
+[ 2017-08-08T15:35:42+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：0.037003s][吞吐率：27.02req/s] [内存消耗：286.80kb] [文件加载：63]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义变量: str[D:\project\default\extend\org\allinpayInter\PhpTools.php:108]
+[ error ] [8]未定义变量: pKeyId[D:\project\default\extend\org\allinpayInter\PhpTools.php:114]
+[ error ] [2]openssl_sign(): supplied key param cannot be coerced into a private key[D:\project\default\extend\org\allinpayInter\PhpTools.php:114]
+[ error ] [8]未定义变量: pKeyId[D:\project\default\extend\org\allinpayInter\PhpTools.php:115]
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, null given[D:\project\default\extend\org\allinpayInter\PhpTools.php:115]
+
+---------------------------------------------------------------
+[ 2017-08-08T15:36:40+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：0.017001s][吞吐率：58.82req/s] [内存消耗：286.70kb] [文件加载：63]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义变量: pKeyId[D:\project\default\extend\org\allinpayInter\PhpTools.php:111]
+[ error ] [2]openssl_sign(): supplied key param cannot be coerced into a private key[D:\project\default\extend\org\allinpayInter\PhpTools.php:111]
+[ error ] [8]未定义变量: pKeyId[D:\project\default\extend\org\allinpayInter\PhpTools.php:112]
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, null given[D:\project\default\extend\org\allinpayInter\PhpTools.php:112]
+
+---------------------------------------------------------------
+[ 2017-08-08T15:36:50+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：0.019001s][吞吐率：52.63req/s] [内存消耗：285.77kb] [文件加载：63]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义变量: pKeyId[D:\project\default\extend\org\allinpayInter\PhpTools.php:111]
+[ error ] [2]openssl_sign(): supplied key param cannot be coerced into a private key[D:\project\default\extend\org\allinpayInter\PhpTools.php:111]
+[ error ] [8]未定义变量: pKeyId[D:\project\default\extend\org\allinpayInter\PhpTools.php:112]
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, null given[D:\project\default\extend\org\allinpayInter\PhpTools.php:112]
+
+---------------------------------------------------------------
+[ 2017-08-08T15:36:52+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：0.023001s][吞吐率：43.48req/s] [内存消耗：286.43kb] [文件加载：63]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义变量: pKeyId[D:\project\default\extend\org\allinpayInter\PhpTools.php:111]
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, null given[D:\project\default\extend\org\allinpayInter\PhpTools.php:111]
+
+---------------------------------------------------------------
+[ 2017-08-08T15:36:58+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：0.020001s][吞吐率：50.00req/s] [内存消耗：285.51kb] [文件加载：63]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义变量: pKeyId[D:\project\default\extend\org\allinpayInter\PhpTools.php:111]
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, null given[D:\project\default\extend\org\allinpayInter\PhpTools.php:111]
+
+---------------------------------------------------------------
+[ 2017-08-08T15:37:01+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：0.010000s][吞吐率：100.00req/s] [内存消耗：285.51kb] [文件加载：63]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义变量: pKeyId[D:\project\default\extend\org\allinpayInter\PhpTools.php:111]
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, null given[D:\project\default\extend\org\allinpayInter\PhpTools.php:111]
+
+---------------------------------------------------------------
+[ 2017-08-08T15:37:08+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：0.434025s][吞吐率：2.30req/s] [内存消耗：318.00kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义变量: pKeyId[D:\project\default\extend\org\allinpayInter\PhpTools.php:111]
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, null given[D:\project\default\extend\org\allinpayInter\PhpTools.php:111]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_replace_pay` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] INSERT INTO `snake_replace_pay` (`req_sn` , `submit_time` , `account_name` , `account_no` , `bank_code` , `amount` , `summary` , `remark` , `user_id` , `return_code` , `return_msg` , `create_time` , `status`) VALUES ('20042100000837915021778287549' , '20170808153708' , '袁浩天' , '6232086500008779067' , '102' , '1' , '春风贷提现' , '123' , '123' , '2007' , '未开通的业务类型' , 1502177828 , 0) [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-08T15:39:41+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：0.373022s][吞吐率：2.68req/s] [内存消耗：317.89kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, boolean given[D:\project\default\extend\org\allinpayInter\PhpTools.php:111]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003001s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_replace_pay` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] INSERT INTO `snake_replace_pay` (`req_sn` , `submit_time` , `account_name` , `account_no` , `bank_code` , `amount` , `summary` , `remark` , `user_id` , `return_code` , `return_msg` , `create_time` , `status`) VALUES ('20042100000837915021779814528' , '20170808153941' , '袁浩天' , '6232086500008779067' , '102' , '1' , '春风贷提现' , '123' , '123' , '2007' , '未开通的业务类型' , 1502177981 , 0) [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-08-08T15:41:11+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：1.575090s][吞吐率：0.63req/s] [内存消耗：318.25kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.000000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, boolean given[D:\project\default\extend\org\allinpayInter\PhpTools.php:111]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_replace_pay` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] INSERT INTO `snake_replace_pay` (`req_sn` , `submit_time` , `account_name` , `account_no` , `bank_code` , `amount` , `summary` , `remark` , `user_id` , `return_code` , `return_msg` , `create_time` , `status`) VALUES ('20042100000837915021780699542' , '20170808154111' , '袁浩天' , '6232086500008779067' , '102' , '1' , '春风贷提现' , '123' , '123' , '1000' , '借方余额不足:20170700000000684276不满足:[0<=(-202--101=-101)<=10000000000000000]' , 1502178069 , 0) [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-08T16:21:59+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Test/Allinpay
+[ log ] www.a.com/Admin/Test/Allinpay [运行时间：1.757100s][吞吐率：0.57req/s] [内存消耗：317.34kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run app\behavior\AppInit @app_init [ RunTime:0.000000s ]
+[ info ] [ LANG ] D:\project\default\vendor\topthink\framework\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Test',
+    2 => 'Allinpay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.a.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=8tia1tekr2q2du7u1vvbvl9bh5; referer=http%3A%2F%2Fwww.a.com%2Fadmin%2Fcompany%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+  '/Admin/Test/Allinpay' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\behavior\ModuleInit @module_init [ RunTime:0.001000s ]
+[ info ] [ RUN ] app\admin\controller\Test->Allinpay[ D:\project\default\application\admin\controller\Test.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [2]openssl_free_key() expects parameter 1 to be resource, boolean given[D:\project\default\extend\org\allinpayInter\PhpTools.php:111]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `snake_replace_pay` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] INSERT INTO `snake_replace_pay` (`req_sn` , `submit_time` , `account_name` , `account_no` , `bank_code` , `amount` , `summary` , `remark` , `user_id` , `return_code` , `return_msg` , `create_time` , `status`) VALUES ('20042100000837915021805176634' , '20170808162159' , '袁浩天' , '6232086500008779067' , '102' , '1' , '春风贷提现' , '123' , '123' , '1000' , '借方余额不足:20170700000000684276不满足:[0<=(-202--101=-101)<=10000000000000000]' , 1502180517 , 0) [ RunTime:0.001000s ]
+
+---------------------------------------------------------------

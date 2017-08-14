@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {include file="header"}
+    <style>
+        .fee-total span {
+            display: inline-block;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        .fee-total span a {
+            color: #FF5722 !important;
+            cursor: default;
+        }
+    </style>
+</head>
+<body>
+{include file="loading"}
+<div class="layui-main">
+    <fieldset class="layui-elem-field layui-field-title">
+        <legend>推广记录</legend>
+    </fieldset>
+    <div class="fee-total">
+        <span class="layui-breadcrumb" lay-separator="|">
+          <a href="javascript:;">推广支出：{$totalAuthFeeDistribution|sprintf='%.2f',###}元</a>
+          <a href="javascript:;">已结算：{$totalAuthFeeDistributionOk|sprintf='%.2f',###}元</a>
+          <a href="javascript:;">未结算：{$totalAuthFeeDistributionNo|sprintf='%.2f',###}元</a>
+          <a href="javascript:;">待结算：{$totalAuthFeeDistributionWait|sprintf='%.2f',###}元</a>
+        </span>
+    </div>
+    <fieldset class="layui-elem-field">
+        <legend>查询搜索</legend>
+        <div class="layui-field-box">
+            <form action="" method="get" class="layui-form">
+                <div class="layui-input-inline">
+                    <select name="status">
+                        <option value="">结算状态</option>
+                        <option value="全部">全部</option>
+                        <option value="未结算" {$Request.param.status=='未结算'?'selected':''}>未结算</option>
+                        <option value="已结算" {$Request.param.status=='已结算'?'selected':''}>已结算</option>
+                    </select>
+                </div>
+                <button type="submit" class="layui-btn">提交</button>
+            </form>
+        </div>
+    </fieldset>
+    <table class="table">
+        <thead>
+        <tr>
+            <th class="number">Id</th>
+            <th>用户类型</th>
+            <th>收益金额</th>
+            <th>时间</th>
+            <th>状态</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        {foreach name="list" item="item"}
+        <tr>
+            <td>{$item->id}</td>
+            <td>{$item->c_type}</td>
+            <td>{$item->money}</td>
+            <td>{$item->add_time|date='Y-m-d',###}</td>
+            <td>{$item->status}</td>
+        </tr>
+        {/foreach}
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="99">
+                <div class="pagination-box">
+                    <span class="info">
+                        共{$list->total()}条数据 {$list->currentPage()}/{$list->lastPage()}页
+                    </span>
+                    {$list->render()}
+                </div>
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+</div>
+<script>
+    layui.use(['base', 'form']);
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {include file="header"}
+</head>
+<body>
+{include file="loading"}
+<div class="layui-main">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>时间</th>
+            <th>金额</th>
+            <th>状态</th>
+        </tr>
+        </thead>
+        <tbody>
+        {foreach name="list" item="item"}
+        <tr>
+            <th>{$item.day}</th>
+            <th>{$item.amount}</th>
+            <th>{$item->stateText[$item.state]}</th>
+        </tr>
+        {/foreach}
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="99">
+                <div class="pagination-box">
+                    <span class="info">
+                        共{$list->total()}条数据 {$list->currentPage()}/{$list->lastPage()}页
+                    </span>
+                    {$list->render()}
+                </div>
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+</div>
+<script>
+    layui.use(['base', 'form'], function () {
+        var $ = layui.jquery;
+
+        $('.del').click(function () {
+            var id = $(this).data('id');
+            layer.confirm('操作确认?', {
+                title: '安全提示',
+                icon: 3,
+                btn: ['确定', '取消']
+            }, function () {
+                window.location.href = "{:path('activityDel')}?goods_id=" + id;
+            });
+        });
+    });
+</script>
+</body>
+</html>

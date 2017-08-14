@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {include file="header"}
+</head>
+<body>
+{include file="loading"}
+<div class="layui-main">
+    <fieldset class="layui-elem-field layui-field-title">
+        <legend>编辑文档</legend>
+    </fieldset>
+    <div class="layui-field-box">
+        <form action="{:path('edit',['id'=>$data->id])}" method="post" class="layui-form">
+            <div class="layui-form-item">
+                <div class="label-title Validform_label">标题</div>
+                <div><input type="text" name="title" value="{$data->title}" class="layui-input" datatype="s2-15">
+                </div>
+            </div>
+            <div class="layui-form-item b-t-d">
+                <div class="label-title">图片</div>
+                <div class="image_upload" data-name="pic" data-value="{$data->pic}"></div>
+            </div>
+            <div class="layui-form-item b-t-d">
+                <div class="label-title Validform_label">内容</div>
+                <div>
+                    <textarea name="content" id="editor">{$data->content}</textarea>
+                </div>
+            </div>
+            <div class="layui-form-item b-t-s">
+                {:token()}
+                <button type="submit" class="layui-btn">提交</button>
+                {if $data}
+                <button type="button" class="layui-btn layui-btn-primary" onclick="window.history.back()">返回</button>
+                {/if}
+            </div>
+        </form>
+    </div>
+</div>
+<link rel="stylesheet" type="text/css" href="/static/simditor/styles/simditor.css"/>
+<script type="text/javascript" src="/static/simditor/scripts/jquery.min.js"></script>
+<script type="text/javascript" src="/static/simditor/scripts/module.js"></script>
+<script type="text/javascript" src="/static/simditor/scripts/hotkeys.js"></script>
+<script type="text/javascript" src="/static/simditor/scripts/uploader.js"></script>
+<script type="text/javascript" src="/static/simditor/scripts/simditor.js"></script>
+<script>
+    layui.use(['base', 'validform'], function () {
+        var $ = layui.jquery;
+        var editor = new Simditor({
+            textarea: $('#editor'),
+            toolbar: ['title', 'bold', 'italic', 'underline', 'strikethrough', 'fontScale', 'color', 'ol', 'ul', 'blockquote', 'table', 'link', 'image', 'hr', 'indent', 'outdent', 'alignment'],
+            allowedAttributes: {
+                img: ['src', 'alt', 'width', 'height', 'data-non-image'],
+                a: ['href', 'target'],
+                font: ['color'],
+                code: ['class']
+            },
+            defaultImage: '/static/simditor/images/image.png',
+            upload: {
+                url: '/upload-editor',
+                params: null,
+                fileKey: 'file',
+                connectionCount: 1,
+                leaveConfirm: '正在上传图片'
+            }
+        });
+        //表单验证
+        $("form").Validform({
+            tiptype: 3
+        });
+    });
+</script>
+</body>
+</html>

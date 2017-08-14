@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {include file="header"}
+</head>
+<body>
+{include file="loading"}
+<div class="layui-main">
+    <fieldset class="layui-elem-field layui-field-title">
+        <legend>首页轮播图</legend>
+    </fieldset>
+    <blockquote class="layui-elem-quote">
+        <p style="color:#FF5722;">请确保图片大小保持一致</p>
+    </blockquote>
+    <form class="layui-form" action="" method="post">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>图片</th>
+                <th>链接</th>
+                <th>状态</th>
+            </tr>
+            </thead>
+            <tbody>
+            {for start="0" end="5"}
+            <tr>
+                <td>
+                    <div class="image_upload" data-name="pic[]" data-value="{$data['pic'][$i]}"></div>
+                </td>
+                <td>
+                    <input type="text" name="url[]" value="{$data['url'][$i]}" class="layui-input" placeholder="http://">
+                </td>
+                <td>
+                    <input type="checkbox" title="应用" name="is_show[{$i}]" value="1" {$data.is_show[$i]?=checked} class="layui-input">
+                </td>
+            </tr>
+            {/for}
+            </tbody>
+            <tfoot>
+            <tr>
+                <td colspan="3">
+                    {:token()}
+                    <button type="submit" class="layui-btn">提交</button>
+                </td>
+            </tr>
+            </tfoot>
+        </table>
+    </form>
+</div>
+<script>
+    layui.use(['base','form']);
+</script>
+</body>
+</html>

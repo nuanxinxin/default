@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {include file="header"}
+</head>
+<body>
+{include file="loading"}
+<div class="layui-main">
+    <div class="layui-field-box">
+        <form action="{:path('setting')}" method="post" class="layui-form">
+            <div class="layui-form-item">
+                <div class="label-title Validform_label">认证费(元)</div>
+                <div><input type="text" name="auth_fee" value="{$data.auth_fee}" class="layui-input" datatype="n">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="label-title Validform_label">直推收益(元)</div>
+                <div><input type="text" name="auth_fee_distribution[]" value="{$data.auth_fee_distribution[0]}" class="layui-input" datatype="n">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="label-title Validform_label">二级推广收益(元)</div>
+                <div><input type="text" name="auth_fee_distribution[]" value="{$data.auth_fee_distribution[1]}" class="layui-input" datatype="n">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="label-title Validform_label">三级推广收益(元)</div>
+                <div><input type="text" name="auth_fee_distribution[]" value="{$data.auth_fee_distribution[2]}" class="layui-input" datatype="n">
+                </div>
+            </div>
+            <div class="layui-form-item b-t-s">
+                {:token()}
+                <button type="submit" class="layui-btn">提交</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    layui.use('validform', function () {
+        var $ = layui.jquery;
+
+        //表单验证
+        $("form").Validform({
+            tiptype: 3
+        });
+    });
+</script>
+
+
+</body>
+</html>

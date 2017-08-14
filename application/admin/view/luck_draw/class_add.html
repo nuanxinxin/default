@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {include file="header"}
+</head>
+<body>
+{include file="loading"}
+<div class="layui-main">
+    <div class="layui-field-box">
+        <form action="" method="post" class="layui-form">
+            <div class="layui-form-item">
+                <div class="label-title Validform_label">类名</div>
+                <div><input type="text" name="class_name" value="{$data->class_name}" class="layui-input"
+                            datatype="*">
+                </div>
+            </div>
+            <div class="layui-form-item b-t-s">
+                <input type="hidden" name="id" value="{$data->id}">
+                <button type="submit" class="layui-btn">提交</button>
+                {if $data}
+                <button type="button" class="layui-btn layui-btn-primary" onclick="window.history.back()">返回</button>
+                {/if}
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    layui.use(['base', 'form', 'validform', 'laydate'], function () {
+        var $ = layui.jquery;
+        //表单验证
+        $("form").Validform({
+            tiptype: 3
+        });
+    });
+</script>
+</body>
+</html>

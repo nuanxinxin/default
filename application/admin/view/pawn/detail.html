@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {include file="header"}
+    <style>
+        .column {
+            width: 350px;
+            float: left;
+            margin-right: 15px;
+        }
+
+        .table tbody tr td:first-child {
+            background-color: #f8f8f8;
+            width: 90px;
+        }
+
+        .table tbody tr td:first-child.image {
+            background-image: url(__LAYUI__/images/image.png);
+            background-repeat: no-repeat;
+            background-size: 19px;
+            background-position: top right;
+            padding-right: 10px;
+        }
+
+        .layui-breadcrumb a {
+            font-size: 12px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="layui-main">
+
+    <div id="layer-photos">
+        <div class="column">
+            <fieldset class="layui-elem-field layui-field-title">
+                <legend>基础信息</legend>
+            </fieldset>
+            <table class="table">
+                <tbody>
+                <tr>
+                    <td>类型</td>
+                    <td>{$data->pawn_type}</td>
+                </tr>
+                <tr>
+                    <td>标题</td>
+                    <td>{$data->title}</td>
+                </tr>
+                <tr>
+                    <td>描述</td>
+                    <td>{$data->desc}</td>
+                </tr>
+                <tr>
+                    <td>购买时间</td>
+                    <td>{$data->buy_time}</td>
+                </tr>
+                <tr>
+                    <td>购买价格</td>
+                    <td>{$data->buy_price}</td>
+                </tr>
+                <tr>
+                    <td>寄卖价格</td>
+                    <td>{$data->sale_price}</td>
+                </tr>
+                <tr>
+                    <td>联系电话</td>
+                    <td>{$data->contact_phone}</td>
+                </tr>
+                <tr>
+                    <td>城市</td>
+                    <td>{$data->city}</td>
+                </tr>
+                <tr>
+                    <td>状态</td>
+                    <td>{$data->status}</td>
+                </tr>
+                <tr>
+                    <td>下架时间</td>
+                    <td>{$data->distance_out_time>0?date('Y-m-d H:i',$data->distance_out_time):'-'}</td>
+                </tr>
+                <tr>
+                    <td>审核</td>
+                    <td>
+                        <button class="layui-btn layui-btn-mini success">通过</button>
+                        <button class="layui-btn layui-btn-mini failed">未通过</button>
+                        {if $data->apply_refund eq 1}
+                        <button class="layui-btn layui-btn-mini layui-btn-danger apply_refund">退押金</button>
+                        {/if}
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="column">
+            <fieldset class="layui-elem-field layui-field-title">
+                <legend>图片</legend>
+            </fieldset>
+            {foreach name="pics" item="pic"}
+            <img style="width:100px;height:100px;border: 1px solid #ccc;margin-bottom: 5px;" layer-src="{$pic}" src="{$pic}"/>
+            {/foreach}
+        </div>
+    </div>
+</div>
+<script>
+    layui.use('base', function () {
+        var $ = layui.jquery;
+        var base = layui.base();
+        layer.photos({
+            photos: "#layer-photos"
+            , anim: 1
+        });
+
+        $(".show-image").click(function () {
+            $(this).siblings("img").click();
+        });
+
+        $(".success").click(function () {
+            if($(this).text() == '正在推送，请耐心等待...'){
+                return;
+            }
+            $(this).text('正在推送，请耐心等待...').css("background","#ccc");
+            window.location.href = "{:path('statusSuccess',['id'=>$data->id])}";
+        });
+
+        $(".failed").click(function () {
+            window.location.href = "{:path('statusFailed',['id'=>$data->id])}";
+        });
+
+        $(".apply_refund").click(function(){
+            layer.confirm('确定操作吗?', {
+                title: '安全提示',
+                icon: 3,
+                btn: ['确定', '取消']
+            }, function () {
+                window.location.href = "{:path('refund',['id'=>$data->id])}";
+            });
+        });
+    });
+</script>
+</body>
+</html>

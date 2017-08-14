@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {include file="header"}
+</head>
+<body>
+{include file="loading"}
+<div class="layui-main">
+    <table class="table">
+        <thead>
+        <tr>
+            <th class="number">Id</th>
+            <th>等级</th>
+            <th>条件(推广数)</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        {foreach name="list" item="item"}
+        <tr>
+            <td>{$item->id}</td>
+            <td>{$item->level}</td>
+            <td>{$item->distribution_number}</td>
+            <td>
+                <a href="{:path('edit',['id'=>$item->id])}" class="layui-btn layui-btn-mini layui-btn-normal">
+                    编辑
+                </a>
+                <a href="javascript:;" class="layui-btn layui-btn-mini layui-btn-danger layui-btn-disabled">
+                    删除
+                </a>
+            </td>
+        </tr>
+        {/foreach}
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="99">
+                <div class="pagination-box">
+                    <span class="info">
+                        共{$list->total()}条数据 {$list->currentPage()}/{$list->lastPage()}页
+                    </span>
+                    {$list->render()}
+                </div>
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+</div>
+<script>
+    layui.use(['base', 'form'], function () {
+        var $ = layui.jquery;
+        $(".detail").click(function () {
+            var id = $(this).data("id");
+            layui.base().fullBox({
+                title: "查看用户信息",
+                content: "{:path('Pub/tab')}?op=用户信息,Member/user?id=" + id + ";认证信息,Member/auth?user_id=" + id,
+                end: function () {
+                    window.location.reload();
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>

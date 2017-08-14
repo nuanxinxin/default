@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {include file="header"}
+</head>
+<body>
+<div class="layui-main">
+    {if $data}
+    <form>
+        <div class="layui-field-box" id="layer-photos">
+            <div class="layui-form-item">
+                <div class="label-title">认证状态</div>
+                <div><input type="text" value="{$data->auth_status}" class="layui-input" disabled></div>
+            </div>
+            <div class="layui-form-item b-t-d">
+                <div class="label-title">姓名</div>
+                <div>
+                    <input type="text" name="name" value="{$data->name}" class="layui-input">
+                    <a href="javascript:setAuthInfo('name');" class="layui-btn">设置</a>
+                </div>
+            </div>
+            <div class="layui-form-item b-t-d">
+                <div class="label-title">身份证</div>
+                <div>
+                    <input type="text" name="id_number" value="{$data->id_number}" class="layui-input">
+                    <a href="javascript:setAuthInfo('id_number');" class="layui-btn">设置</a>
+                </div>
+            </div>
+            <div class="layui-form-item b-t-d">
+                <div class="label-title">身份证扫描件</div>
+                <div>
+                    {foreach name="data->pics" item="pic"}
+                    <img src="{$pic}" style="width:243px;height:153px;">
+                    {/foreach}
+                </div>
+            </div>
+            <div class="layui-form-item b-t-d">
+                <div class="label-title">认证类型</div>
+                <div><input type="text" value="{$data->user_type}" class="layui-input" disabled></div>
+            </div>
+            {if $data->user_type eq '中介'}
+            <div class="layui-form-item b-t-d">
+                <div class="label-title">公司名称</div>
+                <div><input type="text" value="{$data->company_name}" class="layui-input" disabled></div>
+            </div>
+            <div class="layui-form-item b-t-d">
+                <div class="label-title">公司地址</div>
+                <div><input type="text" value="{$data->company_addr}" class="layui-input" disabled></div>
+            </div>
+            {/if}
+            <div class="layui-form-item b-t-d">
+                <div class="label-title">银行卡号</div>
+                <div>
+                    <input type="text" name="bank_card_number" value="{$data->bank_card_number}" class="layui-input">
+                    <a href="javascript:setAuthInfo('bank_card_number');" class="layui-btn">设置</a>
+                </div>
+            </div>
+            <div class="layui-form-item b-t-d">
+                <div class="label-title">银行卡照片</div>
+                <div>
+                    {foreach name="data->bank_card_pics" item="pic"}
+                    <img src="{$pic}" style="width:243px;height:153px;">
+                    {/foreach}
+                </div>
+            </div>
+            <div class="layui-form-item b-t-d">
+                <div class="label-title">银行名称</div>
+                <div>
+                    <input type="text" name="bank_name" value="{$data->bank_name}" class="layui-input">
+                    <a href="javascript:setAuthInfo('bank_name');" class="layui-btn">设置</a>
+                </div>
+            </div>
+            <div class="layui-form-item b-t-d">
+                <div class="label-title">支行名称</div>
+                <div>
+                    <input type="text" name="bank_sub_name" value="{$data->bank_sub_name}" class="layui-input">
+                    <a href="javascript:setAuthInfo('bank_sub_name');" class="layui-btn">设置</a>
+                </div>
+            </div>
+            <div class="layui-form-item b-t-d">
+                <div class="label-title">联行号</div>
+                <div>
+                    <input type="text" name="bank_code" value="{$data->bank_code}" class="layui-input">
+                    <a href="javascript:;" id="setBankCode" class="layui-btn">设置</a>
+                    <a href="http://www.posp.cn/" target="_blank" style="color:blue;">联行号查询</a>
+                </div>
+            </div>
+            <div class="layui-form-item b-t-d">
+                <div class="label-title">区域编码</div>
+                <div>
+                    <input type="text" name="area_code" value="{$data->area_code}" class="layui-input">
+                    <a href="javascript:setAuthInfo('area_code');" class="layui-btn">设置</a>
+                    <a href="http://www.stats.gov.cn/tjsj/tjbz/xzqhdm/201703/t20170310_1471429.html?spm=a219a.7629140.0.0.7aZWPD" target="_blank" style="color:blue;">区域编码查询</a>
+                </div>
+            </div>
+            <div class="layui-form-item b-t-d">
+                <div class="label-title">申请时间</div>
+                <div><input type="text" value="{$data->auth_time|date='Y-m-d',###}" class="layui-input" disabled></div>
+            </div>
+            <div class="layui-form-item b-t-d">
+                <div class="label-title">支付认证费用时间</div>
+                <div><input type="text" value="{$data->auth_pay_time>0?date('Y-m-d',$data->auth_pay_time):'未支付'}"
+                            class="layui-input" disabled>
+                </div>
+            </div>
+            <div class="layui-form-item b-t-s">
+                <a href="javascript:;" id="auth_hf" class="layui-btn">通过认证</a>
+                <!--<a href="javascript:;" id="auth_sz" class="layui-btn">通道注册(SZ){$data->pay_reg_sz==1?'-已提交注册':''}</a>-->
+                <a href="javascript:;" id="auth_wlb" class="layui-btn">通道注册(WLB){$data->pay_reg_wlb==1?'-已提交注册':''}</a>
+                <a href="javascript:;" id="auth_hf_reg" class="layui-btn">通道注册(Hf){$data->pay_reg_hf==1?'-已提交注册':''}</a>
+                <a href="javascript:;" id="error" class="layui-btn">驳回认证</a>
+            </div>
+        </div>
+    </form>
+    {else/}
+    <div style="color:#FF5722;">没有认证信息！</div>
+    {/if}
+</div>
+<script>
+    var jq;
+    layui.use('base', function () {
+        var $ = layui.jquery;
+        var base = layui.base();
+        jq = $;
+        layer.photos({
+            photos: "#layer-photos"
+            , anim: 1
+        });
+
+        $("#auth_hf").on('click', function () {
+            if ($(this).text() == '正在提交，请耐心等待...') {
+                return;
+            }
+            $(this).text('正在提交，请耐心等待...').css("background", "#ccc");
+            window.location.href = "{:path('auth',['user_id'=>$data->user_id,'auth_status'=>'已通过'])}";
+        });
+
+        $("#auth_sz").on('click', function () {
+            if ($(this).text() == '正在提交，请耐心等待...') {
+                return;
+            }
+            $(this).text('正在提交，请耐心等待...').css("background", "#ccc");
+            window.location.href = "{:path('auth_sz',['user_id'=>$data->user_id])}";
+        });
+        $("#auth_hf_reg").on('click', function () {
+            if ($(this).text() == '正在提交，请耐心等待...') {
+                return;
+            }
+            $(this).text('正在提交，请耐心等待...').css("background", "#ccc");
+            window.location.href = "{:path('auth_hf',['user_id'=>$data->user_id])}";
+        });
+        $("#auth_wlb").on('click', function () {
+            if ($(this).text() == '正在提交，请耐心等待...') {
+                return;
+            }
+            $(this).text('正在提交，请耐心等待...').css("background", "#ccc");
+            window.location.href = "{:path('auth_wlb',['user_id'=>$data->user_id])}";
+        });
+
+        $("#error").on('click', function () {
+            layer.prompt({title: '输入驳回说明', formType: 0}, function (msg, index) {
+                layer.close(index);
+                window.location.href = "{:path('auth',['user_id'=>$data->user_id,'auth_status'=>'认证失败'])}?msg=" + msg;
+            });
+        });
+
+        $("#setBankCode").click(function () {
+            var bank_code = $("input[name=bank_code]").val();
+            window.location.href = "{:path('setBankCode')}?id={$data->id}&bank_code=" + bank_code;
+        });
+    });
+
+    function setAuthInfo(name) {
+        var value = jq("input[name=" + name + "]").val();
+        window.location.href = "{:path('setAuthInfo')}?id={$data->id}&name=" + name + "&value=" + value;
+    }
+</script>
+</body>
+</html>

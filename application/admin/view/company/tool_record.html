@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {include file="header"}
+</head>
+<body>
+{include file="loading"}
+<div class="layui-main">
+    <fieldset class="layui-elem-field layui-field-title">
+        <legend>交易记录</legend>
+    </fieldset>
+    <fieldset class="layui-elem-field">
+        <legend>查询搜索</legend>
+        <div class="layui-field-box">
+            <form action="" method="get" class="layui-form">
+                <div class="layui-input-inline">
+                    <input type="text" name="keyword" value="{$Request.param.keyword}" class="layui-input"
+                           placeholder="手机号">
+                </div>
+                <div class="layui-input-inline">
+                    <select name="company_id">
+                        <option value="">选择公司</option>
+                        {foreach name="companys" item="item"}
+                        <option value="{$item->id}" {$Request.param.company_id==$item->id?'selected':''}>{$item->company_name}</option>
+                        {/foreach}
+                    </select>
+                </div>
+                <div class="layui-input-inline">
+                    <select name="user_in_come_status">
+                        <option value="全部">全部状态</option>
+                        <option value="未到账" {$Request.param.user_in_come_status=='未到账'?'selected':''}>未到账</option>
+                        <option value="已到账" {$Request.param.user_in_come_status=='已到账'?'selected':''}>已到账</option>
+                    </select>
+                </div>
+                <div class="layui-input-inline">
+                    <select name="payment">
+                        <option value="全部">全部支付方式</option>
+                        <option value="微信" {$Request.param.payment=='微信'?'selected':''}>微信</option>
+                        <option value="支付宝" {$Request.param.payment=='支付宝'?'selected':''}>支付宝</option>
+                        <option value="京东" {$Request.param.payment=='京东'?'selected':''}>京东</option>
+                    </select>
+                </div>
+                <button type="submit" class="layui-btn">提交</button>
+            </form>
+        </div>
+    </fieldset>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>所属公司</th>
+            <th>手机号</th>
+            <th>类型</th>
+            <th>金额（元）</th>
+            <th>交易时间</th>
+            <th>平台到账状态</th>
+            <th>用户到账状态</th>
+            <th>支付订单号</th>
+            <th>支付方式</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        {foreach name="list" item="item"}
+        <tr>
+            <td>{$item->AdminCompany->company_name}</td>
+            <td>{$item->User->phone}</td>
+            <td>{$item->type}</td>
+            <td>{$item->money}</td>
+            <td>{$item->create_time|date='Y-m-d H:i:s',###}</td>
+            <td>{$item->admin_in_come_status}</td>
+            <td>{$item->user_in_come_status}</td>
+            <td>{$item->order_id}</td>
+            <td>{$item->payment}</td>
+        </tr>
+        {/foreach}
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="99">
+                <div class="pagination-box">
+                    <span class="info">
+                        共{$list->total()}条数据 {$list->currentPage()}/{$list->lastPage()}页
+                    </span>
+                    {$list->render()}
+                </div>
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+</div>
+<script>
+    layui.use(['base','form']);
+</script>
+</body>
+</html>

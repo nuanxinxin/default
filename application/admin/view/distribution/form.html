@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {include file="header"}
+</head>
+<body>
+{include file="loading"}
+<div class="layui-main">
+    <fieldset class="layui-elem-field layui-field-title">
+        <legend>{$data?'修改等级信息':'添加新等级'}</legend>
+    </fieldset>
+    <div class="layui-field-box">
+        <form action="{$data?path('edit',['id'=>$data->id]):path('create')}" method="post" class="layui-form">
+            <div class="layui-form-item">
+                <div class="label-title Validform_label">等级</div>
+                <div><input type="text" name="level" value="{$data->level}" class="layui-input" datatype="s">
+                </div>
+            </div>
+            <div class="layui-form-item b-t-d">
+                <div class="label-title Validform_label">条件</div>
+                <div><input type="text" name="distribution_number" value="{$data->distribution_number}" class="layui-input" datatype="n">
+                </div>
+            </div>
+            <div class="layui-form-item b-t-s">
+                {:token()}
+                <button type="submit" class="layui-btn">提交</button>
+                {if $data}
+                <button type="button" class="layui-btn layui-btn-primary" onclick="window.history.back()">返回</button>
+                {/if}
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    layui.use('validform', function () {
+        var $ = layui.jquery;
+
+        //表单验证
+        $("form").Validform({
+            tiptype: 3
+        });
+    });
+</script>
+
+
+</body>
+</html>

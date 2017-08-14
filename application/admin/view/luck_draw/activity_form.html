@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {include file="header"}
+</head>
+<body>
+{include file="loading"}
+<div class="layui-main">
+    <div class="layui-field-box">
+        <form action="" method="post" class="layui-form">
+            <div class="layui-form-item">
+                <div class="label-title Validform_label">标题</div>
+                <div><input type="text" name="goods_title" value="{$data->goods_title}" class="layui-input"
+                            datatype="*">
+                </div>
+            </div>
+            <div class="layui-form-item b-t-d">
+                <div class="label-title">封面图</div>
+                <div class="image_upload" data-name="page_thumb" data-value="{$data->page_thumb}"></div>
+            </div>
+            <div class="layui-form-item b-t-d">
+                <div class="label-title Validform_label">详情</div>
+                <div>
+                    <textarea class="layui-textarea" name="detail" style="width:360px;">{$data->detail}</textarea>
+                </div>
+            </div>
+            <div class="layui-form-item b-t-d">
+                <div class="label-title">详情图</div>
+                <div class="image_upload" data-name="detail_thumb" data-value="{$data->detail_thumb}"></div>
+                <span style="color:red;">图片比例必须1:1</span>
+            </div>
+            <div class="layui-form-item b-t-d">
+                <div class="label-title Validform_label">参与价格</div>
+                <div><input type="text" name="single_price" value="{$data->single_price}" class="layui-input"
+                            datatype="*">
+                </div>
+            </div>
+            <div class="layui-form-item b-t-d">
+                <div class="label-title Validform_label">客户兑奖后接受电话</div>
+                <div><input type="text" name="phone" value="{$data->phone}" class="layui-input"
+                            datatype="*">
+                </div>
+            </div>
+            <div class="layui-form-item b-t-d">
+                <div class="label-title Validform_label">参与人数</div>
+                <div><input type="text" name="max_people_number" value="{$data->max_people_number}" class="layui-input"
+                            datatype="n">
+                </div>
+            </div>
+            <div class="layui-form-item b-t-d">
+                <div class="label-title Validform_label">时间</div>
+                <div class="layui-input-inline">
+                    <input class="layui-input" name="start_time" value="{if $data->start_time}{$data->start_time|date='Y-m-d H:i:s',###}{/if}" placeholder="开始日"
+                           id="LAY_demorange_s" datatype="*">
+                </div>
+                <div class="layui-input-inline">
+                    <input class="layui-input" name="end_time" value="{if $data->end_time}{$data->end_time|date='Y-m-d H:i:s',###}{/if}" placeholder="截止日"
+                           id="LAY_demorange_e" datatype="*">
+                </div>
+            </div>
+            <div class="layui-form-item b-t-d">
+                <div class="label-title Validform_label">奖品</div>
+                <div style="width:360px;">
+                    <select name="spoil_id" datatype="*">
+                        <option value=""></option>
+                        {foreach name="prizeGoods" item="item"}
+                        <option value="{$item->spoil_id}" {$data->
+                            spoil_id==$item->spoil_id?'selected':''}>{$item->title}
+                        </option>
+                        {/foreach}
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item b-t-d">
+                <div class="label-title">安慰奖开关</div>
+                <div>
+                    <input type="checkbox" name="comfort_spoil_enable" value="1" lay-skin="switch" {$data->comfort_spoil_enable?'checked':''}>
+                </div>
+            </div>
+            <div class="layui-form-item b-t-d">
+                <div class="label-title">安慰奖</div>
+                <div style="width:360px;">
+                    <select name="comfort_spoil_id">
+                        <option value=""></option>
+                        {foreach name="comfortPrizeGoods" item="item"}
+                        <option value="{$item->spoil_id}" {$data->
+                            comfort_spoil_id==$item->spoil_id?'selected':''}>{$item->title}
+                        </option>
+                        {/foreach}
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item b-t-s">
+                <input type="hidden" name="goods_id" value="{$data->goods_id}">
+                <button type="submit" class="layui-btn">提交</button>
+                {if $data}
+                <button type="button" class="layui-btn layui-btn-primary" onclick="window.history.back()">返回</button>
+                {/if}
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    layui.use(['base', 'form', 'validform', 'laydate'], function () {
+        var $ = layui.jquery;
+        var laydate = layui.laydate;
+
+        var start = {
+            min: laydate.now()
+            , max: '2099-06-16 23:59:59'
+            , istoday: false
+            , format: 'YYYY-MM-DD hh:mm:ss'
+            , istime: true
+            , choose: function (datas) {
+                end.min = datas; //开始日选好后，重置结束日的最小日期
+                end.start = datas //将结束日的初始值设定为开始日
+            }
+        };
+
+        var end = {
+            min: laydate.now()
+            , max: '2099-06-16 23:59:59'
+            , istoday: false
+            , format: 'YYYY-MM-DD hh:mm:ss'
+            , istime: true
+            , choose: function (datas) {
+                start.max = datas; //结束日选好后，重置开始日的最大日期
+            }
+        };
+
+        document.getElementById('LAY_demorange_s').onclick = function () {
+            start.elem = this;
+            laydate(start);
+        }
+        document.getElementById('LAY_demorange_e').onclick = function () {
+            end.elem = this
+            laydate(end);
+        }
+
+        //表单验证
+        $("form").Validform({
+            tiptype: 3
+        });
+    });
+</script>
+</body>
+</html>

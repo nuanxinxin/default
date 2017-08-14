@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {include file="header"}
+</head>
+<body>
+{include file="loading"}
+<div class="layui-main">
+    <fieldset class="layui-elem-field">
+        <legend>幸运抽奖</legend>
+        <div class="layui-field-box">
+            <form action="" method="get" class="layui-form">
+                <div class="layui-input-inline">
+                    <input type="text" name="goods_title" value="{$Request.param.goods_title}" class="layui-input"
+                           placeholder="标题">
+                </div>
+                <button type="submit" class="layui-btn">搜索</button>
+            </form>
+        </div>
+    </fieldset>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>标题</th>
+            <th>封面图</th>
+            <th>参与价格</th>
+            <th>开始时间</th>
+            <th>结束时间</th>
+            <th>状态</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        {foreach name="search" item="item"}
+        <tr>
+            <td>{$item->goods_title}</td>
+            <td><img src="{$item->page_thumb}" style="max-width:100px;max-height:100px;"></td>
+            <td>{$item->single_price}</td>
+            <td>{$item->start_time|date='Y-m-d H:i:s',###}</td>
+            <td>{$item->end_time|date='Y-m-d H:i:s',###}</td>
+            <td>{$item->isOutText[$item->is_out]}</td>
+            <td>
+                {if $item->is_recommend eq 1}
+                <a href="javascript:;" class="layui-btn layui-btn-mini layui-btn-normal recommend"
+                   data-id="{$item->goods_id}" daa-is_recommend="0">
+                    取消推荐
+                </a>
+                {else/}
+                <a href="javascript:;" class="layui-btn layui-btn-mini layui-btn-warm recommend"
+                   data-id="{$item->goods_id}" data-is_recommend="1">
+                    推荐
+                </a>
+                {/if}
+            </td>
+        </tr>
+        {/foreach}
+        </tbody>
+    </table>
+</div>
+<script>
+    layui.use(['base', 'form'], function () {
+        var $ = layui.jquery;
+        var base = layui.base();
+        $(".recommend").click(function () {
+            var goods_id = $(this).data("id");
+            var is_recommend = $(this).data("is_recommend");
+            base.request.post({
+                data: {goods_id: goods_id, is_recommend: is_recommend},
+                success: function (res) {
+                    if (res.code == 200) {
+                        window.location.reload();
+                    } else {
+                        layer.msg(res.message);
+                    }
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>

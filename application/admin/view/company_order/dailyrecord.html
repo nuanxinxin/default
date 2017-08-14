@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {include file="header"}
+    <style>
+        .fee-total span {
+            display: inline-block;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        .fee-total span a {
+            color: #FF5722 !important;
+            cursor: default;
+        }
+    </style>
+</head>
+<body>
+{include file="loading"}
+<div class="layui-main">
+    
+
+    <table class="table">
+        <thead>
+        <tr>
+        	<th>交易时间</th>
+        	{if LOGIN_TYPE eq 'admin'}
+        	<th>平台交易总金额</th>
+            
+            {else/}
+            <th>交易金额</th>
+              {/if}
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        {foreach name="list" item="item"}
+        <tr>
+            <td>{$item->days}</td>
+            <td>{$item->total_price|sprintf='%.2f',###}元</td>
+            <td><a href="javascript:;" class="layui-btn layui-btn-danger layui-btn-mini status" data-id="{$item->days}">订单详情</a></td>
+        </tr>
+        {/foreach}
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="99">
+                <div class="pagination-box">
+                    <span class="info">
+                        共{$list->total()}条数据 {$list->currentPage()}/{$list->lastPage()}页
+                    </span>
+                    {$list->render()}
+                </div>
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+</div>
+<script>
+layui.use(['base', 'form'], function () {
+    var $ = layui.jquery;
+    $(".status").click(function () {
+        var id = $(this).data("id");
+        layui.base().fullBox({
+            title: "详情",
+            content: "{:path('detail')}?id=" + id,
+            end: function () {
+                window.location.reload();
+            }
+        });
+    });
+
+});
+    layui.use(['base', 'form']);
+</script>
+</body>
+</html>

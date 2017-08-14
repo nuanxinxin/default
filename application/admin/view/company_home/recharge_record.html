@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {include file="header"}
+</head>
+<body>
+{include file="loading"}
+<div class="layui-main">
+    <fieldset class="layui-elem-field layui-field-title">
+        <legend>公司充值记录&nbsp;&nbsp;&nbsp;<span style="color:#de0000;">平台赋予信用币:{$give_credit_money}</span></legend>
+    </fieldset>
+    <fieldset class="layui-elem-field">
+        <legend>查询搜索</legend>
+        <div class="layui-field-box">
+            <form action="" method="get" class="layui-form">
+                <div class="layui-input-inline">
+                    <input type="text" name="keyword" value="{$Request.param.keyword}" class="layui-input"
+                           placeholder="手机号">
+                </div>
+                <button type="submit" class="layui-btn">提交</button>
+            </form>
+        </div>
+    </fieldset>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>充值金额</th>
+            <th>姓名</th>
+            <th>手机号</th>
+            <th>类型</th>
+            <th>详情</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        {foreach name="list" item="item"}
+        <tr>
+            <td>{$item->money}</td>
+            <td>{$item->user->nickname}</td>
+            <td>{$item->user->phone}</td>
+            <td>{$item->type}</td>
+             <td>{$item->title}</td>
+
+        </tr>
+        {/foreach}
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="99">
+                <div class="pagination-box">
+                    <span class="info">
+                        共{$list->total()}条数据 {$list->currentPage()}/{$list->lastPage()}页
+                    </span>
+                    {$list->render()}
+                </div>
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+</div>
+<script>
+    layui.use('base');
+</script>
+</body>
+</html>

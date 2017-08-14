@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {include file="header"}
+</head>
+<body>
+{include file="loading"}
+<div class="layui-main">
+    <div class="layui-field-box">
+        <form action="" method="post" class="layui-form">
+            <div class="layui-form-item">
+                <div class="label-title Validform_label">商品标题</div>
+                <div><input type="text" name="title" value="{$data->title}" class="layui-input" datatype="*">
+                </div>
+            </div>
+            <div class="layui-form-item b-t-d">
+                <div class="label-title Validform_label">奖品详情</div>
+                <div>
+                    <textarea class="layui-textarea" name="detail" style="width:360px;">{$data->detail}</textarea>
+                </div>
+            </div>
+            <div class="layui-form-item b-t-d">
+                <div class="label-title">图片</div>
+                <div class="image_upload" data-name="thumb" data-value="{$data->thumb}"></div>
+                <span style="color:red;">图片比例必须1:1</span>
+            </div>
+            <div class="layui-form-item b-t-d">
+                <div class="label-title">奖品类型</div>
+                <div>
+                    <input type="radio" name="spoil_type" value="0" title="竞彩奖" checked>
+                    <input type="radio" name="spoil_type" value="1" title="安慰奖" {$data->spoil_type?'checked':''}>
+                    <input type="radio" name="spoil_type" value="2" title="幸运奖" {$data->spoil_type?'checked':''}>
+                </div>
+            </div>
+            <div class="layui-form-item b-t-s">
+                <input type="hidden" name="spoil_id" value="{$data->spoil_id}">
+                <button type="submit" class="layui-btn">提交</button>
+                {if $data}
+                <button type="button" class="layui-btn layui-btn-primary" onclick="window.history.back()">返回</button>
+                {/if}
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    layui.use(['base', 'form', 'validform'], function () {
+        var $ = layui.jquery;
+
+        //表单验证
+        $("form").Validform({
+            tiptype: 3
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {include file="admin@header"}
+</head>
+<body>
+<div class="layui-main">
+    <div class="layui-tab layui-tab-brief" lay-filter="navigate" style="height:calc(100% - 20px);margin:0;">
+        <ul class="layui-tab-title">
+            {foreach name="list" item="item"}
+            {if condition="$key eq 0"}
+            <li class="layui-this" data-url="{$item.url}">{$item.title}</li>
+            {else /}
+            <li class="" data-url="{$item.url}">{$item.title}</li>
+            {/if}
+            {/foreach}
+        </ul>
+        <iframe width="100%" style="height:calc(100% - 60px);margin-top:10px;" src="{$list[0]['url']}" frameborder="0" seamless></iframe>
+    </div>
+</div>
+
+<script>
+    layui.use(['layer', 'element'], function () {
+        var element = layui.element();
+        var $ = layui.jquery;
+        element.on('tab(navigate)', function () {
+            $("iframe").attr("src", $(this).data("url"));
+        });
+    });
+</script>
+
+</body>
+</html>

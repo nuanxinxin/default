@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {include file="header"}
+</head>
+<body>
+{include file="loading"}
+<div class="layui-main">
+    <fieldset class="layui-elem-field layui-field-title">
+        <legend>公告设置</legend>
+    </fieldset>
+    <div class="layui-field-box">
+        <form action="{:path('notify')}" method="post" class="layui-form">
+            <div class="layui-form-item">
+                <div class="label-title Validform_label">公告</div>
+                <div><input type="text" name="lucky_notify" value="{$data.lucky_notify}" class="layui-input" datatype="*">
+                </div>
+            </div>
+            <div class="layui-form-item b-t-s">
+                {:token()}
+                <button type="submit" class="layui-btn">提交</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    layui.use('validform', function () {
+        var $ = layui.jquery;
+
+        //表单验证
+        $("form").Validform({
+            tiptype: 3
+        });
+    });
+</script>
+
+
+</body>
+</html>

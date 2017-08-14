@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {include file="header"}
+</head>
+<body>
+{include file="loading"}
+<div class="layui-main">
+    <fieldset class="layui-elem-field layui-field-title">
+        <legend>站点配置</legend>
+    </fieldset>
+    <div class="layui-field-box">
+        <form action="{:path('webConfig')}" method="post" class="layui-form">
+            <div class="layui-form-item">
+                <div class="label-title Validform_label">开通城市</div>
+                <div><input type="text" name="open_city" value="{$data.open_city}" class="layui-input" datatype="*">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="label-title Validform_label">公告信息</div>
+                <div><input type="text" name="notice_message" value="{$data.notice_message}" class="layui-input" datatype="*">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="label-title Validform_label">提现条件（提现金额不能低于设置金额）</div>
+                <div><input type="text" name="withdrawal_condition" value="{$data.withdrawal_condition}" class="layui-input" datatype="*">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="label-title Validform_label">通道返利</div>
+                <div><input type="text" name="channel_rebate" value="{$data.channel_rebate}" class="layui-input" datatype="*">
+                </div>
+            </div>
+             <div class="layui-form-item">
+                <div class="label-title Validform_label">收付款公告</div>
+                <div><input type="text" name="tool_notice_message" value="{$data.tool_notice_message}" class="layui-input" datatype="*">
+                </div>
+            </div>
+            <div class="layui-form-item b-t-s">
+                {:token()}
+                <button type="submit" class="layui-btn">提交</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    layui.use('validform', function () {
+        var $ = layui.jquery;
+
+        //表单验证
+        $("form").Validform({
+            tiptype: 3
+        });
+    });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "require": {
+    "topthink/think-image": "^1.0",
+    "topthink/think-helper": "^1.0",
+    "topthink/think-captcha": "^1.0",
+    "topthink/framework": "^5.0.3",
+    "endroid/qrcode": "^1.7",
+    "overtrue/wechat": "~3.1"
+  }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {include file="header"}
+    <style>
+        .table-info tbody tr td:first-child {
+            background-color: #fbfbfb;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+{include file="loading"}
+<div class="layui-main">
+    <fieldset class="layui-elem-field layui-field-title">
+        <legend>基本信息</legend>
+    </fieldset>
+    <table class="table table-info">
+        <tbody>
+        <tr>
+            <td style="width:100px;">账号</td>
+            <td>{$company->username}</td>
+        </tr>
+        <tr>
+            <td>公司名称</td>
+            <td>{$company->company_name}</td>
+        </tr>
+        <tr>
+            <td>最低费率</td>
+            <td>{$company->min_rate}</td>
+        </tr>
+        <tr>
+            <td>自营费率</td>
+            <td>
+                {$company->rate}
+                <button type="button" data-value="{$company->rate}" class="layui-btn layui-btn-normal layui-btn-mini"
+                        id="set-rate"
+                        style="margin-left:10px;">设置
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td>标识符</td>
+            <td>{$company->identifier}</td>
+        </tr>
+        <tr>
+            <td>推广码</td>
+            <td>
+                <div id="qrcode"></div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script src="__LAYUI__/qrcode.min.js"></script>
+<script>
+    layui.use('base', function () {
+        var $ = layui.jquery;
+        $("#set-rate").click(function () {
+            layer.prompt({title: '自营费率', formType: 0, value: $(this).data('value')}, function (rate, index) {
+                window.location.href = "{:path('setRate')}?rate=" + rate;
+            });
+        });
+
+        $.get("/api/wx/qrcode?userId=&companyId={$company->identifier}", function (res) {
+            var options = {
+                text: res,
+                width: 100,
+                height: 100,
+                colorDark: '#000000',
+                colorLight: '#ffffff',
+                correctLevel: QRCode.CorrectLevel.H
+            }
+            new QRCode('qrcode', options);
+        });
+    });
+</script>
+</body>
+</html>

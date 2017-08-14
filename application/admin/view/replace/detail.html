@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {include file="header"}
+    <style>
+        .fee-total span {
+            display: inline-block;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        .fee-total span a {
+            color: #FF5722 !important;
+            cursor: default;
+        }
+    </style>
+</head>
+<body>
+{include file="loading"}
+<div class="layui-main">
+        
+    <table class="table">
+        <thead>
+        <tr>
+        	<th>代付单号</th>
+        	<th>代付银行卡号</th>
+        	<th>代付银行姓名</th>
+            <th>代付银行名</th>
+            <th>代付金额</th>
+            <th>代付返回码</th>
+            <th>操作</th>
+             
+        </tr>
+        </thead>
+        <tbody>
+
+        {foreach name="list" item="item"}
+        <tr>
+            <td>{$item->req_sn}</td>
+            <td>{$item->account_no}</td>
+            <td>{$item->account_name}</td>
+            <td>{$item->BankName->bank_name}</td>
+            
+            <td>{$item->amount/100|sprintf='%.2f',###}元</td>
+            <th>{$item->return_msg}</th>
+           	<th><a href="javascript:;" class="layui-btn layui-btn-danger layui-btn-mini detail" data-req_sn="{$item->req_sn}">详情</a></th>
+        </tr>
+        {/foreach}
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="99">
+                <div class="pagination-box">
+                    <span class="info">
+                        共{$list->total()}条数据 {$list->currentPage()}/{$list->lastPage()}页
+                    </span>
+                    {$list->render()}
+                </div>
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+</div>
+<script>
+
+	layui.use([ 'base', 'form' ], function() {
+        var $ = layui.jquery, base = layui.base();
+		$(".detail").click(function() {
+			var req_sn = $(this).data("req_sn");
+			base.request.post({
+				url : "",
+				data : {
+					req_sn : req_sn,
+				},
+				success : function(res) {
+					if (res.code == 200) {
+						layer.msg(res.message);
+					} else {
+						layer.msg(res.message);
+					}
+				}
+			});
+
+		});
+
+	});
+</script>
+</body>
+</html>

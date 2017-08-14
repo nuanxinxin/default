@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {include file="header"}
+    <style>
+        .image {
+            display: inline-block;
+            width: 150px;
+            height: 190px;
+            background-color: #c6c5b6;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            box-shadow: 2px 2px 5px #666;
+        }
+
+        .image .top {
+            width: 100%;
+            height: 150px;
+            text-align: center;
+            background-color: #eee;
+        }
+
+        .image .top img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .image .bottom {
+            width: 100%;
+            height: 40px;
+        }
+
+        .image .bottom .date {
+            color: #fff;
+            line-height: 40px;
+            padding-left: 10px;
+            font-size: 12px;
+            font-weight: 300;
+        }
+
+        .image .bottom .ajaxdel i {
+            font-size: 30px;
+            color: #fff;
+            float: right;
+            line-height: 40px;
+            padding-right: 10px;
+        }
+
+        .search{
+            margin: 10px 0;
+        }
+
+    </style>
+</head>
+<body>
+{include file="body_header"}
+<div class="layui-main">
+    <div class="search">
+        <form action="">
+            <div class="layui-input-inline date-group">
+                <div class="layui-input-inline">
+                    <input class="layui-input range_s" placeholder="开始日期">
+                </div>
+                <div class="layui-input-inline">
+                    <input class="layui-input range_e" placeholder="截止日期">
+                </div>
+            </div>
+            <div class="layui-input-inline date-group">
+                <div class="layui-input-inline">
+                    <input class="layui-input range_s" placeholder="开始日期">
+                </div>
+                <div class="layui-input-inline">
+                    <input class="layui-input range_e" placeholder="截止日期">
+                </div>
+            </div>
+            <button class="layui-btn layui-btn-normal">查询</button>
+            <div class="pagination-box">
+                <span class="info">共{$list->total()}条数据 {$list->currentPage()}/{$list->lastPage()}页</span>
+                {$list->render()}
+            </div>
+        </form>
+    </div>
+    {foreach name="list" item="item"}
+    <div class="image close-checked">
+        <div class="top">
+            <img lay-src="{$item->file_path}?{:rand(10000,99999)}">
+        </div>
+        <div class="bottom">
+            <span class="date">{$item->create_time|date='Y-m-d',###}</span>
+            <a href="javascript:;" class="ajaxdel"><i class="layui-icon">&#xe640;</i></a>
+        </div>
+    </div>
+    {/foreach}
+</div>
+<script>
+    layui.use(['base', 'flow'], function () {
+
+
+
+        var flow = layui.flow;
+        flow.lazyimg({
+            isLazyimg: true,
+            elem: '.layui-main img',
+            scrollElem: '.layui-main'
+        });
+
+        var base = layui.base();
+        var $ = layui.jquery;
+        $("a.ajaxdel").click(function () {
+            var o = $(this);
+            layer.confirm('你确定要删除吗?', {
+                title: '安全提示',
+                icon: 3,
+                btn: ['确定', '取消']
+            }, function (index) {
+                o.parents('.image').remove();
+                layer.close(index);
+            });
+        });
+    });
+</script>
+</body>
+</html>

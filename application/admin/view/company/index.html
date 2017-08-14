@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {include file="header"}
+</head>
+<body>
+{include file="loading"}
+<div class="layui-main">
+    <fieldset class="layui-elem-field layui-field-title">
+        <legend>公司管理</legend>
+    </fieldset>
+    <fieldset class="layui-elem-field">
+        <legend>查询搜索</legend>
+        <div class="layui-field-box">
+            <form action="" method="get">
+                <input type="text" name="keyword" value="{$Request.param.keyword}" class="layui-input"
+                       placeholder="账号或公司名称">
+                <button type="submit" class="layui-btn">提交</button>
+            </form>
+        </div>
+    </fieldset>
+    <table class="table">
+        <thead>
+        <tr>
+            <th class="number">Id</th>
+            <th>账号</th>
+            <th>公司名称</th>
+            <th>最低费率</th>
+            <th>自营费率</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        {foreach name="list" item="item"}
+        <tr>
+            <td class="number">{$item->id}</td>
+            <td>{$item->username}</td>
+            <td>{$item->company_name}</td>
+            <td>{$item->min_rate}</td>
+            <td>{$item->rate}</td>
+            <td>
+                <a href="{:path('edit',['id'=>$item->id])}" class="layui-btn layui-btn-mini layui-btn-normal">
+                    编辑
+                </a>
+                {if $item->id eq 1}
+                <!--<a href="javascript:;" class="layui-btn layui-btn-mini layui-btn-disabled">-->
+                    <!--删除-->
+                <!--</a>-->
+                {else/}
+                <!--<a href="{:path('delete',['id'=>$item->id])}" class="layui-btn layui-btn-mini layui-btn-danger del">-->
+                    <!--删除-->
+                <!--</a>-->
+                {/if}
+                {if $item->balance}
+                <a href="javascript:;" class="layui-btn layui-btn-danger layui-btn-mini balance" data-id="{$item->id}">结算</a>
+                {/if}
+            </td>
+        </tr>
+        {/foreach}
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="99">
+                <div class="pagination-box">
+                    <span class="info">
+                        共{$list->total()}条数据 {$list->currentPage()}/{$list->lastPage()}页
+                    </span>
+                    {$list->render()}
+                </div>
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+</div>
+<script>
+    layui.use('base', function () {
+        var $ = layui.jquery;
+        $('.balance').click(function () {
+            var id = $(this).data('id');
+            layer.confirm('操作确认?', {
+                title: '安全提示',
+                icon: 3,
+                btn: ['确定', '取消']
+            }, function () {
+                window.location.href = "{:path('balance')}?id=" + id;
+            });
+        });
+    });
+</script>
+</body>
+</html>

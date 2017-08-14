@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {include file="header"}
+</head>
+<body>
+{include file="loading"}
+<div class="layui-main">
+    <blockquote class="layui-elem-quote user">
+        <div class="row-info">
+            <span>Id</span>
+            <span>{$data->id}</span>
+        </div>
+        <div class="row-info">
+            <span>手机号</span>
+            <span>{$data->phone}</span>
+        </div>
+        <div class="row-info">
+            <span>所属公司</span>
+            <span>{$data->AdminCompany->company_name}</span>
+        </div>
+        <div class="row-info">
+            <span>城市</span>
+            <span>{$data->city}</span>
+        </div>
+        <div class="row-info">
+            <span>注册时间</span>
+            <span>{$data->register_time|date='Y-m-d',###}</span>
+        </div>
+        <div class="row-info">
+            <span>信用币</span>
+            <span>{$data->credit_money}</span>
+        </div>
+        <div class="row-info">
+            <span>当前交易金额</span>
+            <span>{$data->current_tool_money}</span>
+        </div>
+        <div class="row-info">
+            <span>标识符</span>
+            <span>{$data->identifier}</span>
+        </div>
+    </blockquote>
+</div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {include file="header"}
+    <style>
+        .info div {
+            margin-bottom: 15px;
+        }
+
+        .info span {
+            display: inline-block;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+{include file="loading"}
+<div class="layui-main">
+    <div class="layui-field-box">
+        <form action="" method="get" class="layui-form">
+            <div class="layui-form-item">
+                <div class="label-title Validform_label">兑奖号</div>
+                <div><input type="text" name="ticket_identifier" value="{$Request.param.ticket_identifier}"
+                            class="layui-input" datatype="s2-15">
+                </div>
+            </div>
+            <div class="layui-form-item b-t-s">
+                <button type="submit" class="layui-btn">查询</button>
+            </div>
+        </form>
+        {if $Request.param.ticket_identifier}
+        {if $data eq false}
+        <div>没有中奖信息！</div>
+        {else/}
+        <div class="info">
+            <div><span>奖品：</span><img src="{$data->goods_spoil->thumb}" style="width:50px;height:50px;margin-right:10px;" onerror="this.src='/static/layui/images/prize.jpeg'">{$data->goods_spoil->title}
+            </div>
+            <div><span>活动标题：</span>{$data->goods_title}</div>
+            <div><span>中奖人：</span>{$data->nickname}</div>
+            <div><span>联系电话：</span>{$data->phone}</div>
+            <div><span>奖品类型：</span>{$data->spoilTypeText[$data->spoil_type]}</div>
+            <div><span>兑奖状态：</span>{$data->ticketStatusText[$data->ticket_status]}{if $data->ticket_status eq 0}
+                <button type="submit" class="layui-btn layui-btn-normal layui-btn-mini duijiang"
+                        style="margin-left:10px;">兑奖
+                </button>
+                {/if}
+            </div>
+            <div><span>兑奖时间：</span>{$data->ticket_time}</div>
+        </div>
+        {/if}
+        {/if}
+    </div>
+</div>
+<script>
+    layui.use(['base', 'form', 'validform'], function () {
+        var $ = layui.jquery;
+        var base = layui.base();
+
+        //表单验证
+        $("form").Validform({
+            tiptype: 3
+        });
+
+        $(".duijiang").click(function () {
+            var ticket_identifier = "{$Request.param.ticket_identifier}";
+            base.request.post({
+                data: {ticket_identifier: ticket_identifier},
+                success: function (res) {
+                    if (res.code == 200) {
+                        window.location.reload();
+                    } else {
+                        layer.msg(res.message);
+                    }
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>
